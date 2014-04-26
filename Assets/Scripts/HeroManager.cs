@@ -29,4 +29,9 @@ public class HeroManager : MonoBehaviour
 		moveDirection = new Vector2(h, v);
 		myTransform.Translate(moveDirection * characterSpeed * Time.deltaTime);
 	}
+
+	void OnCollisionEnter(Collision collider)
+	{
+		Debug.Log("Parede");
+	}
 }
