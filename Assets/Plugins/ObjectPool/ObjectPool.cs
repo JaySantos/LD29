@@ -121,7 +121,7 @@ public static class ObjectPoolExtensions
 		ObjectPool.Recycle(obj);
 	}
 
-	public static int Count<T>(T prefab) where T : Component
+	public static int Count<T>(this T prefab) where T : Component
 	{
 		return ObjectPool.Count(prefab);
 	}

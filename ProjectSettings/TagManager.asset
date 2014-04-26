@@ -9,6 +9,8 @@ TagManager:
   - DefaultBullet
   - Wall
   - Enemy
+  - SingleBullet
+  - AreaBullet
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

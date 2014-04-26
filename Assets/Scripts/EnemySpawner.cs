@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class EnemySpawner : EnhancedBehaviour {
 
@@ -9,14 +10,13 @@ public class EnemySpawner : EnhancedBehaviour {
 	/// <summary>
 	/// Guarda a posiçao das portas do jogo.
 	/// </summary>
-	[SerializeField]
-	Transform[] doors;
+	Transform[] spawnPoints;
 
 	/// <summary>
 	/// The hero.
 	/// </summary>
 	[SerializeField]
-	Transform hero;
+	Transform player;
 
 	/// <summary>
 	/// The timer spawn.
@@ -34,12 +34,27 @@ public class EnemySpawner : EnhancedBehaviour {
 
 		// Crio uma piscina de inimigos para reaproveitar
 		enemyPrefab.CreatePool();
+
+		List<Transform> transforms = new List<Transform>(GetComponentsInChildren<Transform>(false));
+		transforms.Remove(transform);
+		spawnPoints = transforms.ToArray();
 		InvokeRepeating("Spawn", Time.time, spawnInterval);
 	}
-	
+
+	[SerializeField]
+	int maxEnemies = 5;
+
+	public static int NumEnemies = 0;
+
 	void Spawn() {
-		Vector3 rndPosition = doors[Random.Range(0, doors.Length)].position;
-		Enemy enemy = enemyPrefab.Spawn(rndPosition);
-		enemy.Hero = hero;
+
+		if(NumEnemies < maxEnemies) {
+
+			Vector3 rndPosition = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
+			Enemy enemy = enemyPrefab.Spawn(rndPosition);
+			enemy.Player = player;
+
+			NumEnemies++;
+		}
 	}
 }
