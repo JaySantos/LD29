@@ -4,12 +4,14 @@
 TagManager:
   tags:
   - MachineGunBullet
-  - ShotgunBullet
-  - RocketBullet
-  - DefaultBullet
+  - SingleBullet
+  - AreaBullet
   - Wall
   - Enemy
   - GameCamera
+  - DefaultBullet
+  - RocketBullet
+  - ShotgunBullet
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

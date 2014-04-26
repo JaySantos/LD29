@@ -14,7 +14,7 @@ GameObject:
   - 50: {fileID: 5000000}
   m_Layer: 0
   m_Name: DefaultGunPrefab
-  m_TagString: DefaultBullet
+  m_TagString: SingleBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,6 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 7.5
   bulletDirection: {x: 0, y: 0}
+  weaponType: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -104,6 +104,7 @@ public class WeaponManager : MonoBehaviour
 		//shooting
 		if (shootDirection != Vector2.zero && fireWeapon)
 		{
+			GetComponent<HeroManager>().SetBodySprite(shootDirection);
 			switch (weaponType)
 			{
 				case WeaponType.DEFAULT:
@@ -111,7 +112,7 @@ public class WeaponManager : MonoBehaviour
 					{
 						if (!defaultBullets[i].activeInHierarchy)
 						{
-							defaultBullets[i].transform.position = myTransform.position;
+							defaultBullets[i].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.1f);
 							defaultBullets[i].GetComponent<BulletManager>().bulletDirection = shootDirection;
 							defaultBullets[i].SetActive(true);
 							break;
@@ -124,7 +125,7 @@ public class WeaponManager : MonoBehaviour
 					{
 						if (!machineGunBullets[i].activeInHierarchy)
 						{
-							machineGunBullets[i].transform.position = myTransform.position;
+							machineGunBullets[i].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.5f);
 							machineGunBullets[i].GetComponent<BulletManager>().bulletDirection = shootDirection;
 							machineGunBullets[i].SetActive(true);
 							break;

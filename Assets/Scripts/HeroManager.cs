@@ -7,15 +7,27 @@ public class HeroManager : MonoBehaviour
 	public bool stealthEnabled = false;
 	public int hitPoints = 5;
 	public float stealthTime = 5.0f;
+	public GameObject legs;
+
+	public Sprite up;
+	public Sprite down;
+	public Sprite left;
+	public Sprite right;
+	public Sprite upRight;
+	public Sprite upLeft;
+	public Sprite downRight;
+	public Sprite downLeft;
 
 	private Vector2 moveDirection;
 	private Transform myTransform;
+	private Animator legsAnim;
 
 	// Use this for initialization
 	void Start () 
 	{
 		moveDirection = new Vector2(0f, 0f);
 		myTransform = transform;
+		legsAnim = legs.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -27,6 +39,17 @@ public class HeroManager : MonoBehaviour
 		//getting the moving input
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis("Vertical");
+
+		legsAnim.SetFloat("h", h);
+		legsAnim.SetFloat("v", v);
+		if (h > 0)
+		{
+			legsAnim.SetBool("LastRight", true);
+		}
+		else
+		{
+			legsAnim.SetBool("LastRight", false);
+		}
 
 		//Moving the character
 		moveDirection = new Vector2(h, v);
@@ -48,6 +71,52 @@ public class HeroManager : MonoBehaviour
 		if (hitPoints > 5)
 		{
 			hitPoints = 5;
+		}
+	}
+
+	public void SetBodySprite(Vector2 v)
+	{
+		SpriteRenderer s = GetComponent<SpriteRenderer>();
+		if (v.x > 0) //right
+		{
+			if (v.y > 0) //up
+			{
+				s.sprite = upRight;
+			}
+			else if (v.y < 0) //down
+			{
+				s.sprite = downRight;
+			}
+			else //zero
+			{
+				s.sprite = right;
+			}
+		}
+		else if (v.x < 0) //Left
+		{
+			if (v.y > 0) //up
+			{
+				s.sprite = upLeft;
+			}
+			else if (v.y < 0)
+			{
+				s.sprite = downLeft;
+			}
+			else //zero
+			{
+				s.sprite = left;
+			}
+		}
+		else //zero
+		{
+			if (v.y > 0) //up
+			{
+				s.sprite = up;
+			}
+			else if (v.y < 0) //down
+			{
+				s.sprite = down;
+			}
 		}
 	}
 
