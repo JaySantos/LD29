@@ -4,6 +4,7 @@ using System.Collections;
 public class HeroManager : MonoBehaviour 
 {
 	public float characterSpeed = 2f;
+	public bool stealthEnabled = false;
 
 	private Vector2 moveDirection;
 	private Transform myTransform;
@@ -28,5 +29,10 @@ public class HeroManager : MonoBehaviour
 		//Moving the character
 		moveDirection = new Vector2(h, v);
 		myTransform.Translate(moveDirection * characterSpeed * Time.deltaTime);
+	}
+
+	void OnCollisionEnter(Collision collider)
+	{
+		Debug.Log("Parede");
 	}
 }

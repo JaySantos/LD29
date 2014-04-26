@@ -21,4 +21,16 @@ public class SphereManager : MonoBehaviour
 			myTransform.Translate(new Vector2(speed * Time.deltaTime, 0f));
 		}
 	}
+
+	void OnTriggerEnter2D (Collider2D other)
+	{
+		if (other.gameObject.tag == "Wall" || other.gameObject.tag == "Enemy")
+		{
+			Destroy(gameObject);
+			if (other.gameObject.tag == "Enemy")
+			{
+				Destroy(other.gameObject);
+			}
+		}
+	}
 }

@@ -36,7 +36,7 @@ public class WeaponManager : MonoBehaviour
 		fireWeapon = true;
 		shootDirection = new Vector2(0f, 0f);
 		myTransform = transform;
-		weaponType = WeaponType.SHOTGUN;
+		weaponType = WeaponType.MACHINE_GUN;
 
 		//Pooling bullets...
 		defaultBullets = new List<GameObject>();
@@ -75,6 +75,7 @@ public class WeaponManager : MonoBehaviour
 			obj.SetActive(false);
 			rocketBullets.Add(obj);
 		}
+
 	}
 	
 	// Update is called once per frame
@@ -174,7 +175,17 @@ public class WeaponManager : MonoBehaviour
 					break;
 
 				case WeaponType.ROCKET_LAUNCHER:
-					break;
+					for (int l = 0; l < rocketBullets.Count; l++)
+					{
+						if (!rocketBullets[l].activeInHierarchy)
+						{
+							rocketBullets[l].transform.position = myTransform.position;
+							rocketBullets[l].GetComponent<BulletManager>().bulletDirection = shootDirection;
+							rocketBullets[l].SetActive(true);
+							break;
+						}
+					}
+				break;
 			}
 			fireWeapon = false;
 			StartCoroutine("Cooldown");
