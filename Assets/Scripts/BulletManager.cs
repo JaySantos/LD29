@@ -11,13 +11,27 @@ public class BulletManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		//bulletDirection = Vector2.zero;
 		myTransform = transform;
+	}
+
+	void OnEnable()
+	{
+		Invoke ("Destroy", 2f);
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
 		myTransform.Translate(bulletDirection * bulletSpeed * Time.deltaTime);
+	}
+
+	void Destroy()
+	{
+		gameObject.SetActive(false);
+	}
+
+	void OnDisable()
+	{
+		CancelInvoke();
 	}
 }
