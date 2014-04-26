@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HeroManager : MonoBehaviour 
+public class HeroManager : EnhancedBehaviour 
 {
 	public float characterSpeed = 2f;
 	public bool stealthEnabled = false;
@@ -19,23 +19,34 @@ public class HeroManager : MonoBehaviour
 	public Sprite downLeft;
 
 	private Vector2 moveDirection;
-	private Transform myTransform;
+
 	private Animator legsAnim;
 
+	private Rigidbody2D body;
+	public Rigidbody2D Body {
+		get {
+			if(!body) 
+				body = rigidbody2D;
+			return body;
+		}
+	}
+
 	// Use this for initialization
-	void Start () 
+	protected override void EnhancedStart ()
 	{
+		base.EnhancedStart ();
 		moveDirection = new Vector2(0f, 0f);
-		myTransform = transform;
+
 		legsAnim = legs.GetComponent<Animator>();
 	}
 	
-	// Update is called once per frame
-	void Update () 
+	protected override void EnhancedUpdate ()
 	{
+		base.EnhancedUpdate ();
+
 		//resetting moving and shooting vectors
 		moveDirection = new Vector2(0f, 0f);
-
+		
 		//getting the moving input
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis("Vertical");
@@ -53,8 +64,8 @@ public class HeroManager : MonoBehaviour
 
 		//Moving the character
 		moveDirection = new Vector2(h, v);
-		myTransform.Translate(moveDirection * characterSpeed * Time.deltaTime);
 	}
+
 
 	public void EnableStealth()
 	{
@@ -127,5 +138,23 @@ public class HeroManager : MonoBehaviour
 		gameObject.GetComponent<SpriteRenderer>().material.color = new Color(gameObject.GetComponent<SpriteRenderer>().material.color.r, 
 		                                                                     gameObject.GetComponent<SpriteRenderer>().material.color.g, 
 		                                                                     gameObject.GetComponent<SpriteRenderer>().material.color.b, 1f);
+	}
+
+	protected override void EnhancedFixedUpdate ()
+	{
+		base.EnhancedFixedUpdate ();
+		Body.velocity = moveDirection * characterSpeed;
+	}
+
+	protected override void EnhancedOnCollisionEnter2D (Collision2D col)
+	{
+		base.EnhancedOnCollisionEnter2D (col);
+		Debug.Log("Collision");
+	}
+
+	protected override void EnhancedOnTriggerEnter2D (Collider2D col)
+	{
+		base.EnhancedOnTriggerEnter2D (col);
+		Debug.Log("Trigger");
 	}
 }

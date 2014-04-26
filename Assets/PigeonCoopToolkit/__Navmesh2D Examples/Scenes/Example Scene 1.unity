@@ -202,34 +202,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &65396730
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.39499998
-    y: .5
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -2, y: 2}
-    Obj: 5
-  - Position: {x: -2, y: 1}
-    Obj: 6
-  - Position: {x: -1, y: 1}
-    Obj: 7
-  - Position: {x: -1, y: 2}
-    Obj: 54
-  ChildNodes: []
 --- !u!1 &72309976
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,149 +454,6 @@ Prefab:
   m_RootGameObject: {fileID: 446046296}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!43 &124500778
-Mesh:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  serializedVersion: 8
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 420
-    topology: 0
-    firstVertex: 0
-    vertexCount: 88
-    localAABB:
-      m_Center: {x: 0, y: .5, z: 0}
-      m_Extent: {x: 4.28999996, y: 2.78999996, z: 0}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_MeshCompression: 0
-  m_StreamCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexBuffer: 0100570000004200570001004b00560049004d004a00480055004800460055004d0048004f004d00550051004f00530053004f0055005300550054005400550046005400460044004000440041004000540044003f00540040003f00530054003e0053003f003e00510053003d0051003e003c0052003d003d0052005100520050005100510050004f0050004e004f004f004e004d004e004c004d004d004c004a004c004b004a004a004b0049004a004900480049004700480048004700460047004500460046004500440045004300440044004300410043004200410041004200010004004100010004004000410006004000040006003f00400008003f00060008003e003f000a003e0008000a003d003e000c003d000a000c003c003d000e003c000c003b000300020039003a003b003a0003003b003a0005000300360007000500360005003a00370036003a0037003a0039003800370039003200330038003300370038003300340037003400360037003400350036003500070036003500090007002d000b0009002d00090035002e002d0035002e00350034002f002e0034002f003400330030002f00330030003300320031003000320027002800310028003000310028002900300029002f00300029002a002f002a002e002f002a002b002e002b002d002e002b002c002d002c000b002d002c000d000b0010000d002c00120010001700170010002c0017002c002b00180017002b0018002b002a00190018001d001d0018002a001d002a0029001e001d0029001e00290028001f001e00230023001e00280023002800270024002300270026002100250021002200250025002200240022002300240022001f0023001f002200210020001f0021001b001c0020001c001f0020001f001c001e001c001d001e001c0019001d0019001c001b001a0019001b00150016001a00160019001a0019001600180016001700180016001200170012001600150014001200150014001300120013001100120012001100100011000f00100010000f000d000f000e000d000d000e000c000d000c000b000b000c000a000b000a00090009000a000800090008000700070008000600070006000500050006000400050004000300030004000100030001000200020001000000
-  m_Skin: []
-  m_VertexData:
-    m_CurrentChannels: 11
-    m_VertexCount: 88
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_Streams:
-    - channelMask: 11
-      offset: 0
-      stride: 32
-      dividerOp: 0
-      frequency: 0
-    - channelMask: 0
-      offset: 0
-      stride: 0
-      dividerOp: 0
-      frequency: 0
-    - channelMask: 0
-      offset: 0
-      stride: 0
-      dividerOp: 0
-      frequency: 0
-    - channelMask: 0
-      offset: 0
-      stride: 0
-      dividerOp: 0
-      frequency: 0
-    m_DataSize: 2816
-    _typelessdata: ae4789c05c8f5240000000000000008000000080000080bfe3a5dbbeb072a83e000080c000004040000000000000008000000080000080bfcdccccbe9a99993e000080c05c8f5240000000000000008000000080000080bfcdccccbeb072a83e000040c000004040000000000000008000000080000080bf9a9999be9a99993e000040c000000040000000000000008000000080000080bf9a9999becdcc4c3e000000c000000040000000000000008000000080000080bfcdcc4cbecdcc4c3e000000c00000803f000000000000008000000080000080bfcdcc4cbecdcccc3d000080bf0000803f000000000000008000000080000080bfcdccccbdcdcccc3d000080bf00000000000000000000008000000080000080bfcdccccbd000000000000000000000000000000000000008000000080000080bf000000000000000000000000000080bf000000000000008000000080000080bf00000000cdccccbd0000803f000080bf000000000000008000000080000080bfcdcccc3dcdccccbd0000803f000000c0000000000000008000000080000080bfcdcccc3dcdcc4cbe00000040000000c0000000000000008000000080000080bfcdcc4c3ecdcc4cbe000000405c8f12c0000000000000008000000080000080bfcdcc4c3efa7e6abe000040405c8f12c0000000000000008000000080000080bf9a99993efa7e6abe00004040000000c0000000000000008000000080000080bf9a99993ecdcc4cbe000080405c8f12c0000000000000008000000080000080bfcdcccc3efa7e6abe00008040000000c0000000000000008000000080000080bfcdcccc3ecdcc4cbeae4789405c8f12c0000000000000008000000080000080bfe3a5db3efa7e6abeae478940000000c0000000000000008000000080000080bfe3a5db3ecdcc4cbeae478940000080bf000000000000008000000080000080bfe3a5db3ecdccccbd00008040000080bf000000000000008000000080000080bfcdcccc3ecdccccbd00004040000080bf000000000000008000000080000080bf9a99993ecdccccbd0000404000000000000000000000008000000080000080bf9a99993e000000000000804000000000000000000000008000000080000080bfcdcccc3e00000000ae47894000000000000000000000008000000080000080bfe3a5db3e00000000ae4789400000803f000000000000008000000080000080bfe3a5db3ecdcccc3d000080400000803f000000000000008000000080000080bfcdcccc3ecdcccc3d000040400000803f000000000000008000000080000080bf9a99993ecdcccc3d0000404000000040000000000000008000000080000080bf9a99993ecdcc4c3e0000804000000040000000000000008000000080000080bfcdcccc3ecdcc4c3eae47894000000040000000000000008000000080000080bfe3a5db3ecdcc4c3eae47894000004040000000000000008000000080000080bfe3a5db3e9a99993e0000804000004040000000000000008000000080000080bfcdcccc3e9a99993e0000404000004040000000000000008000000080000080bf9a99993e9a99993e000040405c8f5240000000000000008000000080000080bf9a99993eb072a83e000080405c8f5240000000000000008000000080000080bfcdcccc3eb072a83eae4789405c8f5240000000000000008000000080000080bfe3a5db3eb072a83e000000405c8f5240000000000000008000000080000080bfcdcc4c3eb072a83e0000004000004040000000000000008000000080000080bfcdcc4c3e9a99993e0000004000000040000000000000008000000080000080bfcdcc4c3ecdcc4c3e000000400000803f000000000000008000000080000080bfcdcc4c3ecdcccc3d0000004000000000000000000000008000000080000080bfcdcc4c3e0000000000000040000080bf000000000000008000000080000080bfcdcc4c3ecdccccbd0000803f00000000000000000000008000000080000080bfcdcccc3d000000000000803f0000803f000000000000008000000080000080bfcdcccc3dcdcccc3d0000803f00000040000000000000008000000080000080bfcdcccc3dcdcc4c3e0000803f00004040000000000000008000000080000080bfcdcccc3d9a99993e0000803f5c8f5240000000000000008000000080000080bfcdcccc3db072a83e000000005c8f5240000000000000008000000080000080bf00000000b072a83e0000000000004040000000000000008000000080000080bf000000009a99993e0000000000000040000000000000008000000080000080bf00000000cdcc4c3e000000000000803f000000000000008000000080000080bf00000000cdcccc3d000080bf00000040000000000000008000000080000080bfcdccccbdcdcc4c3e000080bf00004040000000000000008000000080000080bfcdccccbd9a99993e000080bf5c8f5240000000000000008000000080000080bfcdccccbdb072a83e000000c05c8f5240000000000000008000000080000080bfcdcc4cbeb072a83e000000c000004040000000000000008000000080000080bfcdcc4cbe9a99993e000040c05c8f5240000000000000008000000080000080bf9a9999beb072a83e0000803f5c8f12c0000000000000008000000080000080bfcdcccc3dfa7e6abe00000000000000c0000000000000008000000080000080bf00000000cdcc4cbe000080bf000080bf000000000000008000000080000080bfcdccccbdcdccccbd000000c000000000000000000000008000000080000080bfcdcc4cbe00000000000040c00000803f000000000000008000000080000080bf9a9999becdcccc3d000080c000000040000000000000008000000080000080bfcdccccbecdcc4c3eae4789c000000040000000000000008000000080000080bfe3a5dbbecdcc4c3eae4789c00000803f000000000000008000000080000080bfe3a5dbbecdcccc3d000080c00000803f000000000000008000000080000080bfcdccccbecdcccc3dae4789c000000000000000000000008000000080000080bfe3a5dbbe00000000000080c000000000000000000000008000000080000080bfcdccccbe00000000ae4789c0000080bf000000000000008000000080000080bfe3a5dbbecdccccbd000080c0000080bf000000000000008000000080000080bfcdccccbecdccccbdae4789c0000000c0000000000000008000000080000080bfe3a5dbbecdcc4cbe000080c0000000c0000000000000008000000080000080bfcdccccbecdcc4cbe000080c05c8f12c0000000000000008000000080000080bfcdccccbefa7e6abe000040c05c8f12c0000000000000008000000080000080bf9a9999befa7e6abe000040c0000000c0000000000000008000000080000080bf9a9999becdcc4cbe000000c05c8f12c0000000000000008000000080000080bfcdcc4cbefa7e6abe000000c0000000c0000000000000008000000080000080bfcdcc4cbecdcc4cbe000080bf5c8f12c0000000000000008000000080000080bfcdccccbdfa7e6abe000080bf000000c0000000000000008000000080000080bfcdccccbdcdcc4cbe000000005c8f12c0000000000000008000000080000080bf00000000fa7e6abe000000c0000080bf000000000000008000000080000080bfcdcc4cbecdccccbd000040c000000000000000000000008000000080000080bf9a9999be00000000000040c0000080bf000000000000008000000080000080bf9a9999becdccccbdae4789c05c8f12c0000000000000008000000080000080bfe3a5dbbefa7e6abeae4789c000004040000000000000008000000080000080bfe3a5dbbe9a99993e
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BindPoses:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Colors:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: .5, z: 0}
-    m_Extent: {x: 4.28999996, y: 2.78999996, z: 0}
-  m_MeshUsageFlags: 0
-  m_MeshOptimized: 0
 --- !u!1 &126354995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,102 +1043,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &271042913
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.78999996
-    y: .5
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -3, y: 2}
-    Obj: 4
-  - Position: {x: -3, y: 1}
-    Obj: 64
-  - Position: {x: -4, y: 2}
-    Obj: 65
-  - Position: {x: -4.28999996, y: 2}
-    Obj: 66
-  - Position: {x: -4.28999996, y: 1}
-    Obj: 67
-  - Position: {x: -4, y: 1}
-    Obj: 68
-  ChildNodes: []
---- !u!114 &278422307
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 2.39499998
-    y: -2.78999996
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 3, y: -2.28999996}
-    Obj: 15
-  - Position: {x: 3, y: -2}
-    Obj: 16
-  - Position: {x: 4, y: -2.28999996}
-    Obj: 17
-  - Position: {x: 4, y: -2}
-    Obj: 18
-  - Position: {x: 4.28999996, y: -2.28999996}
-    Obj: 19
-  - Position: {x: 4.28999996, y: -2}
-    Obj: 20
-  ChildNodes: []
---- !u!114 &325967568
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 2.39499998
-    y: -1.14499998
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 4.28999996, y: -1}
-    Obj: 21
-  - Position: {x: 4, y: -1}
-    Obj: 22
-  - Position: {x: 3, y: -1}
-    Obj: 23
-  - Position: {x: 3, y: 0}
-    Obj: 24
-  - Position: {x: 4, y: 0}
-    Obj: 25
-  - Position: {x: 4.28999996, y: 0}
-    Obj: 26
-  ChildNodes: []
 --- !u!1 &353950717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,8 +1534,8 @@ MonoBehaviour:
     Obj: 86
   - Position: {x: -4.28999996, y: 3}
     Obj: 87
-  NodeIndexQuadTreeNode: {fileID: 1040425516}
-  ObstructionLayer: Water
+  NodeIndexQuadTreeNode: {fileID: 0}
+  ObstructionLayer: 5761746572
 --- !u!114 &468581477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1820,7 +1553,7 @@ MonoBehaviour:
     - {x: -4.28999996, y: 3.28999996}
     - {x: -4.28999996, y: -2.28999996}
     - {x: 4.28999996, y: -2.28999996}
-  NavMesh: {fileID: 124500778}
+  NavMesh: {fileID: 0}
   NavMesh2DNodes:
   - connections:
     - connectionType: 0
@@ -2908,8 +2641,8 @@ MonoBehaviour:
     position: {x: -4.28999996, y: 3, z: 0}
   NodeNodeIndexQuadTree: {fileID: 468581476}
   GenerationInformation:
-    WalkableColliderLayer: Default
-    ObstructionColliderLayer: Water
+    WalkableColliderLayer: 44656661756c74
+    ObstructionColliderLayer: 5761746572
     CircleColliderSubdivisionFactor: .25
     CalculationScaleFactor: 100
     ColliderPadding: .214000002
@@ -2917,7 +2650,7 @@ MonoBehaviour:
     GridSize: {x: 1, y: 1}
     JoinType: 2
   Version:
-    Name: NavMesh2D
+    Name: 4e61764d6573683244
     Major: 1
     Minor: 5
     Patch: 1
@@ -3027,38 +2760,6 @@ Prefab:
   m_RootGameObject: {fileID: 973069263}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &546307636
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.78999996
-    y: -2.78999996
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -4.28999996, y: -2}
-    Obj: 73
-  - Position: {x: -4, y: -2}
-    Obj: 74
-  - Position: {x: -4, y: -2.28999996}
-    Obj: 75
-  - Position: {x: -3, y: -2.28999996}
-    Obj: 76
-  - Position: {x: -3, y: -2}
-    Obj: 77
-  - Position: {x: -4.28999996, y: -2.28999996}
-    Obj: 86
-  ChildNodes: []
 --- !u!1001 &552480039
 Prefab:
   m_ObjectHideFlags: 0
@@ -3456,38 +3157,6 @@ Prefab:
   m_RootGameObject: {fileID: 212586667}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &728228624
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 2.39499998
-    y: 2.14499998
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 4.28999996, y: 3}
-    Obj: 33
-  - Position: {x: 4, y: 3}
-    Obj: 34
-  - Position: {x: 3, y: 3}
-    Obj: 35
-  - Position: {x: 3, y: 3.28999996}
-    Obj: 36
-  - Position: {x: 4, y: 3.28999996}
-    Obj: 37
-  - Position: {x: 4.28999996, y: 3.28999996}
-    Obj: 38
-  ChildNodes: []
 --- !u!1001 &728987286
 Prefab:
   m_ObjectHideFlags: 0
@@ -3693,38 +3362,6 @@ Prefab:
   m_RootGameObject: {fileID: 262559759}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &762307880
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 0
-    y: -2.78999996
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 1, y: -2}
-    Obj: 12
-  - Position: {x: 2, y: -2}
-    Obj: 13
-  - Position: {x: 2, y: -2.28999996}
-    Obj: 14
-  - Position: {x: 1, y: -2.28999996}
-    Obj: 60
-  - Position: {x: 0, y: -2}
-    Obj: 61
-  - Position: {x: 0, y: -2.28999996}
-    Obj: 82
-  ChildNodes: []
 --- !u!1001 &796384538
 Prefab:
   m_ObjectHideFlags: 0
@@ -4415,34 +4052,6 @@ Prefab:
   m_RootGameObject: {fileID: 47988419}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &946976475
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.39499998
-    y: -1.14499998
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -1, y: 0}
-    Obj: 8
-  - Position: {x: -1, y: -1}
-    Obj: 62
-  - Position: {x: -2, y: 0}
-    Obj: 63
-  - Position: {x: -2, y: -1}
-    Obj: 83
-  ChildNodes: []
 --- !u!1001 &950594751
 Prefab:
   m_ObjectHideFlags: 0
@@ -4490,34 +4099,6 @@ Prefab:
   m_RootGameObject: {fileID: 164685684}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &959948148
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.39499998
-    y: -2.78999996
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -2, y: -2.28999996}
-    Obj: 78
-  - Position: {x: -2, y: -2}
-    Obj: 79
-  - Position: {x: -1, y: -2.28999996}
-    Obj: 80
-  - Position: {x: -1, y: -2}
-    Obj: 81
-  ChildNodes: []
 --- !u!1 &973069263
 GameObject:
   m_ObjectHideFlags: 0
@@ -4994,238 +4575,6 @@ Prefab:
   m_RootGameObject: {fileID: 1191852523}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1040425516
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.78999996
-    y: -2.78999996
-    width: 9.57999992
-    height: 6.57999992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -4.28999996, y: 3.28999996}
-    Obj: 0
-  - Position: {x: -4, y: 3}
-    Obj: 1
-  - Position: {x: -4, y: 3.28999996}
-    Obj: 2
-  - Position: {x: -3, y: 3}
-    Obj: 3
-  - Position: {x: -3, y: 2}
-    Obj: 4
-  - Position: {x: -2, y: 2}
-    Obj: 5
-  - Position: {x: -2, y: 1}
-    Obj: 6
-  - Position: {x: -1, y: 1}
-    Obj: 7
-  - Position: {x: -1, y: 0}
-    Obj: 8
-  - Position: {x: 0, y: 0}
-    Obj: 9
-  - Position: {x: 0, y: -1}
-    Obj: 10
-  - Position: {x: 1, y: -1}
-    Obj: 11
-  - Position: {x: 1, y: -2}
-    Obj: 12
-  - Position: {x: 2, y: -2}
-    Obj: 13
-  - Position: {x: 2, y: -2.28999996}
-    Obj: 14
-  - Position: {x: 3, y: -2.28999996}
-    Obj: 15
-  - Position: {x: 3, y: -2}
-    Obj: 16
-  - Position: {x: 4, y: -2.28999996}
-    Obj: 17
-  - Position: {x: 4, y: -2}
-    Obj: 18
-  - Position: {x: 4.28999996, y: -2.28999996}
-    Obj: 19
-  - Position: {x: 4.28999996, y: -2}
-    Obj: 20
-  - Position: {x: 4.28999996, y: -1}
-    Obj: 21
-  - Position: {x: 4, y: -1}
-    Obj: 22
-  - Position: {x: 3, y: -1}
-    Obj: 23
-  - Position: {x: 3, y: 0}
-    Obj: 24
-  - Position: {x: 4, y: 0}
-    Obj: 25
-  - Position: {x: 4.28999996, y: 0}
-    Obj: 26
-  - Position: {x: 4.28999996, y: 1}
-    Obj: 27
-  - Position: {x: 4, y: 1}
-    Obj: 28
-  - Position: {x: 3, y: 1}
-    Obj: 29
-  - Position: {x: 3, y: 2}
-    Obj: 30
-  - Position: {x: 4, y: 2}
-    Obj: 31
-  - Position: {x: 4.28999996, y: 2}
-    Obj: 32
-  - Position: {x: 4.28999996, y: 3}
-    Obj: 33
-  - Position: {x: 4, y: 3}
-    Obj: 34
-  - Position: {x: 3, y: 3}
-    Obj: 35
-  - Position: {x: 3, y: 3.28999996}
-    Obj: 36
-  - Position: {x: 4, y: 3.28999996}
-    Obj: 37
-  - Position: {x: 4.28999996, y: 3.28999996}
-    Obj: 38
-  - Position: {x: 2, y: 3.28999996}
-    Obj: 39
-  - Position: {x: 2, y: 3}
-    Obj: 40
-  - Position: {x: 2, y: 2}
-    Obj: 41
-  - Position: {x: 2, y: 1}
-    Obj: 42
-  - Position: {x: 2, y: 0}
-    Obj: 43
-  - Position: {x: 2, y: -1}
-    Obj: 44
-  - Position: {x: 1, y: 0}
-    Obj: 45
-  - Position: {x: 1, y: 1}
-    Obj: 46
-  - Position: {x: 1, y: 2}
-    Obj: 47
-  - Position: {x: 1, y: 3}
-    Obj: 48
-  - Position: {x: 1, y: 3.28999996}
-    Obj: 49
-  - Position: {x: 0, y: 3.28999996}
-    Obj: 50
-  - Position: {x: 0, y: 3}
-    Obj: 51
-  - Position: {x: 0, y: 2}
-    Obj: 52
-  - Position: {x: 0, y: 1}
-    Obj: 53
-  - Position: {x: -1, y: 2}
-    Obj: 54
-  - Position: {x: -1, y: 3}
-    Obj: 55
-  - Position: {x: -1, y: 3.28999996}
-    Obj: 56
-  - Position: {x: -2, y: 3.28999996}
-    Obj: 57
-  - Position: {x: -2, y: 3}
-    Obj: 58
-  - Position: {x: -3, y: 3.28999996}
-    Obj: 59
-  - Position: {x: 1, y: -2.28999996}
-    Obj: 60
-  - Position: {x: 0, y: -2}
-    Obj: 61
-  - Position: {x: -1, y: -1}
-    Obj: 62
-  - Position: {x: -2, y: 0}
-    Obj: 63
-  - Position: {x: -3, y: 1}
-    Obj: 64
-  - Position: {x: -4, y: 2}
-    Obj: 65
-  - Position: {x: -4.28999996, y: 2}
-    Obj: 66
-  - Position: {x: -4.28999996, y: 1}
-    Obj: 67
-  - Position: {x: -4, y: 1}
-    Obj: 68
-  - Position: {x: -4.28999996, y: 0}
-    Obj: 69
-  - Position: {x: -4, y: 0}
-    Obj: 70
-  - Position: {x: -4.28999996, y: -1}
-    Obj: 71
-  - Position: {x: -4, y: -1}
-    Obj: 72
-  - Position: {x: -4.28999996, y: -2}
-    Obj: 73
-  - Position: {x: -4, y: -2}
-    Obj: 74
-  - Position: {x: -4, y: -2.28999996}
-    Obj: 75
-  - Position: {x: -3, y: -2.28999996}
-    Obj: 76
-  - Position: {x: -3, y: -2}
-    Obj: 77
-  - Position: {x: -2, y: -2.28999996}
-    Obj: 78
-  - Position: {x: -2, y: -2}
-    Obj: 79
-  - Position: {x: -1, y: -2.28999996}
-    Obj: 80
-  - Position: {x: -1, y: -2}
-    Obj: 81
-  - Position: {x: 0, y: -2.28999996}
-    Obj: 82
-  - Position: {x: -2, y: -1}
-    Obj: 83
-  - Position: {x: -3, y: 0}
-    Obj: 84
-  - Position: {x: -3, y: -1}
-    Obj: 85
-  - Position: {x: -4.28999996, y: -2.28999996}
-    Obj: 86
-  - Position: {x: -4.28999996, y: 3}
-    Obj: 87
-  ChildNodes:
-  - {fileID: 1351169291}
-  - {fileID: 2126016070}
-  - {fileID: 1902921632}
-  - {fileID: 1604129380}
---- !u!114 &1046137160
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 0
-    y: -1.14499998
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 0, y: 0}
-    Obj: 9
-  - Position: {x: 0, y: -1}
-    Obj: 10
-  - Position: {x: 1, y: -1}
-    Obj: 11
-  - Position: {x: 2, y: 0}
-    Obj: 43
-  - Position: {x: 2, y: -1}
-    Obj: 44
-  - Position: {x: 1, y: 0}
-    Obj: 45
-  ChildNodes: []
 --- !u!1001 &1076889536
 Prefab:
   m_ObjectHideFlags: 0
@@ -6375,70 +5724,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!114 &1351169291
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.78999996
-    y: -2.78999996
-    width: 4.78999996
-    height: 3.28999996
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -1, y: 0}
-    Obj: 8
-  - Position: {x: -1, y: -1}
-    Obj: 62
-  - Position: {x: -2, y: 0}
-    Obj: 63
-  - Position: {x: -4.28999996, y: 0}
-    Obj: 69
-  - Position: {x: -4, y: 0}
-    Obj: 70
-  - Position: {x: -4.28999996, y: -1}
-    Obj: 71
-  - Position: {x: -4, y: -1}
-    Obj: 72
-  - Position: {x: -4.28999996, y: -2}
-    Obj: 73
-  - Position: {x: -4, y: -2}
-    Obj: 74
-  - Position: {x: -4, y: -2.28999996}
-    Obj: 75
-  - Position: {x: -3, y: -2.28999996}
-    Obj: 76
-  - Position: {x: -3, y: -2}
-    Obj: 77
-  - Position: {x: -2, y: -2.28999996}
-    Obj: 78
-  - Position: {x: -2, y: -2}
-    Obj: 79
-  - Position: {x: -1, y: -2.28999996}
-    Obj: 80
-  - Position: {x: -1, y: -2}
-    Obj: 81
-  - Position: {x: -2, y: -1}
-    Obj: 83
-  - Position: {x: -3, y: 0}
-    Obj: 84
-  - Position: {x: -3, y: -1}
-    Obj: 85
-  - Position: {x: -4.28999996, y: -2.28999996}
-    Obj: 86
-  ChildNodes:
-  - {fileID: 546307636}
-  - {fileID: 959948148}
-  - {fileID: 1805863821}
-  - {fileID: 946976475}
 --- !u!1001 &1367176668
 Prefab:
   m_ObjectHideFlags: 0
@@ -6486,38 +5771,6 @@ Prefab:
   m_RootGameObject: {fileID: 1561134394}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1379819874
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 2.39499998
-    y: .5
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 4.28999996, y: 1}
-    Obj: 27
-  - Position: {x: 4, y: 1}
-    Obj: 28
-  - Position: {x: 3, y: 1}
-    Obj: 29
-  - Position: {x: 3, y: 2}
-    Obj: 30
-  - Position: {x: 4, y: 2}
-    Obj: 31
-  - Position: {x: 4.28999996, y: 2}
-    Obj: 32
-  ChildNodes: []
 --- !u!1 &1409791034
 GameObject:
   m_ObjectHideFlags: 0
@@ -6881,38 +6134,6 @@ Prefab:
   m_RootGameObject: {fileID: 2025392565}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1543907286
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.78999996
-    y: 2.14499998
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -4.28999996, y: 3.28999996}
-    Obj: 0
-  - Position: {x: -4, y: 3}
-    Obj: 1
-  - Position: {x: -4, y: 3.28999996}
-    Obj: 2
-  - Position: {x: -3, y: 3}
-    Obj: 3
-  - Position: {x: -3, y: 3.28999996}
-    Obj: 59
-  - Position: {x: -4.28999996, y: 3}
-    Obj: 87
-  ChildNodes: []
 --- !u!1001 &1548870360
 Prefab:
   m_ObjectHideFlags: 0
@@ -7088,78 +6309,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &1604129380
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 0
-    y: .5
-    width: 4.78999996
-    height: 3.28999996
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 4.28999996, y: 1}
-    Obj: 27
-  - Position: {x: 4, y: 1}
-    Obj: 28
-  - Position: {x: 3, y: 1}
-    Obj: 29
-  - Position: {x: 3, y: 2}
-    Obj: 30
-  - Position: {x: 4, y: 2}
-    Obj: 31
-  - Position: {x: 4.28999996, y: 2}
-    Obj: 32
-  - Position: {x: 4.28999996, y: 3}
-    Obj: 33
-  - Position: {x: 4, y: 3}
-    Obj: 34
-  - Position: {x: 3, y: 3}
-    Obj: 35
-  - Position: {x: 3, y: 3.28999996}
-    Obj: 36
-  - Position: {x: 4, y: 3.28999996}
-    Obj: 37
-  - Position: {x: 4.28999996, y: 3.28999996}
-    Obj: 38
-  - Position: {x: 2, y: 3.28999996}
-    Obj: 39
-  - Position: {x: 2, y: 3}
-    Obj: 40
-  - Position: {x: 2, y: 2}
-    Obj: 41
-  - Position: {x: 2, y: 1}
-    Obj: 42
-  - Position: {x: 1, y: 1}
-    Obj: 46
-  - Position: {x: 1, y: 2}
-    Obj: 47
-  - Position: {x: 1, y: 3}
-    Obj: 48
-  - Position: {x: 1, y: 3.28999996}
-    Obj: 49
-  - Position: {x: 0, y: 3.28999996}
-    Obj: 50
-  - Position: {x: 0, y: 3}
-    Obj: 51
-  - Position: {x: 0, y: 2}
-    Obj: 52
-  - Position: {x: 0, y: 1}
-    Obj: 53
-  ChildNodes:
-  - {fileID: 1694975859}
-  - {fileID: 1379819874}
-  - {fileID: 1905246141}
-  - {fileID: 728228624}
 --- !u!1001 &1616979547
 Prefab:
   m_ObjectHideFlags: 0
@@ -7523,38 +6672,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &1694975859
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 0
-    y: .5
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 2, y: 2}
-    Obj: 41
-  - Position: {x: 2, y: 1}
-    Obj: 42
-  - Position: {x: 1, y: 1}
-    Obj: 46
-  - Position: {x: 1, y: 2}
-    Obj: 47
-  - Position: {x: 0, y: 2}
-    Obj: 52
-  - Position: {x: 0, y: 1}
-    Obj: 53
-  ChildNodes: []
 --- !u!1001 &1728934128
 Prefab:
   m_ObjectHideFlags: 0
@@ -7807,38 +6924,6 @@ Prefab:
   m_RootGameObject: {fileID: 811363195}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1805863821
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.78999996
-    y: -1.14499998
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -4.28999996, y: 0}
-    Obj: 69
-  - Position: {x: -4, y: 0}
-    Obj: 70
-  - Position: {x: -4.28999996, y: -1}
-    Obj: 71
-  - Position: {x: -4, y: -1}
-    Obj: 72
-  - Position: {x: -3, y: 0}
-    Obj: 84
-  - Position: {x: -3, y: -1}
-    Obj: 85
-  ChildNodes: []
 --- !u!1 &1818990317
 GameObject:
   m_ObjectHideFlags: 0
@@ -8253,70 +7338,6 @@ Prefab:
   m_RootGameObject: {fileID: 2028534540}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1902921632
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.78999996
-    y: .5
-    width: 4.78999996
-    height: 3.28999996
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -4.28999996, y: 3.28999996}
-    Obj: 0
-  - Position: {x: -4, y: 3}
-    Obj: 1
-  - Position: {x: -4, y: 3.28999996}
-    Obj: 2
-  - Position: {x: -3, y: 3}
-    Obj: 3
-  - Position: {x: -3, y: 2}
-    Obj: 4
-  - Position: {x: -2, y: 2}
-    Obj: 5
-  - Position: {x: -2, y: 1}
-    Obj: 6
-  - Position: {x: -1, y: 1}
-    Obj: 7
-  - Position: {x: -1, y: 2}
-    Obj: 54
-  - Position: {x: -1, y: 3}
-    Obj: 55
-  - Position: {x: -1, y: 3.28999996}
-    Obj: 56
-  - Position: {x: -2, y: 3.28999996}
-    Obj: 57
-  - Position: {x: -2, y: 3}
-    Obj: 58
-  - Position: {x: -3, y: 3.28999996}
-    Obj: 59
-  - Position: {x: -3, y: 1}
-    Obj: 64
-  - Position: {x: -4, y: 2}
-    Obj: 65
-  - Position: {x: -4.28999996, y: 2}
-    Obj: 66
-  - Position: {x: -4.28999996, y: 1}
-    Obj: 67
-  - Position: {x: -4, y: 1}
-    Obj: 68
-  - Position: {x: -4.28999996, y: 3}
-    Obj: 87
-  ChildNodes:
-  - {fileID: 271042913}
-  - {fileID: 65396730}
-  - {fileID: 1543907286}
-  - {fileID: 2098363495}
 --- !u!1 &1902936621
 GameObject:
   m_ObjectHideFlags: 0
@@ -8381,38 +7402,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &1905246141
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 0
-    y: 2.14499998
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 2, y: 3.28999996}
-    Obj: 39
-  - Position: {x: 2, y: 3}
-    Obj: 40
-  - Position: {x: 1, y: 3}
-    Obj: 48
-  - Position: {x: 1, y: 3.28999996}
-    Obj: 49
-  - Position: {x: 0, y: 3.28999996}
-    Obj: 50
-  - Position: {x: 0, y: 3}
-    Obj: 51
-  ChildNodes: []
 --- !u!1 &1941872184
 GameObject:
   m_ObjectHideFlags: 0
@@ -8826,103 +7815,3 @@ Prefab:
   m_RootGameObject: {fileID: 1285411499}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &2098363495
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.39499998
-    y: 2.14499998
-    width: 2.39499998
-    height: 1.64499998
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -1, y: 3}
-    Obj: 55
-  - Position: {x: -1, y: 3.28999996}
-    Obj: 56
-  - Position: {x: -2, y: 3.28999996}
-    Obj: 57
-  - Position: {x: -2, y: 3}
-    Obj: 58
-  ChildNodes: []
---- !u!114 &2126016070
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 0
-    y: -2.78999996
-    width: 4.78999996
-    height: 3.28999996
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 0, y: 0}
-    Obj: 9
-  - Position: {x: 0, y: -1}
-    Obj: 10
-  - Position: {x: 1, y: -1}
-    Obj: 11
-  - Position: {x: 1, y: -2}
-    Obj: 12
-  - Position: {x: 2, y: -2}
-    Obj: 13
-  - Position: {x: 2, y: -2.28999996}
-    Obj: 14
-  - Position: {x: 3, y: -2.28999996}
-    Obj: 15
-  - Position: {x: 3, y: -2}
-    Obj: 16
-  - Position: {x: 4, y: -2.28999996}
-    Obj: 17
-  - Position: {x: 4, y: -2}
-    Obj: 18
-  - Position: {x: 4.28999996, y: -2.28999996}
-    Obj: 19
-  - Position: {x: 4.28999996, y: -2}
-    Obj: 20
-  - Position: {x: 4.28999996, y: -1}
-    Obj: 21
-  - Position: {x: 4, y: -1}
-    Obj: 22
-  - Position: {x: 3, y: -1}
-    Obj: 23
-  - Position: {x: 3, y: 0}
-    Obj: 24
-  - Position: {x: 4, y: 0}
-    Obj: 25
-  - Position: {x: 4.28999996, y: 0}
-    Obj: 26
-  - Position: {x: 2, y: 0}
-    Obj: 43
-  - Position: {x: 2, y: -1}
-    Obj: 44
-  - Position: {x: 1, y: 0}
-    Obj: 45
-  - Position: {x: 1, y: -2.28999996}
-    Obj: 60
-  - Position: {x: 0, y: -2}
-    Obj: 61
-  - Position: {x: 0, y: -2.28999996}
-    Obj: 82
-  ChildNodes:
-  - {fileID: 762307880}
-  - {fileID: 278422307}
-  - {fileID: 1046137160}
-  - {fileID: 325967568}
