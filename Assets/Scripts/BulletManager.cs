@@ -28,7 +28,6 @@ public class BulletManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		//myTransform.Translate(bulletDirection * bulletSpeed * Time.deltaTime);
 	}
 
 	void Destroy()

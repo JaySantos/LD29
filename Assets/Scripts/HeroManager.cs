@@ -4,6 +4,7 @@ using System.Collections;
 public class HeroManager : MonoBehaviour 
 {
 	public float characterSpeed = 2f;
+	public bool stealthEnabled = false;
 
 	private Vector2 moveDirection;
 	private Transform myTransform;

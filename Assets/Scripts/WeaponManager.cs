@@ -36,7 +36,7 @@ public class WeaponManager : MonoBehaviour
 		fireWeapon = true;
 		shootDirection = new Vector2(0f, 0f);
 		myTransform = transform;
-		weaponType = WeaponType.ROCKET_LAUNCHER;
+		weaponType = WeaponType.MACHINE_GUN;
 
 		//Pooling bullets...
 		defaultBullets = new List<GameObject>();
