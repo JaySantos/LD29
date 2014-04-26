@@ -31,6 +31,8 @@ public class SpherePowerUpTest : MonoBehaviour
 		foreach (Transform t in transform)
 		{
 			t.GetComponent<SphereManager>().moveSphere = true;
+			t.GetComponent<Animation>().Stop();
+			Destroy(t.gameObject, 2.0f);
 		}
 	}
 }
