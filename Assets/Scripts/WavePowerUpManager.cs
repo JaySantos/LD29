@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WavePoewrUpManager : MonoBehaviour 
+public class WavePowerUpManager : MonoBehaviour 
 {
 	public float stealthTime = 5.0f;
 
