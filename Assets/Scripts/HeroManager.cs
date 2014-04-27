@@ -9,6 +9,7 @@ public class HeroManager : EnhancedBehaviour
 	public float stealthTime = 5.0f;
 	public GameObject legs;
 	public ScoreManager scoreManager;
+	public GameObject invisiblePrefab;
 
 	public Sprite up;
 	public Sprite down;
@@ -108,6 +109,8 @@ public class HeroManager : EnhancedBehaviour
 		legs.GetComponent<SpriteRenderer>().material.color = new Color(gameObject.GetComponent<SpriteRenderer>().material.color.r, 
 		                                                               gameObject.GetComponent<SpriteRenderer>().material.color.g, 
 		                                                               gameObject.GetComponent<SpriteRenderer>().material.color.b, 0.5f);
+		GameObject invisible = (GameObject)Instantiate(invisiblePrefab, transform.position, Quaternion.identity);
+		invisible.transform.parent = transform;
 		StartCoroutine("DisableStealth");
 	}
 
@@ -118,6 +121,7 @@ public class HeroManager : EnhancedBehaviour
 		{
 			hitPoints = 5;
 		}
+		scoreManager.UpdateScore();
 	}
 
 	public void SetBodySprite(Vector2 v)
@@ -173,6 +177,13 @@ public class HeroManager : EnhancedBehaviour
 		gameObject.GetComponent<SpriteRenderer>().material.color = new Color(gameObject.GetComponent<SpriteRenderer>().material.color.r, 
 		                                                                     gameObject.GetComponent<SpriteRenderer>().material.color.g, 
 		                                                                     gameObject.GetComponent<SpriteRenderer>().material.color.b, 1f);
+		foreach(Transform t in transform)
+		{
+			if (t.gameObject.tag == "InvisibleFX")
+			{
+				Destroy (t.gameObject);
+			}
+		}
 	}
 
 	protected override void EnhancedFixedUpdate ()
@@ -184,13 +195,12 @@ public class HeroManager : EnhancedBehaviour
 	protected override void EnhancedOnCollisionEnter2D (Collision2D col)
 	{
 		base.EnhancedOnCollisionEnter2D (col);
-		Debug.Log("Collision");
 	}
 
 	void OnTriggerEnter2D (Collider2D col)
 	{
 		//base.EnhancedOnTriggerEnter2D (col);
-		if (col.gameObject.tag == "Enemy" && !invincibleAfterHit)
+		if (col.gameObject.tag == "Enemy" && !invincibleAfterHit && !stealthEnabled)
 		{
 			gameObject.GetComponent<Animation>().Play("HitFlash");
 			hitPoints--;

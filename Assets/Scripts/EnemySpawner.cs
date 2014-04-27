@@ -7,7 +7,7 @@ public class EnemySpawner : EnhancedBehaviour {
 	public float freezeTime = 5.0f;
 
 	[SerializeField]
-	Enemy enemyPrefab;
+	Enemy[] enemyPrefabs;
 
 	/// <summary>
 	/// Guarda a posiçao das portas do jogo.
@@ -56,8 +56,10 @@ public class EnemySpawner : EnhancedBehaviour {
 		base.EnhancedOnEnable();
 
 		// Crio uma piscina de inimigos para reaproveitar
-		enemyPrefab.CreatePool();
-		
+		for (int i = 0; i < enemyPrefabs.Length; i++) {
+			enemyPrefabs[i].CreatePool();	
+		}
+
 		List<Transform> transforms = new List<Transform>(GetComponentsInChildren<Transform>(false));
 		transforms.Remove(transform);
 		spawnPoints = transforms.ToArray();
@@ -67,6 +69,18 @@ public class EnemySpawner : EnhancedBehaviour {
 	[SerializeField]
 	int maxEnemies = 1;
 
+	public int MaxEnemies
+	{
+		get
+		{
+			return maxEnemies;
+		}
+		set
+		{
+			maxEnemies = value;
+		}
+	}
+
 	public static int NumEnemies = 0;
 
 	public void StartSpawning()
@@ -74,12 +88,17 @@ public class EnemySpawner : EnhancedBehaviour {
 		InvokeRepeating("Spawn", Time.time, spawnInterval);
 	}
 
+	public void StopSpawning()
+	{
+		CancelInvoke();
+	}
+
 	void Spawn() {
 
 		if(NumEnemies < maxEnemies && !IsFrozen) {
 
 			Vector3 rndPosition = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
-			Enemy enemy = enemyPrefab.Spawn(rndPosition);
+			Enemy enemy = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)].Spawn(rndPosition);
 			enemy.gameObject.transform.parent = gameScene.transform;
 			enemy.GetComponent<SpriteRenderer>().sortingLayerID = 2;
 			enemy.Player = player;

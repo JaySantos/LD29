@@ -7,7 +7,7 @@ public class WeaponPickupManager : MonoBehaviour
 	private const int SHOTGUN = 1;
 	private const int ROCKET_LAUNCHER = 2;
 	
-	public int machineGunAmmo = 100;
+	public int machineGunAmmo = 30;
 	public int shotgunAmmo = 10;
 	public int rocketLauncherAmmo = 5;
 	
@@ -80,18 +80,41 @@ public class WeaponPickupManager : MonoBehaviour
 			switch (powerUp)
 			{
 			case MACHINE_GUN:
-				wm.weaponType = WeaponManager.WeaponType.MACHINE_GUN;
-				wm.ammo = machineGunAmmo;
+				if (wm.weaponType != WeaponManager.WeaponType.MACHINE_GUN)
+				{
+					wm.weaponType = WeaponManager.WeaponType.MACHINE_GUN;
+					Debug.Log("Machine Gun Ammo = " + machineGunAmmo);
+					wm.ammo = machineGunAmmo;
+				}
+				else
+				{
+					wm.ammo += machineGunAmmo;
+				}
 				break;
 				
 			case SHOTGUN:
-				wm.weaponType = WeaponManager.WeaponType.SHOTGUN;
-				wm.ammo = shotgunAmmo;
+				if (wm.weaponType != WeaponManager.WeaponType.SHOTGUN)
+				{
+					wm.weaponType = WeaponManager.WeaponType.SHOTGUN;
+					wm.ammo = shotgunAmmo;
+				}
+				else
+				{
+					wm.ammo += shotgunAmmo;
+				}
 				break;
 				
 			case ROCKET_LAUNCHER:
-				wm.weaponType = WeaponManager.WeaponType.ROCKET_LAUNCHER;
-				wm.ammo = rocketLauncherAmmo;
+				if (wm.weaponType != WeaponManager.WeaponType.ROCKET_LAUNCHER)
+				{
+					wm.weaponType = WeaponManager.WeaponType.ROCKET_LAUNCHER;
+					wm.ammo = rocketLauncherAmmo;
+				}
+				else
+				{
+					wm.ammo += rocketLauncherAmmo;
+				}
+
 				break;
 			}
 			anim.SetTrigger("Empty");

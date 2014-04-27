@@ -61,6 +61,8 @@
      <Compile Include="Assets\PigeonCoopToolkit\__Navmesh2D Examples\Scripts\Mover.cs" />
      <Compile Include="Assets\PigeonCoopToolkit\__Navmesh2D Examples\Scripts\PathFollower.cs" />
      <Compile Include="Assets\Scripts\AboutManager.cs" />
+     <Compile Include="Assets\Scripts\AnimateDrone.cs" />
+     <Compile Include="Assets\Scripts\AnimateGrunt.cs" />
      <Compile Include="Assets\Scripts\BulletManager.cs" />
      <Compile Include="Assets\Scripts\CameraShake.cs" />
      <Compile Include="Assets\Scripts\CirclePowerUpManager.cs" />
@@ -69,6 +71,7 @@
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\HeroManager.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\MainMenuManager.cs" />
      <Compile Include="Assets\Scripts\PowerUpManager.cs" />
      <Compile Include="Assets\Scripts\ScenesManager.cs" />

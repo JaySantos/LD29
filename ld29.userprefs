@@ -1,9 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scenes\TESTE.unity">
     <Files>
-      <File FileName="Assets\Scripts\Enemy.cs" Line="85" Column="35" />
-      <File FileName="Assets\Plugins\My Scripts\Classes\ExtensionMethods.cs" Line="87" Column="35" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="13" Column="46" />
+      <File FileName="Assets\Scripts\Enemy.cs" Line="392" Column="3" />
+      <File FileName="Assets\Scripts\EnemySpawner.cs" Line="100" Column="63" />
+      <File FileName="Assets\Scripts\HeroManager.cs" Line="89" Column="9" />
+      <File FileName="Assets\Scenes\TESTE.unity" Line="667" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

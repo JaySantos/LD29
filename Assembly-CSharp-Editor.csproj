@@ -71,7 +71,7 @@
  <HintPath>C:/Program Files (x86)/Unity Beta/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Poly2Tri">
- <HintPath>C:/Users/EMANUEL/Documents/GitHub/LD29/Assets/PigeonCoopToolkit/External/Editor/Poly2Tri/Poly2Tri.dll</HintPath>
+ <HintPath>C:/Users/Public/Documents/Unity Projects/LD29/Assets/PigeonCoopToolkit/External/Editor/Poly2Tri/Poly2Tri.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity Beta/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
