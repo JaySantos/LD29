@@ -1,0 +1,35 @@
+Camera Shake Changelog
+
+************ Version 1.3.1f1 ***********
+Fixed depreciated warnings for newer Unity versions.
+Renamed CameraShakeEditor.cs to CameraShakeInspector.cs.
+
+************ Version 1.3.0f1 ************
+NOTE: This version includes some refactoring and API changes (including a namespace change) - Make sure to back up before upgrading as serialized values WILL be wiped!
+
+Renamed ThinksquirrelSoftware namespace to Thinksquirrel. Users using Unity 3 should not import the Thinksquirrel.Utilities namespace in their projects.
+Changed version numbering scheme to match other Thinksquirrel products.
+Changed Camera.Shake methods to CameraShake.ShakeAll, Changed DoShake methods to Shake, depreciated instance property, and introduced a method to get all Camera Shake components in the scene.
+Some code cleanup and less garbage allocation.
+Added support to adjust local position when shaking instead of the camera matrix. This is recommended to resolve issues with shadows.
+Added onPreShake and onPostShake events for each individual shake. These can be assigned and then used with the parameterless Shake() methods to cut down on boilerplate code.
+
+************ Version 1.2.0 ************
+Added a CancelShake overload that takes a time argument. This will immediately cancel all shakes and move the camera matrix back to its original position.
+Small compatibility fix for future Unity versions.
+
+************ Version 1.1.0 ************
+Added shake rotation - works on both orthographic and perspective cameras.
+Various performance fixes.
+
+************ Version 1.0.2 ************
+Critical matrix transformation bugfix. Please update!
+
+************ Version 1.0.1 ************
+Added support for multiple cameras.
+NOTE: The GUI shake distance is based on the first camera in the camera list.
+
+The camera matrix is adjusted directly instead of the local transform - moving cameras can now shake properly.
+
+************ Version 1.0.0 ************
+Initial version.
