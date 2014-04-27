@@ -31,6 +31,7 @@ public class EnemySpawner : EnhancedBehaviour {
 	float spawnInterval = 2f;
 
 	bool isFrozen;
+	GameObject gameScene;
 	
 	public bool IsFrozen {
 		get {
@@ -48,20 +49,30 @@ public class EnemySpawner : EnhancedBehaviour {
 	protected override void EnhancedStart ()
 	{
 		base.EnhancedStart ();
+	}
+
+	protected override void EnhancedOnEnable()
+	{
+		base.EnhancedOnEnable();
 
 		// Crio uma piscina de inimigos para reaproveitar
 		enemyPrefab.CreatePool();
-
+		
 		List<Transform> transforms = new List<Transform>(GetComponentsInChildren<Transform>(false));
 		transforms.Remove(transform);
 		spawnPoints = transforms.ToArray();
-		InvokeRepeating("Spawn", Time.time, spawnInterval);
+		gameScene = GameObject.Find("Game");
 	}
 
 	[SerializeField]
-	int maxEnemies = 5;
+	int maxEnemies = 1;
 
 	public static int NumEnemies = 0;
+
+	public void StartSpawning()
+	{
+		InvokeRepeating("Spawn", Time.time, spawnInterval);
+	}
 
 	void Spawn() {
 
@@ -69,6 +80,7 @@ public class EnemySpawner : EnhancedBehaviour {
 
 			Vector3 rndPosition = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
 			Enemy enemy = enemyPrefab.Spawn(rndPosition);
+			enemy.gameObject.transform.parent = gameScene.transform;
 			enemy.Player = player;
 
 			NumEnemies++;

@@ -8,6 +8,7 @@ public class HeroManager : EnhancedBehaviour
 	public int hitPoints = 5;
 	public float stealthTime = 5.0f;
 	public GameObject legs;
+	public ScoreManager scoreManager;
 
 	public Sprite up;
 	public Sprite down;
@@ -21,6 +22,25 @@ public class HeroManager : EnhancedBehaviour
 	private Vector2 moveDirection;
 
 	private Animator legsAnim;
+
+	private bool invincibleAfterHit;
+
+	[SerializeField]
+	private bool enableInput;
+
+	public bool EnableInput
+	{
+		get
+		{
+			return enableInput;
+		}
+		set
+		{
+			enableInput = value;
+		}
+	}
+
+	private float invincibleAfterHitTime = 2.0f;
 
 	private Rigidbody2D body;
 	public Rigidbody2D Body {
@@ -38,7 +58,14 @@ public class HeroManager : EnhancedBehaviour
 		moveDirection = new Vector2(0f, 0f);
 
 		legsAnim = legs.GetComponent<Animator>();
-		Debug.Log(legsAnim);
+		scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+	}
+
+	protected override void EnhancedOnEnable()
+	{
+		hitPoints = 5;
+		invincibleAfterHit = false;
+		enableInput = true;
 	}
 	
 	protected override void EnhancedUpdate ()
@@ -49,15 +76,26 @@ public class HeroManager : EnhancedBehaviour
 		moveDirection = new Vector2(0f, 0f);
 		
 		//getting the moving input
-		float h = Input.GetAxis("Horizontal");
-		float v = Input.GetAxis("Vertical");
-		Debug.Log(legsAnim);
+		float h;
+		float v;
+		if (enableInput)
+		{
+			h = Input.GetAxis("Horizontal");
+			v = Input.GetAxis("Vertical");
+		}
+		else
+		{
+			h = 0f;
+			v = 0f;
+		}
+
 		legsAnim.SetFloat("h", h);
 		legsAnim.SetFloat("v", v);
 
 
 		//Moving the character
 		moveDirection = new Vector2(h, v);
+
 	}
 
 
@@ -146,9 +184,31 @@ public class HeroManager : EnhancedBehaviour
 		Debug.Log("Collision");
 	}
 
-	protected override void EnhancedOnTriggerEnter2D (Collider2D col)
+	void OnTriggerEnter2D (Collider2D col)
 	{
-		base.EnhancedOnTriggerEnter2D (col);
-		Debug.Log("Trigger");
+		//base.EnhancedOnTriggerEnter2D (col);
+		if (col.gameObject.tag == "Enemy" && !invincibleAfterHit)
+		{
+			gameObject.GetComponent<Animation>().Play("HitFlash");
+			hitPoints--;
+			scoreManager.HP--;
+			scoreManager.UpdateScore();
+			if (hitPoints > 0)
+			{
+				invincibleAfterHit = true;
+				StartCoroutine("DisableInvincibleAfterHit");
+			}
+			else
+			{
+				scoreManager.ShowGameOver();
+				enableInput = false;
+			}
+		}
+	}
+
+	IEnumerator DisableInvincibleAfterHit()
+	{
+		yield return new WaitForSeconds(invincibleAfterHitTime);
+		invincibleAfterHit = false;
 	}
 }

@@ -44,10 +44,13 @@ public class WeaponManager : MonoBehaviour
 		shotgunBullets = new List<GameObject>();
 		rocketBullets = new List<GameObject>();
 
+		GameObject gameScene = GameObject.Find("Game");
+
 		//Default...
 		for (int i = 0; i < defaultPooledAmmount; i++)
 		{
 			GameObject obj = (GameObject)Instantiate(defaultPrefab);
+			obj.transform.parent = gameScene.transform;
 			obj.SetActive(false);
 			defaultBullets.Add(obj);
 		}
@@ -56,6 +59,7 @@ public class WeaponManager : MonoBehaviour
 		for (int j = 0; j < machineGunPooledAmmount; j++)
 		{
 			GameObject obj = (GameObject)Instantiate(machineGunPrefab);
+			obj.transform.parent = gameScene.transform;
 			obj.SetActive(false);
 			machineGunBullets.Add(obj);
 		}
@@ -64,6 +68,7 @@ public class WeaponManager : MonoBehaviour
 		for (int k = 0; k < shotgunPooledAmmount; k++)
 		{
 			GameObject obj = (GameObject)Instantiate(shotgunPrefab);
+			obj.transform.parent = gameScene.transform;
 			obj.SetActive(false);
 			shotgunBullets.Add(obj);
 		}
@@ -72,6 +77,7 @@ public class WeaponManager : MonoBehaviour
 		for (int l = 0; l < rocketPooledAmmount; l++)
 		{
 			GameObject obj = (GameObject)Instantiate(rocketPrefab);
+			obj.transform.parent = gameScene.transform;
 			obj.SetActive(false);
 			rocketBullets.Add(obj);
 		}
@@ -102,7 +108,7 @@ public class WeaponManager : MonoBehaviour
 		}
 
 		//shooting
-		if (shootDirection != Vector2.zero && fireWeapon)
+		if (shootDirection != Vector2.zero && fireWeapon && GetComponent<HeroManager>().EnableInput)
 		{
 			GetComponent<HeroManager>().SetBodySprite(shootDirection);
 			switch (weaponType)
@@ -113,6 +119,8 @@ public class WeaponManager : MonoBehaviour
 						if (!defaultBullets[i].activeInHierarchy)
 						{
 							defaultBullets[i].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.1f);
+							defaultBullets[i].transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0.0f, 360.0f));
+
 							defaultBullets[i].GetComponent<BulletManager>().bulletDirection = shootDirection;
 							defaultBullets[i].SetActive(true);
 							break;
@@ -127,6 +135,7 @@ public class WeaponManager : MonoBehaviour
 						{
 							machineGunBullets[i].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.5f);
 							machineGunBullets[i].GetComponent<BulletManager>().bulletDirection = shootDirection;
+							SetBulletRotation(machineGunBullets[i]);
 							machineGunBullets[i].SetActive(true);
 							break;
 						}
@@ -182,6 +191,7 @@ public class WeaponManager : MonoBehaviour
 						{
 							rocketBullets[l].transform.position = myTransform.position;
 							rocketBullets[l].GetComponent<BulletManager>().bulletDirection = shootDirection;
+							SetBulletRotation(rocketBullets[l]);
 							rocketBullets[l].SetActive(true);
 							break;
 						}
@@ -279,5 +289,53 @@ public class WeaponManager : MonoBehaviour
 				b2.GetComponent<BulletManager>().bulletDirection = new Vector2(-0.3f, -0.85f);
 			}
 		}
+	}
+
+	void SetBulletRotation(GameObject bullet)
+	{
+		float z = 0.0f;
+		if (shootDirection.x > 0) //Right
+		{
+			if (shootDirection.y > 0) //up
+			{
+				z = 225f;
+			}
+			else if (shootDirection.y < 0) //down
+			{
+				z = 135f;
+			}
+			else //zero
+			{
+				z = 180f;
+			}
+		} 
+		else if (shootDirection.x < 0) //Left
+		{
+			if (shootDirection.y > 0) //up
+			{
+				z = 315f;
+			}
+			else if (shootDirection.y < 0) //down
+			{
+				z = 45f;
+			}
+			else //zero
+			{
+				z = 0f;
+			}
+		}
+		else //zero
+		{
+			if (shootDirection.y > 0) //up
+			{
+				z = 270f;
+			}
+			else if (shootDirection.y < 0) //down
+			{
+				z = 90f;
+			}
+		}
+
+		bullet.transform.rotation = Quaternion.Euler(0f, 0f, z);
 	}
 }

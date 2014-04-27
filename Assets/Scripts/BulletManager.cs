@@ -46,7 +46,7 @@ public class BulletManager : MonoBehaviour
 		{
 			if (weaponType == WeaponType.ROCKET_LAUNCHER)
 			{
-				Collider2D[] colls = Physics2D.OverlapCircleAll(myTransform.position, areaDamage);;
+				Collider2D[] colls = Physics2D.OverlapCircleAll(myTransform.position, areaDamage);
 				foreach (Collider2D c in colls)
 				{
 					Debug.Log("Objeto atingido: " + c.gameObject.name);

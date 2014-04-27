@@ -8,7 +8,7 @@ public enum EnemyBehaviourType { Wander, Seek, Idle }
 public class Enemy : EnhancedBehaviour {
 
 	public float freezeTime = 5.0f;
-	private ScoreManager scoreManager;
+	private ScoreManager scoreManager = null;
 
 	/// <summary>
 	/// The type of the current behaviour.
@@ -78,7 +78,6 @@ public class Enemy : EnhancedBehaviour {
 		hitPoints = baseHitPoints;
 		IsFrozen = false;
 		collider2D.enabled = true;
-		scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
 	}
 
 	protected override void EnhancedUpdate ()
@@ -257,6 +256,10 @@ public class Enemy : EnhancedBehaviour {
 
 		collider2D.enabled = false;
 		IsFrozen = true;
+		if (!scoreManager)
+		{
+			scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+		}
 		scoreManager.Score += (int)(100 * scoreManager.Combo);
 		scoreManager.Combo += 0.1f;
 		scoreManager.UpdateScore();

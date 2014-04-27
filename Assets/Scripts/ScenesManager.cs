@@ -14,6 +14,10 @@ public class ScenesManager : MonoBehaviour
 		gameScene = GameObject.Find("Game");
 		settingsScene = GameObject.Find("Settings");
 		aboutScene = GameObject.Find("About");
+
+		gameScene.SetActive(false);
+		settingsScene.SetActive(false);
+		aboutScene.SetActive(false);
 		//gameScene.SetActive(false);
 		//settingsScene.SetActive(false);
 		//aboutScene.SetActive(false);
@@ -26,6 +30,9 @@ public class ScenesManager : MonoBehaviour
 	
 	public void StartGame()
 	{
+		gameScene.SetActive(true);
+		mainMenuScene.SetActive(false);
+		gameScene.GetComponent<GameManager>().StartGame();
 	}
 	
 	public void Settings()
