@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
+  - 95: {fileID: 9500000}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.67080069, y: -2.04221892, z: 0}
+  m_LocalPosition: {x: -7.82310438, y: .142188504, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,8 +56,22 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .720000029, y: .560000002}
-  m_Center: {x: 0, y: .280000001}
+  m_Size: {x: .319999993, y: .319999993}
+  m_Center: {x: 0, y: .125}
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ad75bba8e1584c42bb6a578280ffdae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -72,7 +87,8 @@ MonoBehaviour:
   player: {fileID: 0}
   body: {fileID: 0}
   maxSpeed: 2
-  baseHitPoints: 3
+  baseHitPoints: 5
+  hurtTime: .349999994
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -91,9 +107,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2063342131
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300014, guid: e71e576e648167f4587e2803b194e683, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8515230b725b7b549b93998ff593a385, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

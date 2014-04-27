@@ -78,6 +78,11 @@ public class Enemy : EnhancedBehaviour {
 		hitPoints = baseHitPoints;
 		IsFrozen = false;
 		collider2D.enabled = true;
+		MySpriteRenderer.color = Color.white;
+		isHurt = false;
+		path = null;
+		mirrored = false;
+		transform.right = Vector3.right;
 	}
 
 	protected override void EnhancedUpdate ()
@@ -105,11 +110,22 @@ public class Enemy : EnhancedBehaviour {
 	/// </summary>
 	Vector3 nextPosition;
 
+	bool mirrored = false;
+
 	protected override void EnhancedFixedUpdate ()
 	{
 		base.EnhancedFixedUpdate ();
 
 		if(!IsFrozen && path != null) {
+
+			if(Body.position.x < nextPosition.x && !mirrored) {
+				mirrored = true;
+				transform.right = Vector3.left;
+			}
+			else if (Body.position.x > nextPosition.x && mirrored) {
+				mirrored = false;
+				transform.right = Vector3.right;
+			}
 			Body.MovePosition(nextPosition);
 		}
 	}
@@ -235,14 +251,13 @@ public class Enemy : EnhancedBehaviour {
 		base.EnhancedOnTriggerEnter2D (col);
 
 		if(col.CompareTag("SingleBullet")) {
-			hitPoints--;
+
+			if(!isHurt) {
+				StartCoroutine(Hurt (1));
+			}
 		}
 		else if(col.CompareTag("AreaBullet")) {
-			hitPoints = 0;
-		}
-
-		if(hitPoints <= 0) {
-			StartCoroutine(Death ());
+			StartCoroutine(Hurt (baseHitPoints));
 		}
 	}
 
@@ -250,6 +265,39 @@ public class Enemy : EnhancedBehaviour {
 	{
 		yield return new WaitForSeconds(freezeTime);
 		IsFrozen = false;
+	}
+
+	/// <summary>
+	/// My sprite renderer.
+	/// </summary>
+	SpriteRenderer mySpriteRenderer;
+
+	public SpriteRenderer MySpriteRenderer {
+		get {
+			if(!mySpriteRenderer)
+				mySpriteRenderer = GetComponent<SpriteRenderer>();
+			return mySpriteRenderer;
+		}
+	}
+
+	[SerializeField]
+	float hurtTime = 0.2f;
+
+	bool isHurt = false;
+
+	IEnumerator Hurt(int damage) {
+
+		isHurt = true;
+		hitPoints -= damage;
+
+		if(hitPoints <= 0) {
+			StartCoroutine(Death ());
+		}
+		else {
+			yield return StartCoroutine(MySpriteRenderer.ColorTo(Color.red, hurtTime / 2f));
+			yield return StartCoroutine(MySpriteRenderer.ColorTo(Color.white, hurtTime / 2f));
+			isHurt = false;
+		}
 	}
 
 	IEnumerator Death() {
@@ -264,8 +312,8 @@ public class Enemy : EnhancedBehaviour {
 		scoreManager.Combo += 0.1f;
 		scoreManager.UpdateScore();
 
-		SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-		yield return StartCoroutine(spriteRenderer.FadeOut(0.25f));
+
+		yield return StartCoroutine(MySpriteRenderer.FadeOut(0.25f));
 		EnemySpawner.NumEnemies--;
 		this.Recycle();
 
