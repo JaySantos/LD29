@@ -12,9 +12,10 @@ public class ScoreManager : MonoBehaviour
 	public GameObject comboSlider;
 
 	private bool countDownCombo;
-	private float comboTimerInitValue = 1.0f;
+	private float comboTimerInitValue = 2.0f;
 	private float comboTimer;
 	private WeaponManager wm;
+	private HeroManager hm;
 
 	[SerializeField]
 	int score;
@@ -87,7 +88,7 @@ public class ScoreManager : MonoBehaviour
 	void Start () 
 	{
 		wm = GameObject.Find("Player").GetComponent<WeaponManager>();
-		Debug.Log("wm = " + wm);
+		hm = GameObject.Find("Player").GetComponent<HeroManager>();
 	}
 
 	void Update()
@@ -109,7 +110,7 @@ public class ScoreManager : MonoBehaviour
 	void OnEnable()
 	{
 		countDownCombo = false;
-		comboTimer = 1.0f;
+		comboTimer = 1.5f;
 		score = 0;
 		combo = 1.0f;
 		hp = 5;
@@ -120,18 +121,21 @@ public class ScoreManager : MonoBehaviour
 
 	public void UpdateScore()
 	{
-		scoreText.GetComponent<Text>().text = "Score: " + score;
-		comboText.GetComponent<Text>().text = "Combo: " + combo + "x";
-		hpText.GetComponent<Text>().text = "HP: " + hp;
+		scoreText.GetComponent<Text>().text =  score;
+		comboText.GetComponent<Text>().text = combo + "x";
+		if (hm)
+		{
+			hpText.GetComponent<Text>().text = hm.hitPoints;
+		}
 		if (wm)
 		{
 			if (wm.weaponType == WeaponManager.WeaponType.DEFAULT)
 			{
-				ammoText.GetComponent<Text>().text = "Ammo: -";
+				ammoText.GetComponent<Text>().text = "-";
 			}
 			else
 			{
-				ammoText.GetComponent<Text>().text = "Ammo: " + wm.ammo;
+				ammoText.GetComponent<Text>().text = wm.ammo;
 			}
 		}
 	}
@@ -141,6 +145,7 @@ public class ScoreManager : MonoBehaviour
 		scoreText.GetComponent<Text>().text = "";
 		comboText.GetComponent<Text>().text = "";
 		hpText.GetComponent<Text>().text = "";
+		ammoText.GetComponent<Text>().text = "";
 		gameOverText.GetComponent<Text>().text = "GAME OVER!!!";
 	}
 }

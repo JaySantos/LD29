@@ -16,9 +16,9 @@ public class WeaponManager : EnhancedBehaviour
 
 	public int ammo;
 	private bool fireWeapon;
-	private float defaultCooldownTime = 0.5f;
+	private float defaultCooldownTime = 0.3f;
 	private float machineGunCooldownTime = 0.1f;
-	private float shotgunCooldownTime = 0.5f;
+	private float shotgunCooldownTime = 0.4f;
 	private float rocketCooldownTime = 1f;
 	private Vector2 shootDirection;
 	private Transform myTransform;

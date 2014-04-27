@@ -8,9 +8,9 @@ TagManager:
   - AreaBullet
   - Wall
   - Enemy
-  - 
+  - FrozenFX
   - RocketBullet
-  - 
+  - InvisibleFX
   - Spawner
   - SpawnController
   - 

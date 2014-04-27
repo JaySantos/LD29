@@ -26,8 +26,6 @@ public class BulletManager : MonoBehaviour
 		{
 			myTransform.rigidbody2D.velocity = bulletDirection * bulletSpeed;
 		}
-		//myTransform.Translate(bulletDirection * bulletSpeed);
-		Debug.Log(myTransform.rigidbody2D.velocity);
 	}
 	
 	// Update is called once per frame
@@ -58,7 +56,11 @@ public class BulletManager : MonoBehaviour
 				Collider2D[] colls = Physics2D.OverlapCircleAll(myTransform.position, areaDamage);
 				foreach (Collider2D c in colls)
 				{
-					Debug.Log("Objeto atingido: " + c.gameObject.name);
+					//Debug.Log("Objeto atingido: " + c.gameObject.name);
+					if (c.gameObject.tag == "Enemy")
+					{
+						c.gameObject.GetComponent<Enemy>().RocketKill();
+					}
 				}
 			}
 			Destroy();

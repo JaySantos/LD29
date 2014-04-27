@@ -50,7 +50,7 @@ public class PowerUpManager : MonoBehaviour
 			int draw = Random.Range (0, 100);
 			if (draw < chanceToDraw)
 			{
-				powerUp = Random.Range(0, 5);
+				powerUp = Random.Range(1, 2);
 
 				switch (powerUp)
 				{
@@ -112,6 +112,8 @@ public class PowerUpManager : MonoBehaviour
 				GameObject[] objs = GameObject.FindGameObjectsWithTag("Enemy");
 				foreach (GameObject go in objs)
 				{
+					Debug.Log("SQUARE:: " + go);
+					Debug.Log("SQUARE:: " + go.GetComponent<Enemy>());
 					go.GetComponent<Enemy>().IsFrozen = true;
 				}
 				GameObject.Find("Enemy Manager").GetComponent<EnemySpawner>().IsFrozen = true;
