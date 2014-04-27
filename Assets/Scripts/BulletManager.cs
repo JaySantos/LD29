@@ -30,7 +30,7 @@ public class BulletManager : MonoBehaviour
 	{
 	}
 
-	void Destroy()
+	public void Destroy()
 	{
 		gameObject.SetActive(false);
 	}

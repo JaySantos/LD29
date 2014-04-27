@@ -22,6 +22,7 @@ public class PathFollower : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, path[0], 5*Time.deltaTime);
             if(Vector2.Distance(transform.position,path[0]) < 0.01f)
             {
+				Debug.Log("Removed");
                 path.RemoveAt(0);
             }
         }

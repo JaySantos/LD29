@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpherePowerUpTest : MonoBehaviour 
+public class CirclePowerUpManager : MonoBehaviour 
 {
-	//public GameObject spherePowerUp;
-	//public GameObject sphere;
 	public float xSpeed = 5f;
 	public float rotationSpeed = 100f;
 	public float timeToExplode = 2f;

@@ -68,9 +68,25 @@ public class Enemy : EnhancedBehaviour {
 	protected override void EnhancedOnEnable ()
 	{
 		base.EnhancedOnEnable ();
+		MySpriteRenderer.color = Color.white;
 		hitPoints = baseHitPoints;
 		IsFrozen = false;
 		collider2D.enabled = true;
+		isHurt = false;
+		particleSystem.Stop ();
+	}
+
+	/// <summary>
+	/// My sprite renderer.
+	/// </summary>
+	SpriteRenderer mySpriteRenderer;
+
+	public SpriteRenderer MySpriteRenderer {
+		get {
+			if(!mySpriteRenderer) 
+				mySpriteRenderer = GetComponent<SpriteRenderer>();
+			return mySpriteRenderer;
+		}
 	}
 
 	protected override void EnhancedUpdate ()
@@ -215,6 +231,7 @@ public class Enemy : EnhancedBehaviour {
 	/// <summary>
 	/// The current hit points.
 	/// </summary>
+	[SerializeField]
 	int hitPoints;
 
 	public int HitPoints {
@@ -228,14 +245,46 @@ public class Enemy : EnhancedBehaviour {
 		base.EnhancedOnTriggerEnter2D (col);
 
 		if(col.CompareTag("SingleBullet")) {
-			hitPoints--;
+
+			col.GetComponent<BulletManager>().Destroy();
+
+			if(!isHurt) {
+				StartCoroutine(Hurt (1));
+			}
 		}
 		else if(col.CompareTag("AreaBullet")) {
-			hitPoints = 0;
+			StartCoroutine(Hurt (baseHitPoints));
 		}
+	}
+
+	bool isHurt = false;
+
+	/// <summary>
+	/// The hurt time.
+	/// </summary>
+	[SerializeField]
+	float hurtTime = 0.2f;
+
+	IEnumerator Hurt(int damage) {
+
+		isHurt = true;
+
+		hitPoints -= damage;
 
 		if(hitPoints <= 0) {
 			StartCoroutine(Death ());
+		}
+		else {
+
+			if(!particleSystem.isPlaying) {
+				particleSystem.Play();
+			}
+
+			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+			yield return StartCoroutine(MySpriteRenderer.ColorTo(Color.red, hurtTime / 2f));
+			yield return StartCoroutine(MySpriteRenderer.ColorTo(Color.white, hurtTime / 2f));
+
+			isHurt = false;
 		}
 	}
 
@@ -244,8 +293,11 @@ public class Enemy : EnhancedBehaviour {
 		collider2D.enabled = false;
 		IsFrozen = true;
 
-		SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-		yield return StartCoroutine(spriteRenderer.FadeOut(0.25f));
+		if(!particleSystem.isPlaying) {
+			particleSystem.Play();
+		}
+
+		yield return StartCoroutine(MySpriteRenderer.FadeOut(0.25f));
 		EnemySpawner.NumEnemies--;
 		this.Recycle();
 
