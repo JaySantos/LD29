@@ -105,6 +105,9 @@ public class HeroManager : EnhancedBehaviour
 		gameObject.GetComponent<SpriteRenderer>().material.color = new Color(gameObject.GetComponent<SpriteRenderer>().material.color.r, 
 		                                                                     gameObject.GetComponent<SpriteRenderer>().material.color.g, 
 		                                                                     gameObject.GetComponent<SpriteRenderer>().material.color.b, 0.5f);
+		legs.GetComponent<SpriteRenderer>().material.color = new Color(gameObject.GetComponent<SpriteRenderer>().material.color.r, 
+		                                                               gameObject.GetComponent<SpriteRenderer>().material.color.g, 
+		                                                               gameObject.GetComponent<SpriteRenderer>().material.color.b, 0.5f);
 		StartCoroutine("DisableStealth");
 	}
 

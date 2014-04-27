@@ -163,7 +163,7 @@ public class WeaponManager : EnhancedBehaviour
 					{
 						if (!shotgunBullets[i].activeInHierarchy)
 						{
-							shotgunBullets[i].transform.position = myTransform.position;
+							shotgunBullets[i].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.5f);
 							shotgunBullets[i].GetComponent<BulletManager>().bulletDirection = shootDirection;
 							shotgunBullets[i].SetActive(true);
 							break;
@@ -175,7 +175,7 @@ public class WeaponManager : EnhancedBehaviour
 					{
 						if (!shotgunBullets[j].activeInHierarchy)
 						{
-							shotgunBullets[j].transform.position = myTransform.position;
+							shotgunBullets[j].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.5f);
 							shotgunBullets[j].SetActive(true);
 							bullet1 = shotgunBullets[j];
 							break;
@@ -187,13 +187,13 @@ public class WeaponManager : EnhancedBehaviour
 					{
 						if (!shotgunBullets[k].activeInHierarchy)
 						{
-							shotgunBullets[k].transform.position = myTransform.position;
+							shotgunBullets[k].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.5f);
 							shotgunBullets[k].SetActive(true);
 							bullet2 = shotgunBullets[k];
 							break;
 						}
 					}
-					//bp1.GetComponent<BulletManager>().bulletDirection = shootDirection;
+					ammo--;
 					SetShotgunBulletsDirections(bullet1, bullet2);
 					break;
 
@@ -202,13 +202,14 @@ public class WeaponManager : EnhancedBehaviour
 					{
 						if (!rocketBullets[l].activeInHierarchy)
 						{
-							rocketBullets[l].transform.position = myTransform.position;
+							rocketBullets[l].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.5f);
 							rocketBullets[l].GetComponent<BulletManager>().bulletDirection = shootDirection;
 							SetBulletRotation(rocketBullets[l]);
 							rocketBullets[l].SetActive(true);
 							break;
 						}
 					}
+					ammo--;
 				break;
 			}
 			if (ammo == 0)
