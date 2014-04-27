@@ -138,28 +138,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &34713505
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.15750027
-    y: 1.46374989
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -2, y: 2}
-    Obj: 84
-  ChildNodes: []
 --- !u!1 &47988419
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,28 +313,6 @@ Prefab:
   m_RootGameObject: {fileID: 1947970412}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &65137892
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -1.02125025
-    y: -2.32999992
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 0, y: -1.58000004}
-    Obj: 23
-  ChildNodes: []
 --- !u!1 &72309976
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,76 +377,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1292531724}
   m_RootOrder: 15
---- !u!114 &78385381
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: .114999771
-    y: -2.32999992
-    width: 4.54500008
-    height: 3.03499985
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: .189999998, y: -.949999988}
-    Obj: 24
-  - Position: {x: .289999992, y: -1.70000005}
-    Obj: 25
-  - Position: {x: .379999995, y: -.920000017}
-    Obj: 26
-  - Position: {x: .579999983, y: -1.71000004}
-    Obj: 27
-  - Position: {x: .639999986, y: -.879999995}
-    Obj: 28
-  - Position: {x: 1, y: -1}
-    Obj: 29
-  - Position: {x: 1.11000001, y: -1.73000002}
-    Obj: 30
-  - Position: {x: 1.22000003, y: -1.73000002}
-    Obj: 31
-  - Position: {x: 2, y: -1}
-    Obj: 32
-  - Position: {x: 2.20000005, y: -1.74000001}
-    Obj: 33
-  - Position: {x: 2.46000004, y: -1.40999997}
-    Obj: 34
-  - Position: {x: 2.29999995, y: -1.83000004}
-    Obj: 35
-  - Position: {x: 2.75999999, y: -1.03999996}
-    Obj: 36
-  - Position: {x: 2.79999995, y: -1}
-    Obj: 37
-  - Position: {x: 2, y: 0}
-    Obj: 38
-  - Position: {x: .920000017, y: -.569999993}
-    Obj: 39
-  - Position: {x: 1.03999996, y: 0}
-    Obj: 40
-  - Position: {x: .860000014, y: -.200000003}
-    Obj: 41
-  - Position: {x: 1.38999999, y: .370000005}
-    Obj: 42
-  - Position: {x: 3, y: 0}
-    Obj: 44
-  - Position: {x: 3.44000006, y: -.370000005}
-    Obj: 45
-  - Position: {x: 3.61999989, y: 0}
-    Obj: 46
-  - Position: {x: 3.81999993, y: .389999986}
-    Obj: 47
-  ChildNodes:
-  - {fileID: 428725296}
-  - {fileID: 2109921365}
-  - {fileID: 866032866}
-  - {fileID: 911546353}
 --- !u!1001 &78874292
 Prefab:
   m_ObjectHideFlags: 0
@@ -761,28 +647,6 @@ Prefab:
   m_RootGameObject: {fileID: 446046296}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &125416047
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 1.25124979
-    y: -1.57124996
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 2, y: -1}
-    Obj: 32
-  ChildNodes: []
 --- !u!1 &126354995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,36 +933,6 @@ Prefab:
   m_RootGameObject: {fileID: 1458100176}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &177419174
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 3.52374983
-    y: .704999924
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 3.6400001, y: 1.34000003}
-    Obj: 51
-  - Position: {x: 4, y: .779999971}
-    Obj: 52
-  - Position: {x: 3.9000001, y: 1.16999996}
-    Obj: 53
-  - Position: {x: 4, y: 1}
-    Obj: 54
-  - Position: {x: 4.15999985, y: 1.10000002}
-    Obj: 55
-  ChildNodes: []
 --- !u!1 &177460183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,30 +997,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &203075640
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -.453125238
-    y: 1.46374989
-    width: .56812501
-    height: .379374981
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -.100000001, y: 1.83000004}
-    Obj: 68
-  - Position: {x: 0, y: 1.73000002}
-    Obj: 69
-  ChildNodes: []
 --- !u!1 &212586667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,104 +1347,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &305132390
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -1.02125025
-    y: 1.46374989
-    width: .56812501
-    height: .379374981
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -.939999998, y: 1.77999997}
-    Obj: 81
-  - Position: {x: -1, y: 1.73000002}
-    Obj: 82
-  ChildNodes: []
---- !u!114 &342533913
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: .114999771
-    y: .704999924
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 2, y: 1}
-    Obj: 43
-  - Position: {x: 2, y: 2}
-    Obj: 57
-  - Position: {x: 1, y: 2}
-    Obj: 62
-  - Position: {x: .25999999, y: 1.49000001}
-    Obj: 70
-  - Position: {x: .519999981, y: 1.47000003}
-    Obj: 71
-  - Position: {x: .550000012, y: 1.47000003}
-    Obj: 72
-  - Position: {x: 1.10000002, y: 1.46000004}
-    Obj: 73
-  - Position: {x: 1.20000005, y: 1.24000001}
-    Obj: 74
-  - Position: {x: 1.25999999, y: 1.10000002}
-    Obj: 75
-  - Position: {x: 1.28999996, y: 1.04999995}
-    Obj: 76
-  - Position: {x: 1.33000004, y: .74000001}
-    Obj: 77
-  ChildNodes:
-  - {fileID: 1450612431}
-  - {fileID: 392542549}
-  - {fileID: 1372090661}
-  - {fileID: 1121281242}
---- !u!114 &342994704
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.15750027
-    y: -1.57124996
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -2, y: -1}
-    Obj: 9
-  - Position: {x: -2, y: -1.32000005}
-    Obj: 12
-  - Position: {x: -1.86000001, y: -1.26999998}
-    Obj: 13
-  - Position: {x: -1.08000004, y: -1.22000003}
-    Obj: 20
-  ChildNodes: []
 --- !u!1 &353950717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,110 +1411,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &366085002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -3.29375029
-    y: .704999924
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -3, y: 1}
-    Obj: 93
-  ChildNodes: []
---- !u!114 &383220217
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.43000031
-    y: -2.32999992
-    width: 4.54500008
-    height: 3.03499985
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -3.93000007, y: .340000004}
-    Obj: 0
-  - Position: {x: -3.80999994, y: .280000001}
-    Obj: 1
-  - Position: {x: -3.77999997, y: .680000007}
-    Obj: 2
-  - Position: {x: -3.53999996, y: 0}
-    Obj: 3
-  - Position: {x: -3, y: 0}
-    Obj: 4
-  - Position: {x: -3.13000011, y: -.430000007}
-    Obj: 5
-  - Position: {x: -3, y: -.600000024}
-    Obj: 6
-  - Position: {x: -2, y: 0}
-    Obj: 7
-  - Position: {x: -2.74000001, y: -.949999988}
-    Obj: 8
-  - Position: {x: -2, y: -1}
-    Obj: 9
-  - Position: {x: -2.71000004, y: -1}
-    Obj: 10
-  - Position: {x: -2.42000008, y: -1.49000001}
-    Obj: 11
-  - Position: {x: -2, y: -1.32000005}
-    Obj: 12
-  - Position: {x: -1.86000001, y: -1.26999998}
-    Obj: 13
-  - Position: {x: -1, y: -1}
-    Obj: 14
-  - Position: {x: -1.24000001, y: -.0900000036}
-    Obj: 15
-  - Position: {x: -1, y: -.289999992}
-    Obj: 16
-  - Position: {x: -.569999993, y: -.660000026}
-    Obj: 17
-  - Position: {x: -.620000005, y: -1.34000003}
-    Obj: 18
-  - Position: {x: -1, y: -1.24000001}
-    Obj: 19
-  - Position: {x: -1.08000004, y: -1.22000003}
-    Obj: 20
-  - Position: {x: -.280000001, y: -.819999993}
-    Obj: 21
-  - Position: {x: 0, y: -1}
-    Obj: 22
-  - Position: {x: 0, y: -1.58000004}
-    Obj: 23
-  - Position: {x: -1.41999996, y: .460000008}
-    Obj: 95
-  - Position: {x: -1.45000005, y: .230000004}
-    Obj: 96
-  - Position: {x: -1.28999996, y: 0}
-    Obj: 97
-  - Position: {x: -1.39999998, y: .699999988}
-    Obj: 98
-  - Position: {x: 0, y: -.889999986}
-    Obj: 105
-  ChildNodes:
-  - {fileID: 399751229}
-  - {fileID: 560679515}
-  - {fileID: 1689096668}
-  - {fileID: 1825944810}
 --- !u!1001 &387288652
 Prefab:
   m_ObjectHideFlags: 0
@@ -1850,60 +1458,6 @@ Prefab:
   m_RootGameObject: {fileID: 1409791034}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &388661005
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.43000031
-    y: 2.22249985
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -2.31999993, y: 2.92000008}
-    Obj: 88
-  - Position: {x: -2.5999999, y: 2.52999997}
-    Obj: 89
-  - Position: {x: -2.20000005, y: 3.24000001}
-    Obj: 103
-  ChildNodes: []
---- !u!114 &392542549
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 1.25124979
-    y: .704999924
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 2, y: 1}
-    Obj: 43
-  - Position: {x: 1.25999999, y: 1.10000002}
-    Obj: 75
-  - Position: {x: 1.28999996, y: 1.04999995}
-    Obj: 76
-  - Position: {x: 1.33000004, y: .74000001}
-    Obj: 77
-  ChildNodes: []
 --- !u!1 &394291515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,32 +1540,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1292531724}
   m_RootOrder: 5
---- !u!114 &399751229
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.43000031
-    y: -2.32999992
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -2.74000001, y: -.949999988}
-    Obj: 8
-  - Position: {x: -2.71000004, y: -1}
-    Obj: 10
-  - Position: {x: -2.42000008, y: -1.49000001}
-    Obj: 11
-  ChildNodes: []
 --- !u!1 &402128411
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,52 +1762,6 @@ Prefab:
   m_RootGameObject: {fileID: 72309976}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &428725296
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: .114999771
-    y: -2.32999992
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: .189999998, y: -.949999988}
-    Obj: 24
-  - Position: {x: .289999992, y: -1.70000005}
-    Obj: 25
-  - Position: {x: .379999995, y: -.920000017}
-    Obj: 26
-  - Position: {x: .579999983, y: -1.71000004}
-    Obj: 27
-  - Position: {x: .639999986, y: -.879999995}
-    Obj: 28
-  - Position: {x: 1, y: -1}
-    Obj: 29
-  - Position: {x: 1.11000001, y: -1.73000002}
-    Obj: 30
-  - Position: {x: 1.22000003, y: -1.73000002}
-    Obj: 31
-  - Position: {x: 2, y: -1}
-    Obj: 32
-  - Position: {x: 2.20000005, y: -1.74000001}
-    Obj: 33
-  - Position: {x: 2.29999995, y: -1.83000004}
-    Obj: 35
-  ChildNodes:
-  - {fileID: 1551319762}
-  - {fileID: 732708803}
-  - {fileID: 1078417390}
-  - {fileID: 125416047}
 --- !u!1 &446046296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,8 +2150,8 @@ MonoBehaviour:
     Obj: 104
   - Position: {x: 0, y: -.889999986}
     Obj: 105
-  NodeIndexQuadTreeNode: {fileID: 1036649160}
-  ObstructionLayer: Water
+  NodeIndexQuadTreeNode: {fileID: 0}
+  ObstructionLayer: 5761746572
 --- !u!114 &455175668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2734,7 +2216,7 @@ MonoBehaviour:
     - {x: .920000017, y: -.569999993}
     - {x: .639999986, y: -.879999995}
     - {x: .189999998, y: -.949999988}
-  NavMesh: {fileID: 2022687973}
+  NavMesh: {fileID: 0}
   NavMesh2DNodes:
   - connections:
     - connectionType: 0
@@ -3882,8 +3364,8 @@ MonoBehaviour:
     position: {x: 0, y: -.889999986, z: 0}
   NodeNodeIndexQuadTree: {fileID: 455175667}
   GenerationInformation:
-    WalkableColliderLayer: Default
-    ObstructionColliderLayer: Water
+    WalkableColliderLayer: 44656661756c74
+    ObstructionColliderLayer: 5761746572
     CircleColliderSubdivisionFactor: .25
     CalculationScaleFactor: 100
     ColliderPadding: .214000002
@@ -3891,7 +3373,7 @@ MonoBehaviour:
     GridSize: {x: 1, y: 1}
     JoinType: 2
   Version:
-    Name: NavMesh2D
+    Name: 4e61764d6573683244
     Major: 1
     Minor: 5
     Patch: 1
@@ -4048,72 +3530,6 @@ Prefab:
   m_RootGameObject: {fileID: 1818990317}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &560679515
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.15750027
-    y: -2.32999992
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -2, y: -1}
-    Obj: 9
-  - Position: {x: -2, y: -1.32000005}
-    Obj: 12
-  - Position: {x: -1.86000001, y: -1.26999998}
-    Obj: 13
-  - Position: {x: -1, y: -1}
-    Obj: 14
-  - Position: {x: -.620000005, y: -1.34000003}
-    Obj: 18
-  - Position: {x: -1, y: -1.24000001}
-    Obj: 19
-  - Position: {x: -1.08000004, y: -1.22000003}
-    Obj: 20
-  - Position: {x: -.280000001, y: -.819999993}
-    Obj: 21
-  - Position: {x: 0, y: -1}
-    Obj: 22
-  - Position: {x: 0, y: -1.58000004}
-    Obj: 23
-  - Position: {x: 0, y: -.889999986}
-    Obj: 105
-  ChildNodes:
-  - {fileID: 2015582033}
-  - {fileID: 65137892}
-  - {fileID: 342994704}
-  - {fileID: 1369949975}
---- !u!114 &574006844
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.43000031
-    y: -.8125
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode: []
-  ChildNodes: []
 --- !u!1 &578320590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4178,32 +3594,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &581867750
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 2.38749981
-    y: 1.46374989
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 3.06999993, y: 1.72000003}
-    Obj: 49
-  - Position: {x: 3.1400001, y: 1.66999996}
-    Obj: 50
-  - Position: {x: 2.57999992, y: 2.13000011}
-    Obj: 56
-  ChildNodes: []
 --- !u!1 &626825794
 GameObject:
   m_ObjectHideFlags: 0
@@ -4268,26 +3658,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &651021460
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -1.02125025
-    y: -.0537500381
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode: []
-  ChildNodes: []
 --- !u!1 &663316678
 GameObject:
   m_ObjectHideFlags: 0
@@ -4416,60 +3786,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &713052863
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: .114999771
-    y: 2.22249985
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 1.86000001, y: 2.88000011}
-    Obj: 59
-  - Position: {x: 1.72000003, y: 2.80999994}
-    Obj: 60
-  - Position: {x: 1.36000001, y: 2.63000011}
-    Obj: 61
-  - Position: {x: 1.01999998, y: 2.6099999}
-    Obj: 63
-  - Position: {x: .50999999, y: 2.57999992}
-    Obj: 64
-  ChildNodes: []
---- !u!114 &714990018
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -3.29375029
-    y: -.8125
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -3.13000011, y: -.430000007}
-    Obj: 5
-  - Position: {x: -3, y: -.600000024}
-    Obj: 6
-  ChildNodes: []
 --- !u!1001 &719237421
 Prefab:
   m_ObjectHideFlags: 0
@@ -4758,52 +4074,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &732708803
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 1.25124979
-    y: -2.32999992
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 2.20000005, y: -1.74000001}
-    Obj: 33
-  - Position: {x: 2.29999995, y: -1.83000004}
-    Obj: 35
-  ChildNodes: []
---- !u!114 &743195053
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.15750027
-    y: -.8125
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -1.24000001, y: -.0900000036}
-    Obj: 15
-  ChildNodes: []
 --- !u!1001 &744860708
 Prefab:
   m_ObjectHideFlags: 0
@@ -4851,68 +4121,6 @@ Prefab:
   m_RootGameObject: {fileID: 1825769125}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &749601571
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 2.38749981
-    y: 2.22249985
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 2.45000005, y: 2.25999999}
-    Obj: 58
-  ChildNodes: []
---- !u!114 &753293732
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -1.02125025
-    y: 1.46374989
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 0, y: 2}
-    Obj: 65
-  - Position: {x: -.370000005, y: 1.98000002}
-    Obj: 67
-  - Position: {x: -.100000001, y: 1.83000004}
-    Obj: 68
-  - Position: {x: 0, y: 1.73000002}
-    Obj: 69
-  - Position: {x: -.790000021, y: 1.91999996}
-    Obj: 79
-  - Position: {x: -1, y: 2}
-    Obj: 80
-  - Position: {x: -.939999998, y: 1.77999997}
-    Obj: 81
-  - Position: {x: -1, y: 1.73000002}
-    Obj: 82
-  ChildNodes:
-  - {fileID: 305132390}
-  - {fileID: 203075640}
-  - {fileID: 993733277}
-  - {fileID: 2133717090}
 --- !u!1001 &757470572
 Prefab:
   m_ObjectHideFlags: 0
@@ -4960,38 +4168,6 @@ Prefab:
   m_RootGameObject: {fileID: 262559759}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &759153902
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.15750027
-    y: 2.22249985
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 0, y: 2.63000011}
-    Obj: 66
-  - Position: {x: -.449999988, y: 2.69000006}
-    Obj: 78
-  - Position: {x: -1.07000005, y: 2.82999992}
-    Obj: 85
-  - Position: {x: -1, y: 2.80999994}
-    Obj: 86
-  - Position: {x: -2, y: 3}
-    Obj: 87
-  - Position: {x: -2, y: 3.16000009}
-    Obj: 104
-  ChildNodes: []
 --- !u!1001 &796384538
 Prefab:
   m_ObjectHideFlags: 0
@@ -5278,36 +4454,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &866032866
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: .114999771
-    y: -.8125
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 2, y: 0}
-    Obj: 38
-  - Position: {x: .920000017, y: -.569999993}
-    Obj: 39
-  - Position: {x: 1.03999996, y: 0}
-    Obj: 40
-  - Position: {x: .860000014, y: -.200000003}
-    Obj: 41
-  - Position: {x: 1.38999999, y: .370000005}
-    Obj: 42
-  ChildNodes: []
 --- !u!1 &885186555
 GameObject:
   m_ObjectHideFlags: 0
@@ -5524,34 +4670,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &911546353
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 2.38749981
-    y: -.8125
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 3, y: 0}
-    Obj: 44
-  - Position: {x: 3.44000006, y: -.370000005}
-    Obj: 45
-  - Position: {x: 3.61999989, y: 0}
-    Obj: 46
-  - Position: {x: 3.81999993, y: .389999986}
-    Obj: 47
-  ChildNodes: []
 --- !u!1001 &916245352
 Prefab:
   m_ObjectHideFlags: 0
@@ -5787,32 +4905,6 @@ Prefab:
   m_RootGameObject: {fileID: 164685684}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &962524647
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.15750027
-    y: .704999924
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -1.38999999, y: 1.38999999}
-    Obj: 83
-  - Position: {x: -2, y: 1}
-    Obj: 94
-  - Position: {x: -1.46000004, y: 1}
-    Obj: 99
-  ChildNodes: []
 --- !u!1 &973069263
 GameObject:
   m_ObjectHideFlags: 0
@@ -5941,30 +5033,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &993733277
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -1.02125025
-    y: 1.84312487
-    width: .56812501
-    height: .379374981
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -.790000021, y: 1.91999996}
-    Obj: 79
-  - Position: {x: -1, y: 2}
-    Obj: 80
-  ChildNodes: []
 --- !u!1001 &1001461604
 Prefab:
   m_ObjectHideFlags: 0
@@ -6202,82 +5270,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &1022404530
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: .114999771
-    y: .704999924
-    width: 4.54500008
-    height: 3.03499985
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 2, y: 1}
-    Obj: 43
-  - Position: {x: 3, y: 1}
-    Obj: 48
-  - Position: {x: 3.06999993, y: 1.72000003}
-    Obj: 49
-  - Position: {x: 3.1400001, y: 1.66999996}
-    Obj: 50
-  - Position: {x: 3.6400001, y: 1.34000003}
-    Obj: 51
-  - Position: {x: 4, y: .779999971}
-    Obj: 52
-  - Position: {x: 3.9000001, y: 1.16999996}
-    Obj: 53
-  - Position: {x: 4, y: 1}
-    Obj: 54
-  - Position: {x: 4.15999985, y: 1.10000002}
-    Obj: 55
-  - Position: {x: 2.57999992, y: 2.13000011}
-    Obj: 56
-  - Position: {x: 2, y: 2}
-    Obj: 57
-  - Position: {x: 2.45000005, y: 2.25999999}
-    Obj: 58
-  - Position: {x: 1.86000001, y: 2.88000011}
-    Obj: 59
-  - Position: {x: 1.72000003, y: 2.80999994}
-    Obj: 60
-  - Position: {x: 1.36000001, y: 2.63000011}
-    Obj: 61
-  - Position: {x: 1, y: 2}
-    Obj: 62
-  - Position: {x: 1.01999998, y: 2.6099999}
-    Obj: 63
-  - Position: {x: .50999999, y: 2.57999992}
-    Obj: 64
-  - Position: {x: .25999999, y: 1.49000001}
-    Obj: 70
-  - Position: {x: .519999981, y: 1.47000003}
-    Obj: 71
-  - Position: {x: .550000012, y: 1.47000003}
-    Obj: 72
-  - Position: {x: 1.10000002, y: 1.46000004}
-    Obj: 73
-  - Position: {x: 1.20000005, y: 1.24000001}
-    Obj: 74
-  - Position: {x: 1.25999999, y: 1.10000002}
-    Obj: 75
-  - Position: {x: 1.28999996, y: 1.04999995}
-    Obj: 76
-  - Position: {x: 1.33000004, y: .74000001}
-    Obj: 77
-  ChildNodes:
-  - {fileID: 342533913}
-  - {fileID: 1194445157}
-  - {fileID: 713052863}
-  - {fileID: 749601571}
 --- !u!1 &1026277551
 GameObject:
   m_ObjectHideFlags: 0
@@ -6342,242 +5334,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &1036649160
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.43000031
-    y: -2.32999992
-    width: 9.09000015
-    height: 6.06999969
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -3.93000007, y: .340000004}
-    Obj: 0
-  - Position: {x: -3.80999994, y: .280000001}
-    Obj: 1
-  - Position: {x: -3.77999997, y: .680000007}
-    Obj: 2
-  - Position: {x: -3.53999996, y: 0}
-    Obj: 3
-  - Position: {x: -3, y: 0}
-    Obj: 4
-  - Position: {x: -3.13000011, y: -.430000007}
-    Obj: 5
-  - Position: {x: -3, y: -.600000024}
-    Obj: 6
-  - Position: {x: -2, y: 0}
-    Obj: 7
-  - Position: {x: -2.74000001, y: -.949999988}
-    Obj: 8
-  - Position: {x: -2, y: -1}
-    Obj: 9
-  - Position: {x: -2.71000004, y: -1}
-    Obj: 10
-  - Position: {x: -2.42000008, y: -1.49000001}
-    Obj: 11
-  - Position: {x: -2, y: -1.32000005}
-    Obj: 12
-  - Position: {x: -1.86000001, y: -1.26999998}
-    Obj: 13
-  - Position: {x: -1, y: -1}
-    Obj: 14
-  - Position: {x: -1.24000001, y: -.0900000036}
-    Obj: 15
-  - Position: {x: -1, y: -.289999992}
-    Obj: 16
-  - Position: {x: -.569999993, y: -.660000026}
-    Obj: 17
-  - Position: {x: -.620000005, y: -1.34000003}
-    Obj: 18
-  - Position: {x: -1, y: -1.24000001}
-    Obj: 19
-  - Position: {x: -1.08000004, y: -1.22000003}
-    Obj: 20
-  - Position: {x: -.280000001, y: -.819999993}
-    Obj: 21
-  - Position: {x: 0, y: -1}
-    Obj: 22
-  - Position: {x: 0, y: -1.58000004}
-    Obj: 23
-  - Position: {x: .189999998, y: -.949999988}
-    Obj: 24
-  - Position: {x: .289999992, y: -1.70000005}
-    Obj: 25
-  - Position: {x: .379999995, y: -.920000017}
-    Obj: 26
-  - Position: {x: .579999983, y: -1.71000004}
-    Obj: 27
-  - Position: {x: .639999986, y: -.879999995}
-    Obj: 28
-  - Position: {x: 1, y: -1}
-    Obj: 29
-  - Position: {x: 1.11000001, y: -1.73000002}
-    Obj: 30
-  - Position: {x: 1.22000003, y: -1.73000002}
-    Obj: 31
-  - Position: {x: 2, y: -1}
-    Obj: 32
-  - Position: {x: 2.20000005, y: -1.74000001}
-    Obj: 33
-  - Position: {x: 2.46000004, y: -1.40999997}
-    Obj: 34
-  - Position: {x: 2.29999995, y: -1.83000004}
-    Obj: 35
-  - Position: {x: 2.75999999, y: -1.03999996}
-    Obj: 36
-  - Position: {x: 2.79999995, y: -1}
-    Obj: 37
-  - Position: {x: 2, y: 0}
-    Obj: 38
-  - Position: {x: .920000017, y: -.569999993}
-    Obj: 39
-  - Position: {x: 1.03999996, y: 0}
-    Obj: 40
-  - Position: {x: .860000014, y: -.200000003}
-    Obj: 41
-  - Position: {x: 1.38999999, y: .370000005}
-    Obj: 42
-  - Position: {x: 2, y: 1}
-    Obj: 43
-  - Position: {x: 3, y: 0}
-    Obj: 44
-  - Position: {x: 3.44000006, y: -.370000005}
-    Obj: 45
-  - Position: {x: 3.61999989, y: 0}
-    Obj: 46
-  - Position: {x: 3.81999993, y: .389999986}
-    Obj: 47
-  - Position: {x: 3, y: 1}
-    Obj: 48
-  - Position: {x: 3.06999993, y: 1.72000003}
-    Obj: 49
-  - Position: {x: 3.1400001, y: 1.66999996}
-    Obj: 50
-  - Position: {x: 3.6400001, y: 1.34000003}
-    Obj: 51
-  - Position: {x: 4, y: .779999971}
-    Obj: 52
-  - Position: {x: 3.9000001, y: 1.16999996}
-    Obj: 53
-  - Position: {x: 4, y: 1}
-    Obj: 54
-  - Position: {x: 4.15999985, y: 1.10000002}
-    Obj: 55
-  - Position: {x: 2.57999992, y: 2.13000011}
-    Obj: 56
-  - Position: {x: 2, y: 2}
-    Obj: 57
-  - Position: {x: 2.45000005, y: 2.25999999}
-    Obj: 58
-  - Position: {x: 1.86000001, y: 2.88000011}
-    Obj: 59
-  - Position: {x: 1.72000003, y: 2.80999994}
-    Obj: 60
-  - Position: {x: 1.36000001, y: 2.63000011}
-    Obj: 61
-  - Position: {x: 1, y: 2}
-    Obj: 62
-  - Position: {x: 1.01999998, y: 2.6099999}
-    Obj: 63
-  - Position: {x: .50999999, y: 2.57999992}
-    Obj: 64
-  - Position: {x: 0, y: 2}
-    Obj: 65
-  - Position: {x: 0, y: 2.63000011}
-    Obj: 66
-  - Position: {x: -.370000005, y: 1.98000002}
-    Obj: 67
-  - Position: {x: -.100000001, y: 1.83000004}
-    Obj: 68
-  - Position: {x: 0, y: 1.73000002}
-    Obj: 69
-  - Position: {x: .25999999, y: 1.49000001}
-    Obj: 70
-  - Position: {x: .519999981, y: 1.47000003}
-    Obj: 71
-  - Position: {x: .550000012, y: 1.47000003}
-    Obj: 72
-  - Position: {x: 1.10000002, y: 1.46000004}
-    Obj: 73
-  - Position: {x: 1.20000005, y: 1.24000001}
-    Obj: 74
-  - Position: {x: 1.25999999, y: 1.10000002}
-    Obj: 75
-  - Position: {x: 1.28999996, y: 1.04999995}
-    Obj: 76
-  - Position: {x: 1.33000004, y: .74000001}
-    Obj: 77
-  - Position: {x: -.449999988, y: 2.69000006}
-    Obj: 78
-  - Position: {x: -.790000021, y: 1.91999996}
-    Obj: 79
-  - Position: {x: -1, y: 2}
-    Obj: 80
-  - Position: {x: -.939999998, y: 1.77999997}
-    Obj: 81
-  - Position: {x: -1, y: 1.73000002}
-    Obj: 82
-  - Position: {x: -1.38999999, y: 1.38999999}
-    Obj: 83
-  - Position: {x: -2, y: 2}
-    Obj: 84
-  - Position: {x: -1.07000005, y: 2.82999992}
-    Obj: 85
-  - Position: {x: -1, y: 2.80999994}
-    Obj: 86
-  - Position: {x: -2, y: 3}
-    Obj: 87
-  - Position: {x: -2.31999993, y: 2.92000008}
-    Obj: 88
-  - Position: {x: -2.5999999, y: 2.52999997}
-    Obj: 89
-  - Position: {x: -3, y: 2}
-    Obj: 90
-  - Position: {x: -3, y: 2.1099999}
-    Obj: 91
-  - Position: {x: -3.27999997, y: 1.83000004}
-    Obj: 92
-  - Position: {x: -3, y: 1}
-    Obj: 93
-  - Position: {x: -2, y: 1}
-    Obj: 94
-  - Position: {x: -1.41999996, y: .460000008}
-    Obj: 95
-  - Position: {x: -1.45000005, y: .230000004}
-    Obj: 96
-  - Position: {x: -1.28999996, y: 0}
-    Obj: 97
-  - Position: {x: -1.39999998, y: .699999988}
-    Obj: 98
-  - Position: {x: -1.46000004, y: 1}
-    Obj: 99
-  - Position: {x: -3.6099999, y: 1.08000004}
-    Obj: 100
-  - Position: {x: -3.57999992, y: 1.15999997}
-    Obj: 101
-  - Position: {x: -3.61999989, y: 1.08000004}
-    Obj: 102
-  - Position: {x: -2.20000005, y: 3.24000001}
-    Obj: 103
-  - Position: {x: -2, y: 3.16000009}
-    Obj: 104
-  - Position: {x: 0, y: -.889999986}
-    Obj: 105
-  ChildNodes:
-  - {fileID: 383220217}
-  - {fileID: 78385381}
-  - {fileID: 1072483183}
-  - {fileID: 1022404530}
 --- !u!1001 &1038825870
 Prefab:
   m_ObjectHideFlags: 0
@@ -6625,86 +5381,6 @@ Prefab:
   m_RootGameObject: {fileID: 1191852523}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1072483183
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.43000031
-    y: .704999924
-    width: 4.54500008
-    height: 3.03499985
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 0, y: 2}
-    Obj: 65
-  - Position: {x: 0, y: 2.63000011}
-    Obj: 66
-  - Position: {x: -.370000005, y: 1.98000002}
-    Obj: 67
-  - Position: {x: -.100000001, y: 1.83000004}
-    Obj: 68
-  - Position: {x: 0, y: 1.73000002}
-    Obj: 69
-  - Position: {x: -.449999988, y: 2.69000006}
-    Obj: 78
-  - Position: {x: -.790000021, y: 1.91999996}
-    Obj: 79
-  - Position: {x: -1, y: 2}
-    Obj: 80
-  - Position: {x: -.939999998, y: 1.77999997}
-    Obj: 81
-  - Position: {x: -1, y: 1.73000002}
-    Obj: 82
-  - Position: {x: -1.38999999, y: 1.38999999}
-    Obj: 83
-  - Position: {x: -2, y: 2}
-    Obj: 84
-  - Position: {x: -1.07000005, y: 2.82999992}
-    Obj: 85
-  - Position: {x: -1, y: 2.80999994}
-    Obj: 86
-  - Position: {x: -2, y: 3}
-    Obj: 87
-  - Position: {x: -2.31999993, y: 2.92000008}
-    Obj: 88
-  - Position: {x: -2.5999999, y: 2.52999997}
-    Obj: 89
-  - Position: {x: -3, y: 2}
-    Obj: 90
-  - Position: {x: -3, y: 2.1099999}
-    Obj: 91
-  - Position: {x: -3.27999997, y: 1.83000004}
-    Obj: 92
-  - Position: {x: -3, y: 1}
-    Obj: 93
-  - Position: {x: -2, y: 1}
-    Obj: 94
-  - Position: {x: -1.46000004, y: 1}
-    Obj: 99
-  - Position: {x: -3.6099999, y: 1.08000004}
-    Obj: 100
-  - Position: {x: -3.57999992, y: 1.15999997}
-    Obj: 101
-  - Position: {x: -3.61999989, y: 1.08000004}
-    Obj: 102
-  - Position: {x: -2.20000005, y: 3.24000001}
-    Obj: 103
-  - Position: {x: -2, y: 3.16000009}
-    Obj: 104
-  ChildNodes:
-  - {fileID: 1409783145}
-  - {fileID: 1971864521}
-  - {fileID: 388661005}
-  - {fileID: 759153902}
 --- !u!1001 &1076889536
 Prefab:
   m_ObjectHideFlags: 0
@@ -6799,34 +5475,6 @@ Prefab:
   m_RootGameObject: {fileID: 126354995}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1078417390
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: .114999771
-    y: -1.57124996
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: .189999998, y: -.949999988}
-    Obj: 24
-  - Position: {x: .379999995, y: -.920000017}
-    Obj: 26
-  - Position: {x: .639999986, y: -.879999995}
-    Obj: 28
-  - Position: {x: 1, y: -1}
-    Obj: 29
-  ChildNodes: []
 --- !u!1 &1083352447
 GameObject:
   m_ObjectHideFlags: 0
@@ -6891,36 +5539,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &1087011661
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.15750027
-    y: -.0537500381
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -2, y: 0}
-    Obj: 7
-  - Position: {x: -1.41999996, y: .460000008}
-    Obj: 95
-  - Position: {x: -1.45000005, y: .230000004}
-    Obj: 96
-  - Position: {x: -1.28999996, y: 0}
-    Obj: 97
-  - Position: {x: -1.39999998, y: .699999988}
-    Obj: 98
-  ChildNodes: []
 --- !u!1 &1097808848
 GameObject:
   m_ObjectHideFlags: 0
@@ -7096,50 +5714,6 @@ Prefab:
   m_RootGameObject: {fileID: 97765163}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1121281242
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 1.25124979
-    y: 1.46374989
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 2, y: 2}
-    Obj: 57
-  ChildNodes: []
---- !u!114 &1126218096
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 2.38749981
-    y: .704999924
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 3, y: 1}
-    Obj: 48
-  ChildNodes: []
 --- !u!1001 &1156998244
 Prefab:
   m_ObjectHideFlags: 0
@@ -7426,48 +6000,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &1194445157
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 2.38749981
-    y: .704999924
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 3, y: 1}
-    Obj: 48
-  - Position: {x: 3.06999993, y: 1.72000003}
-    Obj: 49
-  - Position: {x: 3.1400001, y: 1.66999996}
-    Obj: 50
-  - Position: {x: 3.6400001, y: 1.34000003}
-    Obj: 51
-  - Position: {x: 4, y: .779999971}
-    Obj: 52
-  - Position: {x: 3.9000001, y: 1.16999996}
-    Obj: 53
-  - Position: {x: 4, y: 1}
-    Obj: 54
-  - Position: {x: 4.15999985, y: 1.10000002}
-    Obj: 55
-  - Position: {x: 2.57999992, y: 2.13000011}
-    Obj: 56
-  ChildNodes:
-  - {fileID: 1126218096}
-  - {fileID: 177419174}
-  - {fileID: 581867750}
-  - {fileID: 2126854918}
 --- !u!1001 &1205304507
 Prefab:
   m_ObjectHideFlags: 0
@@ -8274,104 +6806,6 @@ Prefab:
   m_RootGameObject: {fileID: 1561134394}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1369949975
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -1.02125025
-    y: -1.57124996
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -1, y: -1}
-    Obj: 14
-  - Position: {x: -.620000005, y: -1.34000003}
-    Obj: 18
-  - Position: {x: -1, y: -1.24000001}
-    Obj: 19
-  - Position: {x: -.280000001, y: -.819999993}
-    Obj: 21
-  - Position: {x: 0, y: -1}
-    Obj: 22
-  - Position: {x: 0, y: -.889999986}
-    Obj: 105
-  ChildNodes: []
---- !u!114 &1372090661
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: .114999771
-    y: 1.46374989
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 1, y: 2}
-    Obj: 62
-  - Position: {x: .25999999, y: 1.49000001}
-    Obj: 70
-  - Position: {x: .519999981, y: 1.47000003}
-    Obj: 71
-  - Position: {x: .550000012, y: 1.47000003}
-    Obj: 72
-  ChildNodes: []
---- !u!114 &1409783145
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.43000031
-    y: .704999924
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -3, y: 2}
-    Obj: 90
-  - Position: {x: -3, y: 2.1099999}
-    Obj: 91
-  - Position: {x: -3.27999997, y: 1.83000004}
-    Obj: 92
-  - Position: {x: -3, y: 1}
-    Obj: 93
-  - Position: {x: -3.6099999, y: 1.08000004}
-    Obj: 100
-  - Position: {x: -3.57999992, y: 1.15999997}
-    Obj: 101
-  - Position: {x: -3.61999989, y: 1.08000004}
-    Obj: 102
-  ChildNodes:
-  - {fileID: 2098618500}
-  - {fileID: 366085002}
-  - {fileID: 1533879501}
-  - {fileID: 1541690607}
 --- !u!1 &1409791034
 GameObject:
   m_ObjectHideFlags: 0
@@ -8641,30 +7075,6 @@ Prefab:
   m_RootGameObject: {fileID: 578320590}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1450612431
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: .114999771
-    y: .704999924
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 1.10000002, y: 1.46000004}
-    Obj: 73
-  - Position: {x: 1.20000005, y: 1.24000001}
-    Obj: 74
-  ChildNodes: []
 --- !u!1 &1456992880
 GameObject:
   m_ObjectHideFlags: 0
@@ -8952,52 +7362,6 @@ Prefab:
   m_RootGameObject: {fileID: 2025392565}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1533879501
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.43000031
-    y: 1.46374989
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode: []
-  ChildNodes: []
---- !u!114 &1541690607
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -3.29375029
-    y: 1.46374989
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -3, y: 2}
-    Obj: 90
-  - Position: {x: -3, y: 2.1099999}
-    Obj: 91
-  - Position: {x: -3.27999997, y: 1.83000004}
-    Obj: 92
-  ChildNodes: []
 --- !u!1001 &1548870360
 Prefab:
   m_ObjectHideFlags: 0
@@ -9045,34 +7409,6 @@ Prefab:
   m_RootGameObject: {fileID: 2006987413}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1551319762
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: .114999771
-    y: -2.32999992
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: .289999992, y: -1.70000005}
-    Obj: 25
-  - Position: {x: .579999983, y: -1.71000004}
-    Obj: 27
-  - Position: {x: 1.11000001, y: -1.73000002}
-    Obj: 30
-  - Position: {x: 1.22000003, y: -1.73000002}
-    Obj: 31
-  ChildNodes: []
 --- !u!1 &1555274124
 GameObject:
   m_ObjectHideFlags: 0
@@ -9248,26 +7584,6 @@ Prefab:
   m_RootGameObject: {fileID: 731227186}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1620837052
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -1.02125025
-    y: .704999924
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode: []
-  ChildNodes: []
 --- !u!1001 &1626405093
 Prefab:
   m_ObjectHideFlags: 0
@@ -9409,34 +7725,6 @@ Prefab:
   m_RootGameObject: {fileID: 663316678}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1678935492
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.43000031
-    y: -.0537500381
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -3.93000007, y: .340000004}
-    Obj: 0
-  - Position: {x: -3.80999994, y: .280000001}
-    Obj: 1
-  - Position: {x: -3.77999997, y: .680000007}
-    Obj: 2
-  - Position: {x: -3.53999996, y: 0}
-    Obj: 3
-  ChildNodes: []
 --- !u!1001 &1688068453
 Prefab:
   m_ObjectHideFlags: 0
@@ -9484,44 +7772,6 @@ Prefab:
   m_RootGameObject: {fileID: 1191090063}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1689096668
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.43000031
-    y: -.8125
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -3.93000007, y: .340000004}
-    Obj: 0
-  - Position: {x: -3.80999994, y: .280000001}
-    Obj: 1
-  - Position: {x: -3.77999997, y: .680000007}
-    Obj: 2
-  - Position: {x: -3.53999996, y: 0}
-    Obj: 3
-  - Position: {x: -3, y: 0}
-    Obj: 4
-  - Position: {x: -3.13000011, y: -.430000007}
-    Obj: 5
-  - Position: {x: -3, y: -.600000024}
-    Obj: 6
-  ChildNodes:
-  - {fileID: 574006844}
-  - {fileID: 714990018}
-  - {fileID: 1678935492}
-  - {fileID: 2007928343}
 --- !u!1 &1689952112
 GameObject:
   m_ObjectHideFlags: 0
@@ -10094,46 +8344,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &1825944810
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.15750027
-    y: -.8125
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -2, y: 0}
-    Obj: 7
-  - Position: {x: -1.24000001, y: -.0900000036}
-    Obj: 15
-  - Position: {x: -1, y: -.289999992}
-    Obj: 16
-  - Position: {x: -.569999993, y: -.660000026}
-    Obj: 17
-  - Position: {x: -1.41999996, y: .460000008}
-    Obj: 95
-  - Position: {x: -1.45000005, y: .230000004}
-    Obj: 96
-  - Position: {x: -1.28999996, y: 0}
-    Obj: 97
-  - Position: {x: -1.39999998, y: .699999988}
-    Obj: 98
-  ChildNodes:
-  - {fileID: 743195053}
-  - {fileID: 1845484060}
-  - {fileID: 1087011661}
-  - {fileID: 651021460}
 --- !u!1 &1843890837
 GameObject:
   m_ObjectHideFlags: 0
@@ -10280,30 +8490,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1292531724}
   m_RootOrder: 2
---- !u!114 &1845484060
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -1.02125025
-    y: -.8125
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -1, y: -.289999992}
-    Obj: 16
-  - Position: {x: -.569999993, y: -.660000026}
-    Obj: 17
-  ChildNodes: []
 --- !u!1001 &1849765002
 Prefab:
   m_ObjectHideFlags: 0
@@ -10720,54 +8906,6 @@ Prefab:
   m_RootGameObject: {fileID: 1823822021}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1971864521
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.15750027
-    y: .704999924
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 0, y: 2}
-    Obj: 65
-  - Position: {x: -.370000005, y: 1.98000002}
-    Obj: 67
-  - Position: {x: -.100000001, y: 1.83000004}
-    Obj: 68
-  - Position: {x: 0, y: 1.73000002}
-    Obj: 69
-  - Position: {x: -.790000021, y: 1.91999996}
-    Obj: 79
-  - Position: {x: -1, y: 2}
-    Obj: 80
-  - Position: {x: -.939999998, y: 1.77999997}
-    Obj: 81
-  - Position: {x: -1, y: 1.73000002}
-    Obj: 82
-  - Position: {x: -1.38999999, y: 1.38999999}
-    Obj: 83
-  - Position: {x: -2, y: 2}
-    Obj: 84
-  - Position: {x: -2, y: 1}
-    Obj: 94
-  - Position: {x: -1.46000004, y: 1}
-    Obj: 99
-  ChildNodes:
-  - {fileID: 962524647}
-  - {fileID: 1620837052}
-  - {fileID: 34713505}
-  - {fileID: 753293732}
 --- !u!1 &2006987413
 GameObject:
   m_ObjectHideFlags: 0
@@ -10832,191 +8970,6 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5222f48d28513c64ba1be56363eb357e, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
---- !u!114 &2007928343
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -3.29375029
-    y: -.0537500381
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -3, y: 0}
-    Obj: 4
-  ChildNodes: []
---- !u!114 &2015582033
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -2.15750027
-    y: -2.32999992
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode: []
-  ChildNodes: []
---- !u!43 &2022687973
-Mesh:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  serializedVersion: 8
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 381
-    topology: 0
-    firstVertex: 0
-    vertexCount: 106
-    localAABB:
-      m_Center: {x: .11499989, y: .704999983, z: 0}
-      m_Extent: {x: 4.04500008, y: 2.53500009, z: 0}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_MeshCompression: 0
-  m_StreamCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexBuffer: 1600150069001800160069005500570068005700670068005700580067006500640066005d0065005c005d0064006500020064005d00040002005d00070004005d0054005e005a005e005400530063005e00530062005e00630062005f005e000f00090007000f0007006100610007006000600007005f0007005e005f005e0007005d005e005d005a005a005d005c005b005a005c005a005b0059005a0059005400540059005800540058005700540057005500500056004e005000550056005000540055005000530054005000520053005100520050004f00510050004f0050004e0043004f004e00420043004e002b002a004d002b004d004c002b004c004b004b004a002b002b004a00390039004a004900390049003e00490048003e003e0048004700470041003e00460041004700460045004100410045004400410044004300410043004200400041004200410040003e003f003e0040003e003f003d003e003d00390039003d003c0039003c003b0039003b003a00380039003a00390038002b002b003800310037003600350034003600370034003500360034003300350034002f00300030003300340033003000320032003000310030002b00310030002c002b002c0030002f002e002c002f002e002d002c0025002c002d00250026002c002c0026002b002b0026002a00260028002a002800270029002700280026001d001c0027001d002700200020002700260020002600250024002000250024002200200022002300210022002100200021001f0020001f001d0020001f001e001d001e001b001d001b001c001d001b001a001c001b0019001a001a001900180017001800190017001600180016001700120016001200150012001100150014000d000e000e0013001400120013000e0012000e00110011000e0010000e000f0010000e0009000f0009000e000d000d000c00090009000c000b0009000b000a0009000a000800090008000700080006000700060004000700040006000500040005000300040003000200030001000200020001000000
-  m_Skin: []
-  m_VertexData:
-    m_CurrentChannels: 11
-    m_VertexCount: 106
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_Streams:
-    - channelMask: 11
-      offset: 0
-      stride: 32
-      dividerOp: 0
-      frequency: 0
-    - channelMask: 0
-      offset: 0
-      stride: 0
-      dividerOp: 0
-      frequency: 0
-    - channelMask: 0
-      offset: 0
-      stride: 0
-      dividerOp: 0
-      frequency: 0
-    - channelMask: 0
-      offset: 0
-      stride: 0
-      dividerOp: 0
-      frequency: 0
-    m_DataSize: 3392
-    _typelessdata: 1f857bc07b14ae3e000000000000008000000080000080bf4c37c9be96430b3d0ad773c0295c8f3e000000000000008000000080000080bf6e12c3be4260e53c85eb71c07b142e3f000000000000008000000080000080bf3789c1be96438b3d5c8f62c000000000000000000000008000000080000080bf7d3fb5be00000000000040c000000000000000000000008000000080000080bf9a9999be00000000ec5148c0f628dcbe000000000000008000000080000080bf8a41a0bec52030bd000040c09a9919bf000000000000008000000080000080bf9a9999be90c275bd000000c000000000000000000000008000000080000080bfcdcc4cbe00000000295c2fc0333373bf000000000000008000000080000080bfba498cbe5c8fc2bd000000c0000080bf000000000000008000000080000080bfcdcc4cbecdccccbda4702dc0000080bf000000000000008000000080000080bf83c08abecdccccbd48e11ac052b8bebf000000000000008000000080000080bfdace77be759318be000000c0c3f5a8bf000000000000008000000080000080bfcdcc4cbe022b07be7b14eebf5c8fa2bf000000000000008000000080000080bfc9763ebe4a0c02be000080bf000080bf000000000000008000000080000080bfcdccccbdcdccccbd52b89ebfec51b8bd000000000000008000000080000080bfb6f3fdbdbd7413bc000080bfe17a94be000000000000008000000080000080bfcdccccbd6891edbc85eb11bfc3f528bf000000000000008000000080000080bfd57869bd022b87bd52b81ebf1f85abbf000000000000008000000080000080bfb6f37dbd4c3709be000080bf52b89ebf000000000000008000000080000080bfcdccccbdb6f3fdbd713d8abff6289cbf000000000000008000000080000080bf1b2fddbd23dbf9bd295c8fbe85eb51bf000000000000008000000080000080bf4260e5bc9eefa7bd00000000000080bf000000000000008000000080000080bf00000000cdccccbd00000000713dcabf000000000000008000000080000080bf00000000c1ca21be5c8f423e333373bf000000000000008000000080000080bfe3a59b3c5c8fc2bde17a943e9a99d9bf000000000000008000000080000080bf6891ed3c7b142ebe5c8fc23e1f856bbf000000000000008000000080000080bfe3a51b3d7f6abcbde17a143f48e1dabf000000000000008000000080000080bf68916d3da01a2fbe0ad7233fae4761bf000000000000008000000080000080bf6e12833d5839b4bd0000803f000080bf000000000000008000000080000080bfcdcccc3dcdccccbd7b148e3fa470ddbf000000000000008000000080000080bff853e33dea2631bef6289c3fa470ddbf000000000000008000000080000080bf23dbf93dea2631be00000040000080bf000000000000008000000080000080bfcdcc4c3ecdccccbdcdcc0c4052b8debf000000000000008000000080000080bfae47613e0e2d32bea4701d40e17ab4bf000000000000008000000080000080bf6de77b3e4e6210be33331340713deabf000000000000008000000080000080bf1e856b3e5a643bbed7a33040b81e85bf000000000000008000000080000080bfdf4f8d3ef3fdd4bd33333340000080bf000000000000008000000080000080bf295c8f3ecdccccbd0000004000000000000000000000008000000080000080bfcdcc4c3e000000001f856b3f85eb11bf000000000000008000000080000080bf7f6abc3dd57869bdb81e853f00000000000000000000008000000080000080bff3fdd43d00000000f6285c3fcdcc4cbe000000000000008000000080000080bfc520b03d0ad7a3bc85ebb13fa470bd3e000000000000008000000080000080bf04560e3e508d173d000000400000803f000000000000008000000080000080bfcdcc4c3ecdcccc3d0000404000000000000000000000008000000080000080bf9a99993e00000000f6285c40a470bdbe000000000000008000000080000080bfc520b03e508d17bd14ae674000000000000000000000008000000080000080bf1058b93e00000000e17a744014aec73e000000000000008000000080000080bf8195c33e76be1f3d000040400000803f000000000000008000000080000080bf9a99993ecdcccc3de17a4440f628dc3f000000000000008000000080000080bf1a2f9d3ec520303ec3f548408fc2d53f000000000000008000000080000080bf9cc4a03e0c022b3ec3f568401f85ab3f000000000000008000000080000080bf365eba3e4c37093e0000804014ae473f000000000000008000000080000080bfcdcccc3e76be9f3d9a9979408fc2953f000000000000008000000080000080bf15aec73eb29def3d000080400000803f000000000000008000000080000080bfcdcccc3ecdcccc3db81e8540cdcc8c3f000000000000008000000080000080bff3fdd43eae47e13db81e2540ec510840000000000000008000000080000080bf9318843ead1c5a3e0000004000000040000000000000008000000080000080bfcdcc4c3ecdcc4c3ecdcc1c40d7a31040000000000000008000000080000080bf48e17a3e8b6c673e7b14ee3fec513840000000000000008000000080000080bfc9763e3ebd74933ef628dc3f0ad73340000000000000008000000080000080bfc520303e3bdf8f3e7b14ae3fec512840000000000000008000000080000080bf96430b3ef0a7863e0000803f00000040000000000000008000000080000080bfcdcccc3dcdcc4c3e5c8f823f3d0a2740000000000000008000000080000080bf60e5d03dcaa1853e5c8f023fb81e2540000000000000008000000080000080bf60e5503d9318843e0000000000000040000000000000008000000080000080bf00000000cdcc4c3e00000000ec512840000000000000008000000080000080bf00000000f0a7863ea470bdbea470fd3f000000000000008000000080000080bf508d17bd83c04a3ecdccccbd713dea3f000000000000008000000080000080bf0ad723bc5a643b3e00000000a470dd3f000000000000008000000080000080bf00000000ea26313eb81e853e52b8be3f000000000000008000000080000080bff3fdd43c7593183eb81e053ff628bc3f000000000000008000000080000080bff3fd543d2b87163ecdcc0c3ff628bc3f000000000000008000000080000080bfae47613d2b87163ecdcc8c3f48e1ba3f000000000000008000000080000080bfae47e13d0681153e9a99993f52b89e3f000000000000008000000080000080bf90c2f53db6f3fd3dae47a13fcdcc8c3f000000000000008000000080000080bf2506013eae47e13db81ea53f6666863f000000000000008000000080000080bf9318043e3d0ad73d713daa3fa4703d3f000000000000008000000080000080bf2731083e508d973d6666e6bef6282c40000000000000008000000080000080bfeb5138bd5eba893e713d4abf8fc2f53f000000000000008000000080000080bfc1caa1bda69b443e000080bf00000040000000000000008000000080000080bfcdccccbdcdcc4c3ed7a370bf0ad7e33f000000000000008000000080000080bf1283c0bda245363e000080bfa470dd3f000000000000008000000080000080bfcdccccbdea26313e85ebb1bf85ebb13f000000000000008000000080000080bf04560ebe04560e3e000000c000000040000000000000008000000080000080bfcdcc4cbecdcc4c3ec3f588bfb81e3540000000000000008000000080000080bfd222dbbd60e5903e000080bf0ad73340000000000000008000000080000080bfcdccccbd3bdf8f3e000000c000004040000000000000008000000080000080bfcdcc4cbe9a99993ee17a14c048e13a40000000000000008000000080000080bf68916dbe0681953e666626c085eb2140000000000000008000000080000080bfb81e85be3789813e000040c000000040000000000000008000000080000080bf9a9999becdcc4c3e000040c03d0a0740000000000000008000000080000080bf9a9999be6210583e85eb51c0713dea3f000000000000008000000080000080bf9eefa7be5a643b3e000040c00000803f000000000000008000000080000080bf9a9999becdcccc3d000000c00000803f000000000000008000000080000080bfcdcc4cbecdcccc3d8fc2b5bf1f85eb3e000000000000008000000080000080bf726811be7f6a3c3d9a99b9bf1f856b3e000000000000008000000080000080bfe27a14be7f6abc3cb81ea5bf00000000000000000000008000000080000080bf931804be000000003333b3bf3333333f000000000000008000000080000080bf295c0fbe295c8f3d48e1babf0000803f000000000000008000000080000080bf068115becdcccc3d3d0a67c0713d8a3f000000000000008000000080000080bffed4b8be1b2fdd3db81e65c0e17a943f000000000000008000000080000080bfc64bb7be6891ed3d14ae67c0713d8a3f000000000000008000000080000080bf1058b9be1b2fdd3dcdcc0cc0295c4f40000000000000008000000080000080bfae4761be54e3a53e000000c0713d4a40000000000000008000000080000080bfcdcc4cbec1caa13e000000000ad763bf000000000000008000000080000080bf00000000a245b6bd
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BindPoses:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Colors:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-  m_LocalAABB:
-    m_Center: {x: .11499989, y: .704999983, z: 0}
-    m_Extent: {x: 4.04500008, y: 2.53500009, z: 0}
-  m_MeshUsageFlags: 0
-  m_MeshOptimized: 0
 --- !u!1 &2025392565
 GameObject:
   m_ObjectHideFlags: 0
@@ -11255,78 +9208,6 @@ Prefab:
   m_RootGameObject: {fileID: 1285411499}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &2098618500
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -4.43000031
-    y: .704999924
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: -3.6099999, y: 1.08000004}
-    Obj: 100
-  - Position: {x: -3.57999992, y: 1.15999997}
-    Obj: 101
-  - Position: {x: -3.61999989, y: 1.08000004}
-    Obj: 102
-  ChildNodes: []
---- !u!114 &2109921365
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 2.38749981
-    y: -2.32999992
-    width: 2.27250004
-    height: 1.51749992
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 2.46000004, y: -1.40999997}
-    Obj: 34
-  - Position: {x: 2.75999999, y: -1.03999996}
-    Obj: 36
-  - Position: {x: 2.79999995, y: -1}
-    Obj: 37
-  ChildNodes: []
---- !u!114 &2126854918
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: 3.52374983
-    y: 1.46374989
-    width: 1.13625002
-    height: .758749962
-  ObstructionLayer: Water
-  ObjectsWithinNode: []
-  ChildNodes: []
 --- !u!1001 &2129472301
 Prefab:
   m_ObjectHideFlags: 0
@@ -11438,27 +9319,3 @@ Prefab:
   m_RootGameObject: {fileID: 449380704}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &2133717090
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fae3ba18335764aa0be62a65003ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeBounds:
-    serializedVersion: 2
-    x: -.453125238
-    y: 1.84312487
-    width: .56812501
-    height: .379374981
-  ObstructionLayer: Water
-  ObjectsWithinNode:
-  - Position: {x: 0, y: 2}
-    Obj: 65
-  - Position: {x: -.370000005, y: 1.98000002}
-    Obj: 67
-  ChildNodes: []

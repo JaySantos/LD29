@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class WeaponManager : MonoBehaviour 
+public class WeaponManager : EnhancedBehaviour 
 {
 	public float shootSpeed = 5f;
 	public GameObject defaultPrefab;
@@ -14,6 +14,7 @@ public class WeaponManager : MonoBehaviour
 	public int shotgunPooledAmmount = 20;
 	public int rocketPooledAmmount = 5;
 
+	public int ammo;
 	private bool fireWeapon;
 	private float defaultCooldownTime = 0.5f;
 	private float machineGunCooldownTime = 0.1f;
@@ -21,22 +22,30 @@ public class WeaponManager : MonoBehaviour
 	private float rocketCooldownTime = 1f;
 	private Vector2 shootDirection;
 	private Transform myTransform;
-	private WeaponType weaponType;
+
+	private ScoreManager scoreManager;
+	public WeaponType weaponType;
+
+	private ScoreManager sm;
 
 	private List<GameObject> defaultBullets;
 	private List<GameObject> machineGunBullets;
 	private List<GameObject> shotgunBullets;
 	private List<GameObject> rocketBullets;
 
-	private enum WeaponType {DEFAULT, MACHINE_GUN, SHOTGUN, ROCKET_LAUNCHER};
+	public enum WeaponType {DEFAULT, MACHINE_GUN, SHOTGUN, ROCKET_LAUNCHER};
 
 	// Use this for initialization
-	void Start () 
-	{	
+	protected override void EnhancedStart ()
+	{
+		base.EnhancedStart();
+		ammo = 0;
 		fireWeapon = true;
 		shootDirection = new Vector2(0f, 0f);
 		myTransform = transform;
 		weaponType = WeaponType.SHOTGUN;
+
+		scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
 
 		//Pooling bullets...
 		defaultBullets = new List<GameObject>();
@@ -44,11 +53,15 @@ public class WeaponManager : MonoBehaviour
 		shotgunBullets = new List<GameObject>();
 		rocketBullets = new List<GameObject>();
 
+		GameObject gameScene = GameObject.Find("Game");
+
 		//Default...
 		for (int i = 0; i < defaultPooledAmmount; i++)
 		{
 			GameObject obj = (GameObject)Instantiate(defaultPrefab);
+			obj.transform.parent = gameScene.transform;
 			obj.SetActive(false);
+			obj.GetComponent<SpriteRenderer>().sortingLayerName = "Game";
 			defaultBullets.Add(obj);
 		}
 
@@ -56,7 +69,9 @@ public class WeaponManager : MonoBehaviour
 		for (int j = 0; j < machineGunPooledAmmount; j++)
 		{
 			GameObject obj = (GameObject)Instantiate(machineGunPrefab);
+			obj.transform.parent = gameScene.transform;
 			obj.SetActive(false);
+			obj.GetComponent<SpriteRenderer>().sortingLayerName = "Game";
 			machineGunBullets.Add(obj);
 		}
 
@@ -64,7 +79,9 @@ public class WeaponManager : MonoBehaviour
 		for (int k = 0; k < shotgunPooledAmmount; k++)
 		{
 			GameObject obj = (GameObject)Instantiate(shotgunPrefab);
+			obj.transform.parent = gameScene.transform;
 			obj.SetActive(false);
+			obj.GetComponent<SpriteRenderer>().sortingLayerName = "Game";
 			shotgunBullets.Add(obj);
 		}
 
@@ -72,7 +89,9 @@ public class WeaponManager : MonoBehaviour
 		for (int l = 0; l < rocketPooledAmmount; l++)
 		{
 			GameObject obj = (GameObject)Instantiate(rocketPrefab);
+			obj.transform.parent = gameScene.transform;
 			obj.SetActive(false);
+			obj.GetComponent<SpriteRenderer>().sortingLayerName = "Game";
 			rocketBullets.Add(obj);
 		}
 	}
@@ -101,8 +120,9 @@ public class WeaponManager : MonoBehaviour
 		}
 
 		//shooting
-		if (shootDirection != Vector2.zero && fireWeapon)
+		if (shootDirection != Vector2.zero && fireWeapon && GetComponent<HeroManager>().EnableInput)
 		{
+			GetComponent<HeroManager>().SetBodySprite(shootDirection);
 			switch (weaponType)
 			{
 				case WeaponType.DEFAULT:
@@ -110,7 +130,9 @@ public class WeaponManager : MonoBehaviour
 					{
 						if (!defaultBullets[i].activeInHierarchy)
 						{
-							defaultBullets[i].transform.position = myTransform.position;
+							defaultBullets[i].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.1f);
+							defaultBullets[i].transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0.0f, 360.0f));
+
 							defaultBullets[i].GetComponent<BulletManager>().bulletDirection = shootDirection;
 							defaultBullets[i].SetActive(true);
 							break;
@@ -123,9 +145,11 @@ public class WeaponManager : MonoBehaviour
 					{
 						if (!machineGunBullets[i].activeInHierarchy)
 						{
-							machineGunBullets[i].transform.position = myTransform.position;
+							machineGunBullets[i].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.5f);
 							machineGunBullets[i].GetComponent<BulletManager>().bulletDirection = shootDirection;
+							SetBulletRotation(machineGunBullets[i]);
 							machineGunBullets[i].SetActive(true);
+							ammo--;
 							break;
 						}
 					}
@@ -139,7 +163,7 @@ public class WeaponManager : MonoBehaviour
 					{
 						if (!shotgunBullets[i].activeInHierarchy)
 						{
-							shotgunBullets[i].transform.position = myTransform.position;
+							shotgunBullets[i].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.5f);
 							shotgunBullets[i].GetComponent<BulletManager>().bulletDirection = shootDirection;
 							shotgunBullets[i].SetActive(true);
 							break;
@@ -151,7 +175,7 @@ public class WeaponManager : MonoBehaviour
 					{
 						if (!shotgunBullets[j].activeInHierarchy)
 						{
-							shotgunBullets[j].transform.position = myTransform.position;
+							shotgunBullets[j].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.5f);
 							shotgunBullets[j].SetActive(true);
 							bullet1 = shotgunBullets[j];
 							break;
@@ -163,19 +187,34 @@ public class WeaponManager : MonoBehaviour
 					{
 						if (!shotgunBullets[k].activeInHierarchy)
 						{
-							shotgunBullets[k].transform.position = myTransform.position;
+							shotgunBullets[k].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.5f);
 							shotgunBullets[k].SetActive(true);
 							bullet2 = shotgunBullets[k];
 							break;
 						}
 					}
-					//bp1.GetComponent<BulletManager>().bulletDirection = shootDirection;
 					SetShotgunBulletsDirections(bullet1, bullet2);
 					break;
 
 				case WeaponType.ROCKET_LAUNCHER:
-					break;
+					for (int l = 0; l < rocketBullets.Count; l++)
+					{
+						if (!rocketBullets[l].activeInHierarchy)
+						{
+							rocketBullets[l].transform.position = myTransform.position;
+							rocketBullets[l].GetComponent<BulletManager>().bulletDirection = shootDirection;
+							SetBulletRotation(rocketBullets[l]);
+							rocketBullets[l].SetActive(true);
+							break;
+						}
+					}
+				break;
 			}
+			if (ammo == 0)
+			{
+				//weaponType = WeaponType.DEFAULT;
+			}
+			scoreManager.UpdateScore();
 			fireWeapon = false;
 			StartCoroutine("Cooldown");
 		}
@@ -267,5 +306,53 @@ public class WeaponManager : MonoBehaviour
 				b2.GetComponent<BulletManager>().bulletDirection = new Vector2(-0.3f, -0.85f);
 			}
 		}
+	}
+
+	void SetBulletRotation(GameObject bullet)
+	{
+		float z = 0.0f;
+		if (shootDirection.x > 0) //Right
+		{
+			if (shootDirection.y > 0) //up
+			{
+				z = 225f;
+			}
+			else if (shootDirection.y < 0) //down
+			{
+				z = 135f;
+			}
+			else //zero
+			{
+				z = 180f;
+			}
+		} 
+		else if (shootDirection.x < 0) //Left
+		{
+			if (shootDirection.y > 0) //up
+			{
+				z = 315f;
+			}
+			else if (shootDirection.y < 0) //down
+			{
+				z = 45f;
+			}
+			else //zero
+			{
+				z = 0f;
+			}
+		}
+		else //zero
+		{
+			if (shootDirection.y > 0) //up
+			{
+				z = 270f;
+			}
+			else if (shootDirection.y < 0) //down
+			{
+				z = 90f;
+			}
+		}
+
+		bullet.transform.rotation = Quaternion.Euler(0f, 0f, z);
 	}
 }
