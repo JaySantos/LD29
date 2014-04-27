@@ -22,12 +22,21 @@ public class BulletManager : MonoBehaviour
 	{
 		Invoke ("Destroy", 2f);
 		myTransform = transform;
-		myTransform.rigidbody2D.velocity = bulletDirection * bulletSpeed;
+		if (weaponType != WeaponType.SHOTGUN)
+		{
+			myTransform.rigidbody2D.velocity = bulletDirection * bulletSpeed;
+		}
+		//myTransform.Translate(bulletDirection * bulletSpeed);
+		Debug.Log(myTransform.rigidbody2D.velocity);
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		if (weaponType == WeaponType.SHOTGUN)
+		{
+			myTransform.Translate(bulletDirection * bulletSpeed * Time.deltaTime);
+		}
 	}
 
 	void Destroy()
@@ -44,7 +53,6 @@ public class BulletManager : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Wall" || other.gameObject.tag == "Enemy")
 		{
-			Debug.Log("!!!TRIGGERENTER!!!");
 			if (weaponType == WeaponType.ROCKET_LAUNCHER)
 			{
 				Collider2D[] colls = Physics2D.OverlapCircleAll(myTransform.position, areaDamage);

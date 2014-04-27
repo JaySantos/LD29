@@ -77,7 +77,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Shotgun
+    m_ConditionEvent: Rocket
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -140,7 +140,7 @@ Transition:
     m_ConditionEvent: Shotgun
     m_EventTreshold: 0
     m_ExitTime: .899999976
-  m_Atomic: 0
+  m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
@@ -241,23 +241,23 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110246545}
-      second:
-      - {fileID: 110153340}
-    data:
-      first: {fileID: 110225870}
-      second:
-      - {fileID: 110118076}
-    data:
-      first: {fileID: 110232261}
-      second:
-      - {fileID: 110117757}
-    data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
       - {fileID: 110102169}
       - {fileID: 110145984}
+    data:
+      first: {fileID: 110232261}
+      second:
+      - {fileID: 110117757}
+    data:
+      first: {fileID: 110225870}
+      second:
+      - {fileID: 110118076}
+    data:
+      first: {fileID: 110246545}
+      second:
+      - {fileID: 110153340}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

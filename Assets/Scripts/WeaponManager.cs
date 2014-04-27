@@ -43,7 +43,7 @@ public class WeaponManager : EnhancedBehaviour
 		fireWeapon = true;
 		shootDirection = new Vector2(0f, 0f);
 		myTransform = transform;
-		weaponType = WeaponType.SHOTGUN;
+		weaponType = WeaponType.DEFAULT;
 
 		scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
 
@@ -193,6 +193,7 @@ public class WeaponManager : EnhancedBehaviour
 							break;
 						}
 					}
+					ammo--;
 					SetShotgunBulletsDirections(bullet1, bullet2);
 					break;
 
@@ -201,18 +202,19 @@ public class WeaponManager : EnhancedBehaviour
 					{
 						if (!rocketBullets[l].activeInHierarchy)
 						{
-							rocketBullets[l].transform.position = myTransform.position;
+							rocketBullets[l].transform.position = myTransform.position + (new Vector3(shootDirection.x, shootDirection.y, 0f) * 0.5f);
 							rocketBullets[l].GetComponent<BulletManager>().bulletDirection = shootDirection;
 							SetBulletRotation(rocketBullets[l]);
 							rocketBullets[l].SetActive(true);
 							break;
 						}
 					}
+					ammo--;
 				break;
 			}
 			if (ammo == 0)
 			{
-				//weaponType = WeaponType.DEFAULT;
+				weaponType = WeaponType.DEFAULT;
 			}
 			scoreManager.UpdateScore();
 			fireWeapon = false;

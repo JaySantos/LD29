@@ -7,10 +7,6 @@ public class WeaponPickupManager : MonoBehaviour
 	private const int SHOTGUN = 1;
 	private const int ROCKET_LAUNCHER = 2;
 	
-	public Sprite machineGun;
-	public Sprite shotgun;
-	public Sprite rocketLauncher;
-	
 	public int machineGunAmmo = 100;
 	public int shotgunAmmo = 10;
 	public int rocketLauncherAmmo = 5;
@@ -49,22 +45,19 @@ public class WeaponPickupManager : MonoBehaviour
 			int draw = Random.Range (0, 100);
 			if (draw < chanceToDraw)
 			{
-				powerUp = Random.Range(0, 2);
+				powerUp = Random.Range(0, 3);
 				
 				switch (powerUp)
 				{
 				case MACHINE_GUN:
-					gameObject.GetComponent<SpriteRenderer>().sprite = machineGun;
 					anim.SetTrigger("MachineGun");
 					break;
 					
 				case SHOTGUN:
-					gameObject.GetComponent<SpriteRenderer>().sprite = shotgun;
 					anim.SetTrigger("Shotgun");
 					break;
 					
 				case ROCKET_LAUNCHER:
-					gameObject.GetComponent<SpriteRenderer>().sprite = rocketLauncher;
 					anim.SetTrigger("Rocket");
 					break;
 				}

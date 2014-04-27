@@ -28,11 +28,12 @@ public class PowerUpManager : MonoBehaviour
 	public GameObject circlePowerUpPrefab;
 
 	private int powerUp;
+	private Animator anim;
 
 	// Use this for initialization
 	void Start () 
 	{
-		//powerUp = Random.Range(0, 5);
+		anim = GetComponent<Animator>();
 	}
 
 	public void Activate()
@@ -54,23 +55,23 @@ public class PowerUpManager : MonoBehaviour
 				switch (powerUp)
 				{
 				case CIRCLE_CARD:
-					gameObject.GetComponent<SpriteRenderer>().sprite = circleCard;
+					anim.SetTrigger("Circle");
 					break;
 					
 				case WAVE_CARD:
-					gameObject.GetComponent<SpriteRenderer>().sprite = waveCard;
+					anim.SetTrigger("Wave");
 					break;
 					
 				case CROSS_CARD:
-					gameObject.GetComponent<SpriteRenderer>().sprite = crossCard;
+					anim.SetTrigger("Cross");
 					break;
 					
 				case SQUARE_CARD:
-					gameObject.GetComponent<SpriteRenderer>().sprite = squareCard;
+					anim.SetTrigger("Square");
 					break;
 					
 				case STAR_CARD:
-					gameObject.GetComponent<SpriteRenderer>().sprite = starCard;
+					anim.SetTrigger("Star");
 					break;
 				}
 			}
@@ -94,6 +95,7 @@ public class PowerUpManager : MonoBehaviour
 			case CIRCLE_CARD:
 				GameObject obj = (GameObject)Instantiate(circlePowerUpPrefab);
 				obj.transform.parent = GameObject.Find("Player").transform;
+
 				obj.transform.position = obj.transform.parent.position;
 
 				break;
@@ -123,7 +125,7 @@ public class PowerUpManager : MonoBehaviour
 				cs.Shake();
 				break;
 			}
-
+			anim.SetTrigger("Empty");
 			gameObject.GetComponent<BoxCollider2D>().enabled = false;
 			gameObject.GetComponent<SpriteRenderer>().enabled = false;
 		}

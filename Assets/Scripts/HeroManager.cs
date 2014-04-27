@@ -67,10 +67,28 @@ public class HeroManager : EnhancedBehaviour
 		invincibleAfterHit = false;
 		enableInput = true;
 	}
+
+	/// <summary>
+	/// My sprite renderer.
+	/// </summary>
+	SpriteRenderer mySpriteRenderer;
 	
+	public SpriteRenderer MySpriteRenderer {
+		get {
+			if(!mySpriteRenderer)
+				mySpriteRenderer = GetComponent<SpriteRenderer>();
+			return mySpriteRenderer;
+		}
+	}
+	
+	[SerializeField]
+	Transform legReference;
+
 	protected override void EnhancedUpdate ()
 	{
 		base.EnhancedUpdate ();
+
+		MySpriteRenderer.sortingOrder = Mathf.FloorToInt(-legReference.position.y);
 
 		//resetting moving and shooting vectors
 		moveDirection = new Vector2(0f, 0f);
@@ -105,6 +123,9 @@ public class HeroManager : EnhancedBehaviour
 		gameObject.GetComponent<SpriteRenderer>().material.color = new Color(gameObject.GetComponent<SpriteRenderer>().material.color.r, 
 		                                                                     gameObject.GetComponent<SpriteRenderer>().material.color.g, 
 		                                                                     gameObject.GetComponent<SpriteRenderer>().material.color.b, 0.5f);
+		legs.GetComponent<SpriteRenderer>().material.color = new Color(gameObject.GetComponent<SpriteRenderer>().material.color.r, 
+		                                                               gameObject.GetComponent<SpriteRenderer>().material.color.g, 
+		                                                               gameObject.GetComponent<SpriteRenderer>().material.color.b, 0.5f);
 		StartCoroutine("DisableStealth");
 	}
 

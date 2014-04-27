@@ -61,6 +61,8 @@
      <Compile Include="Assets\PigeonCoopToolkit\__Navmesh2D Examples\Scripts\Mover.cs" />
      <Compile Include="Assets\PigeonCoopToolkit\__Navmesh2D Examples\Scripts\PathFollower.cs" />
      <Compile Include="Assets\Scripts\AboutManager.cs" />
+     <Compile Include="Assets\Scripts\AnimateDrone.cs" />
+     <Compile Include="Assets\Scripts\AnimateGrunt.cs" />
      <Compile Include="Assets\Scripts\BulletManager.cs" />
      <Compile Include="Assets\Scripts\CameraShake.cs" />
      <Compile Include="Assets\Scripts\CirclePowerUpManager.cs" />

@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: enemyWalk
+  m_Name: Square
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -18,30 +18,32 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 8515230b725b7b549b93998ff593a385, type: 3}
+      value: {fileID: 21300000, guid: 26cf251e7cd924180ab905ce5a09d387, type: 3}
     - time: .0833333358
-      value: {fileID: 21300000, guid: b27d8acf4fd6bc140888d3b3153c1640, type: 3}
+      value: {fileID: 21300000, guid: 4d8fe45c339474137baf7608436f8222, type: 3}
     - time: .166666672
-      value: {fileID: 21300000, guid: fcee24244933e7a4f87e9355426a9548, type: 3}
+      value: {fileID: 21300000, guid: 068d0ad18c519490cb683a5cdf4048ab, type: 3}
     - time: .25
-      value: {fileID: 21300000, guid: c28b0953578c077409d8d3023bb4f8d4, type: 3}
+      value: {fileID: 21300000, guid: 87044dbab24e142729aa17708e1c935d, type: 3}
     - time: .333333343
-      value: {fileID: 21300000, guid: 54679031994e6764e81f4c87af648562, type: 3}
+      value: {fileID: 21300000, guid: bfb80e339d1f84457bf74a504a8fd8c0, type: 3}
     - time: .416666657
-      value: {fileID: 21300000, guid: 44631fd3c80a00d4d97c939ed24f5b61, type: 3}
+      value: {fileID: 21300000, guid: 19a6b5c57a35e4208ae1a2522de13832, type: 3}
+    - time: .5
+      value: {fileID: 21300000, guid: cce42c490b6fe40d984ce2af37baaf7e, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
-  m_WrapMode: 2
+  m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .5
+    m_StopTime: .583333313
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
