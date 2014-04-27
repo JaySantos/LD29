@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freezeTime: 5
+  frozenPrefab: {fileID: 100000, guid: 8ba1e97d6435b44e18d119d59f2f3f95, type: 2}
   player: {fileID: 0}
   body: {fileID: 0}
   maxSpeed: 2

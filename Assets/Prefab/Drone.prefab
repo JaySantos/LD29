@@ -13,6 +13,7 @@ GameObject:
   - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
   - 95: {fileID: 9500000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Enemy
@@ -84,6 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freezeTime: 5
+  frozenPrefab: {fileID: 100000, guid: 8ba1e97d6435b44e18d119d59f2f3f95, type: 2}
   player: {fileID: 0}
   body: {fileID: 0}
   maxSpeed: 2
@@ -92,6 +94,17 @@ MonoBehaviour:
   idleTimeInterval: {x: 0, y: 1}
   baseHitPoints: 3
   hurtTime: .349999994
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65c199d32f440e4497c159551c582ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

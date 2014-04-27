@@ -69,11 +69,28 @@ public class EnemySpawner : EnhancedBehaviour {
 	[SerializeField]
 	int maxEnemies = 1;
 
+	public int MaxEnemies
+	{
+		get
+		{
+			return maxEnemies;
+		}
+		set
+		{
+			maxEnemies = value;
+		}
+	}
+
 	public static int NumEnemies = 0;
 
 	public void StartSpawning()
 	{
 		InvokeRepeating("Spawn", Time.time, spawnInterval);
+	}
+
+	public void StopSpawning()
+	{
+		CancelInvoke();
 	}
 
 	void Spawn() {
