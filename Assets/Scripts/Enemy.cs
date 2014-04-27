@@ -113,7 +113,7 @@ public class Enemy : EnhancedBehaviour {
 	/// of the enemy.
 	/// </summary>
 	Vector3 nextPosition;
-	
+
 	bool mirrored = false;
 	
 	protected override void EnhancedFixedUpdate ()
@@ -121,7 +121,6 @@ public class Enemy : EnhancedBehaviour {
 		base.EnhancedFixedUpdate ();
 		
 		if(!IsFrozen && path != null) {
-			
 			if(Body.position.x < nextPosition.x && !mirrored) {
 				mirrored = true;
 				transform.right = Vector3.left;
@@ -255,7 +254,6 @@ public class Enemy : EnhancedBehaviour {
 		base.EnhancedOnTriggerEnter2D (col);
 		
 		if(col.CompareTag("SingleBullet")) {
-			
 			if(!isHurt) {
 				StartCoroutine(Hurt (1));
 			}
@@ -277,12 +275,10 @@ public class Enemy : EnhancedBehaviour {
 			}
 		}
 	}
-	
 	/// <summary>
 	/// My sprite renderer.
 	/// </summary>
 	SpriteRenderer mySpriteRenderer;
-	
 	public SpriteRenderer MySpriteRenderer {
 		get {
 			if(!mySpriteRenderer)
@@ -290,17 +286,18 @@ public class Enemy : EnhancedBehaviour {
 			return mySpriteRenderer;
 		}
 	}
-	
+
+
 	[SerializeField]
 	float hurtTime = 0.2f;
-	
+
 	bool isHurt = false;
-	
+
 	IEnumerator Hurt(int damage) {
-		
+
 		isHurt = true;
 		hitPoints -= damage;
-		
+
 		if(hitPoints <= 0) {
 			StartCoroutine(Death ());
 		}
@@ -310,7 +307,7 @@ public class Enemy : EnhancedBehaviour {
 			isHurt = false;
 		}
 	}
-	
+
 	IEnumerator Death() {
 		
 		collider2D.enabled = false;
@@ -322,8 +319,6 @@ public class Enemy : EnhancedBehaviour {
 		scoreManager.Score += (int)(100 * scoreManager.Combo);
 		scoreManager.Combo += 0.1f;
 		scoreManager.UpdateScore();
-		
-		
 		yield return StartCoroutine(MySpriteRenderer.FadeOut(0.25f));
 		EnemySpawner.NumEnemies--;
 		if (!levelManager)
