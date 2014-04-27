@@ -81,6 +81,7 @@ public class EnemySpawner : EnhancedBehaviour {
 			Vector3 rndPosition = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
 			Enemy enemy = enemyPrefab.Spawn(rndPosition);
 			enemy.gameObject.transform.parent = gameScene.transform;
+			enemy.GetComponent<SpriteRenderer>().sortingLayerID = 2;
 			enemy.Player = player;
 
 			NumEnemies++;

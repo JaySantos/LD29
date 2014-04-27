@@ -11,6 +11,9 @@ TagManager:
   - 
   - RocketBullet
   - 
+  - Spawner
+  - SpawnController
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
@@ -47,4 +50,12 @@ TagManager:
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: Background
+    userID: 1
+    uniqueID: 2474885779
+    locked: 0
+  - name: Game
+    userID: 2
+    uniqueID: 2063342131
     locked: 0

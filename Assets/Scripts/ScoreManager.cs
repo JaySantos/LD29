@@ -8,11 +8,14 @@ public class ScoreManager : MonoBehaviour
 	public GameObject comboText;
 	public GameObject hpText;
 	public GameObject gameOverText;
+	public GameObject ammoText;
 	public GameObject comboSlider;
 
 	private bool countDownCombo;
 	private float comboTimerInitValue = 1.0f;
 	private float comboTimer;
+	private WeaponManager wm;
+
 	[SerializeField]
 	int score;
 	
@@ -64,10 +67,27 @@ public class ScoreManager : MonoBehaviour
 			hp = value;
 		}
 	}
+
+	[SerializeField]
+	int ammo;
 	
+	public int Ammo
+	{
+		get
+		{
+			return ammo;
+		}
+		set
+		{
+			ammo = value;
+		}
+	}
+
 	// Use this for initialization
 	void Start () 
 	{
+		wm = GameObject.Find("Player").GetComponent<WeaponManager>();
+		Debug.Log("wm = " + wm);
 	}
 
 	void Update()
@@ -93,6 +113,7 @@ public class ScoreManager : MonoBehaviour
 		score = 0;
 		combo = 1.0f;
 		hp = 5;
+		ammo = 0;
 		gameOverText.GetComponent<Text>().text = "";
 		UpdateScore();
 	}
@@ -102,6 +123,17 @@ public class ScoreManager : MonoBehaviour
 		scoreText.GetComponent<Text>().text = "Score: " + score;
 		comboText.GetComponent<Text>().text = "Combo: " + combo + "x";
 		hpText.GetComponent<Text>().text = "HP: " + hp;
+		if (wm)
+		{
+			if (wm.weaponType == WeaponManager.WeaponType.DEFAULT)
+			{
+				ammoText.GetComponent<Text>().text = "Ammo: -";
+			}
+			else
+			{
+				ammoText.GetComponent<Text>().text = "Ammo: " + wm.ammo;
+			}
+		}
 	}
 
 	public void ShowGameOver()

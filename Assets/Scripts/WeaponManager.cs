@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class WeaponManager : MonoBehaviour 
+public class WeaponManager : EnhancedBehaviour 
 {
 	public float shootSpeed = 5f;
 	public GameObject defaultPrefab;
@@ -14,6 +14,7 @@ public class WeaponManager : MonoBehaviour
 	public int shotgunPooledAmmount = 20;
 	public int rocketPooledAmmount = 5;
 
+	public int ammo;
 	private bool fireWeapon;
 	private float defaultCooldownTime = 0.5f;
 	private float machineGunCooldownTime = 0.1f;
@@ -21,22 +22,30 @@ public class WeaponManager : MonoBehaviour
 	private float rocketCooldownTime = 1f;
 	private Vector2 shootDirection;
 	private Transform myTransform;
-	private WeaponType weaponType;
+
+	private ScoreManager scoreManager;
+	public WeaponType weaponType;
+
+	private ScoreManager sm;
 
 	private List<GameObject> defaultBullets;
 	private List<GameObject> machineGunBullets;
 	private List<GameObject> shotgunBullets;
 	private List<GameObject> rocketBullets;
 
-	private enum WeaponType {DEFAULT, MACHINE_GUN, SHOTGUN, ROCKET_LAUNCHER};
+	public enum WeaponType {DEFAULT, MACHINE_GUN, SHOTGUN, ROCKET_LAUNCHER};
 
 	// Use this for initialization
-	void Start () 
-	{	
+	protected override void EnhancedStart ()
+	{
+		base.EnhancedStart();
+		ammo = 0;
 		fireWeapon = true;
 		shootDirection = new Vector2(0f, 0f);
 		myTransform = transform;
-		weaponType = WeaponType.MACHINE_GUN;
+		weaponType = WeaponType.DEFAULT;
+
+		scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
 
 		//Pooling bullets...
 		defaultBullets = new List<GameObject>();
@@ -52,6 +61,7 @@ public class WeaponManager : MonoBehaviour
 			GameObject obj = (GameObject)Instantiate(defaultPrefab);
 			obj.transform.parent = gameScene.transform;
 			obj.SetActive(false);
+			obj.GetComponent<SpriteRenderer>().sortingLayerName = "Game";
 			defaultBullets.Add(obj);
 		}
 
@@ -61,6 +71,7 @@ public class WeaponManager : MonoBehaviour
 			GameObject obj = (GameObject)Instantiate(machineGunPrefab);
 			obj.transform.parent = gameScene.transform;
 			obj.SetActive(false);
+			obj.GetComponent<SpriteRenderer>().sortingLayerName = "Game";
 			machineGunBullets.Add(obj);
 		}
 
@@ -70,6 +81,7 @@ public class WeaponManager : MonoBehaviour
 			GameObject obj = (GameObject)Instantiate(shotgunPrefab);
 			obj.transform.parent = gameScene.transform;
 			obj.SetActive(false);
+			obj.GetComponent<SpriteRenderer>().sortingLayerName = "Game";
 			shotgunBullets.Add(obj);
 		}
 
@@ -79,9 +91,9 @@ public class WeaponManager : MonoBehaviour
 			GameObject obj = (GameObject)Instantiate(rocketPrefab);
 			obj.transform.parent = gameScene.transform;
 			obj.SetActive(false);
+			obj.GetComponent<SpriteRenderer>().sortingLayerName = "Game";
 			rocketBullets.Add(obj);
 		}
-
 	}
 	
 	// Update is called once per frame
@@ -137,6 +149,7 @@ public class WeaponManager : MonoBehaviour
 							machineGunBullets[i].GetComponent<BulletManager>().bulletDirection = shootDirection;
 							SetBulletRotation(machineGunBullets[i]);
 							machineGunBullets[i].SetActive(true);
+							ammo--;
 							break;
 						}
 					}
@@ -198,6 +211,11 @@ public class WeaponManager : MonoBehaviour
 					}
 				break;
 			}
+			if (ammo == 0)
+			{
+				weaponType = WeaponType.DEFAULT;
+			}
+			scoreManager.UpdateScore();
 			fireWeapon = false;
 			StartCoroutine("Cooldown");
 		}

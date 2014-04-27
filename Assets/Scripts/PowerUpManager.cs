@@ -35,7 +35,7 @@ public class PowerUpManager : MonoBehaviour
 		//powerUp = Random.Range(0, 5);
 	}
 
-	void Activate()
+	public void Activate()
 	{
 		gameObject.GetComponent<BoxCollider2D>().enabled = false;
 		gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -75,6 +75,11 @@ public class PowerUpManager : MonoBehaviour
 				}
 			}
 
+			float x = Random.Range(minX, maxX);
+			float y = Random.Range(minY, maxY);
+
+			gameObject.transform.position = new Vector2(x, y);
+
 			gameObject.GetComponent<BoxCollider2D>().enabled = true;
 			gameObject.GetComponent<SpriteRenderer>().enabled = true;
 		}
@@ -88,7 +93,6 @@ public class PowerUpManager : MonoBehaviour
 			{
 			case CIRCLE_CARD:
 				GameObject obj = (GameObject)Instantiate(circlePowerUpPrefab);
-				Debug.Log(obj);
 				obj.transform.parent = GameObject.Find("Player").transform;
 				obj.transform.position = obj.transform.parent.position;
 
@@ -120,7 +124,8 @@ public class PowerUpManager : MonoBehaviour
 				break;
 			}
 
-			Destroy(gameObject);
+			gameObject.GetComponent<BoxCollider2D>().enabled = false;
+			gameObject.GetComponent<SpriteRenderer>().enabled = false;
 		}
 	}
 }
