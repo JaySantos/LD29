@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: RunDown
+  m_Name: runDown
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -18,17 +18,17 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 04d139e04fc61480a98da064356d5182, type: 3}
+      value: {fileID: 21300000, guid: f13663195037b487881c2e96d61dd41d, type: 3}
     - time: .0833333358
-      value: {fileID: 21300000, guid: 83561865cd00446c48efb539018fe19b, type: 3}
+      value: {fileID: 21300000, guid: e91bffc570e5343e99d7d9a1eb6c3c1e, type: 3}
     - time: .166666672
-      value: {fileID: 21300000, guid: 44c0da809fade48c79a0888d12f134e3, type: 3}
+      value: {fileID: 21300000, guid: 58c2cb8d6aa314402b7f459ba1df701f, type: 3}
     - time: .25
-      value: {fileID: 21300000, guid: 5c798dadeee8b4baca9330e1b44fc170, type: 3}
+      value: {fileID: 21300000, guid: 0c75c22e79144489b83bd49f7753f11c, type: 3}
     - time: .333333343
-      value: {fileID: 21300000, guid: acd818f19c71640d584d6eaaf3145811, type: 3}
+      value: {fileID: 21300000, guid: 1cc6c632c76e24ca8b27eea293e7a276, type: 3}
     - time: .416666657
-      value: {fileID: 21300000, guid: 37ac788e9300f4073838d08167c6a156, type: 3}
+      value: {fileID: 21300000, guid: 4a5e7f31b822942eaaeb5352efdff5a4, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212

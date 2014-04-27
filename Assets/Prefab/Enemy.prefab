@@ -14,7 +14,7 @@ GameObject:
   - 61: {fileID: 6100000}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 120240766, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5ccd824793f2134fb52a98511ca43b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freezeTime: 5
   player: {fileID: 0}
   body: {fileID: 0}
   maxSpeed: 2

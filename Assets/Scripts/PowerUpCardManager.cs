@@ -26,7 +26,7 @@ public class PowerUpCardManager : MonoBehaviour
 	void Start () 
 	{
 		//powerUp = Random.Range(0, 5);
-		powerUp = 4;
+		powerUp = 3;
 		switch (powerUp)
 		{
 		case CIRCLE_CARD:
@@ -74,6 +74,12 @@ public class PowerUpCardManager : MonoBehaviour
 				break;
 
 			case SQUARE_CARD:
+				GameObject[] objs = GameObject.FindGameObjectsWithTag("Enemy");
+				foreach (GameObject go in objs)
+				{
+					go.GetComponent<Enemy>().IsFrozen = true;
+				}
+				GameObject.Find("Enemy Manager").GetComponent<EnemySpawner>().IsFrozen = true;
 				break;
 
 			case STAR_CARD:
@@ -85,7 +91,7 @@ public class PowerUpCardManager : MonoBehaviour
 				break;
 			}
 
-			//Destroy(gameObject);
+			Destroy(gameObject);
 		}
 	}
 }

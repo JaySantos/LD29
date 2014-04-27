@@ -38,6 +38,7 @@ public class HeroManager : EnhancedBehaviour
 		moveDirection = new Vector2(0f, 0f);
 
 		legsAnim = legs.GetComponent<Animator>();
+		Debug.Log(legsAnim);
 	}
 	
 	protected override void EnhancedUpdate ()
@@ -50,17 +51,10 @@ public class HeroManager : EnhancedBehaviour
 		//getting the moving input
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis("Vertical");
-
+		Debug.Log(legsAnim);
 		legsAnim.SetFloat("h", h);
 		legsAnim.SetFloat("v", v);
-		if (h > 0)
-		{
-			legsAnim.SetBool("LastRight", true);
-		}
-		else
-		{
-			legsAnim.SetBool("LastRight", false);
-		}
+
 
 		//Moving the character
 		moveDirection = new Vector2(h, v);
