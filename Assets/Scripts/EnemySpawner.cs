@@ -7,7 +7,7 @@ public class EnemySpawner : EnhancedBehaviour {
 	public float freezeTime = 5.0f;
 
 	[SerializeField]
-	Enemy enemyPrefab;
+	Enemy[] enemyPrefabs;
 
 	/// <summary>
 	/// Guarda a posiçao das portas do jogo.
@@ -56,6 +56,7 @@ public class EnemySpawner : EnhancedBehaviour {
 		base.EnhancedOnEnable();
 
 		// Crio uma piscina de inimigos para reaproveitar
+<<<<<<< HEAD
 		enemyPrefab.CreatePool();
 		
 		List<Transform> transforms = new List<Transform>();
@@ -66,6 +67,13 @@ public class EnemySpawner : EnhancedBehaviour {
 				transforms.Add (t);
 			}
 		}
+=======
+		for (int i = 0; i < enemyPrefabs.Length; i++) {
+			enemyPrefabs[i].CreatePool();	
+		}
+
+		List<Transform> transforms = new List<Transform>(GetComponentsInChildren<Transform>(false));
+>>>>>>> FETCH_HEAD
 		transforms.Remove(transform);
 		spawnPoints = transforms.ToArray();
 		gameScene = GameObject.Find("Game");
@@ -99,6 +107,7 @@ public class EnemySpawner : EnhancedBehaviour {
 	}
 
 	void Spawn() {
+<<<<<<< HEAD
 		if(NumEnemies < maxEnemies && !IsFrozen) 
 		{
 			Transform chosenPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
@@ -114,6 +123,13 @@ public class EnemySpawner : EnhancedBehaviour {
 			Enemy enemy = enemyPrefab.Spawn(rndPosition);
 			enemy.startPoint = rndPosition;
 			enemy.endPoint = endPoint.position;
+=======
+
+		if(NumEnemies < maxEnemies && !IsFrozen) {
+
+			Vector3 rndPosition = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
+			Enemy enemy = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)].Spawn(rndPosition);
+>>>>>>> FETCH_HEAD
 			enemy.gameObject.transform.parent = gameScene.transform;
 			enemy.GetComponent<SpriteRenderer>().sortingLayerID = 2;
 			enemy.Player = player;

@@ -39,6 +39,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400004}
+  m_Layer: 0
+  m_Name: Leg Reference
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -62,8 +77,21 @@ Transform:
   m_LocalScale: {x: 1.13177884, y: 1.13177943, z: 1.13177943}
   m_Children:
   - {fileID: 400000}
+  - {fileID: 400004}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &400004
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.330000013, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400002}
+  m_RootOrder: 1
 --- !u!50 &5000000
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -108,8 +136,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .560000002, y: .28401655}
-  m_Center: {x: 0, y: -.352992088}
+  m_Size: {x: .197201341, y: .143578395}
+  m_Center: {x: .00585140195, y: -.282773197}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -165,6 +193,7 @@ MonoBehaviour:
   downRight: {fileID: 21300000, guid: 85236757dec07402b94bbbc12f006133, type: 3}
   downLeft: {fileID: 21300000, guid: 2200e054681014213915ecbe2f264abf, type: 3}
   enableInput: 0
+  legReference: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -185,6 +214,8 @@ MonoBehaviour:
   machineGunPooledAmmount: 20
   shotgunPooledAmmount: 20
   rocketPooledAmmount: 5
+  ammo: 0
+  weaponType: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -203,7 +234,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2063342131
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: af906889b9cbd453485d2d8cec0e1c3c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -225,7 +256,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2063342131
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 68928946a76f54819a2967129f6cb845, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -8,8 +8,12 @@ public class ScoreManager : MonoBehaviour
 	public GameObject comboText;
 	public GameObject hpText;
 	public GameObject ammoText;
+<<<<<<< HEAD
 	public GameObject gameOverImage;
 	//public GameObject comboSlider;
+=======
+//	public GameObject comboSlider;
+>>>>>>> FETCH_HEAD
 
 	private bool countDownCombo;
 	private float comboTimerInitValue = 3.0f;
@@ -96,7 +100,11 @@ public class ScoreManager : MonoBehaviour
 		if (countDownCombo)
 		{
 			comboTimer -= Time.deltaTime;
+<<<<<<< HEAD
 			//comboSlider.GetComponent<Slider>().value = comboTimer;
+=======
+//			comboSlider.GetComponent<Slider>().value = comboTimer;
+>>>>>>> FETCH_HEAD
 			if (comboTimer <= 0f)
 			{
 				combo = 1.0f;
@@ -130,8 +138,13 @@ public class ScoreManager : MonoBehaviour
 
 	public void UpdateScore()
 	{
+<<<<<<< HEAD
 		scoreText.GetComponent<Text>().text =  score.ToString();
 		comboText.GetComponent<Text>().text = combo.ToString();
+=======
+		scoreText.GetComponent<Text>().text = score.ToString();
+		comboText.GetComponent<Text>().text = combo + "x";
+>>>>>>> FETCH_HEAD
 		if (hm)
 		{
 			hpText.GetComponent<Text>().text = hm.hitPoints.ToString();

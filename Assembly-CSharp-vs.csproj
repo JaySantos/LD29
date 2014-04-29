@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -94,6 +95,106 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{2278C10F-A90C-DB91-4DD0-FE232E5852D9}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity Beta/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity Beta/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\CameraShake\Example\CameraShakeExample.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Generic\VersionInformation.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\NavMesh2D.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\NavMesh2DBehaviour.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\NavMesh2DConnection.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\NavMesh2DNode.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\NodeIndexQuadTree.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\NodeIndexQuadTreeNode.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Navmesh2D\OffMeshLink2D.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Utillities\CircularBuffer.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Utillities\GizmosExtra.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\Utillities\Range.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\__Navmesh2D Examples\Scripts\Mover.cs" />
+     <Compile Include="Assets\PigeonCoopToolkit\__Navmesh2D Examples\Scripts\PathFollower.cs" />
+     <Compile Include="Assets\Scripts\AboutManager.cs" />
+     <Compile Include="Assets\Scripts\AnimateDrone.cs" />
+     <Compile Include="Assets\Scripts\AnimateGrunt.cs" />
+     <Compile Include="Assets\Scripts\BulletManager.cs" />
+     <Compile Include="Assets\Scripts\CameraShake.cs" />
+     <Compile Include="Assets\Scripts\CirclePowerUpManager.cs" />
+     <Compile Include="Assets\Scripts\CrossPowerUpManager.cs" />
+     <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\HeroManager.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\MainMenuManager.cs" />
+     <Compile Include="Assets\Scripts\PowerUpManager.cs" />
+     <Compile Include="Assets\Scripts\ScenesManager.cs" />
+     <Compile Include="Assets\Scripts\ScoreManager.cs" />
+     <Compile Include="Assets\Scripts\SphereManager.cs" />
+     <Compile Include="Assets\Scripts\SquarePowerUpManager.cs" />
+     <Compile Include="Assets\Scripts\SteeringBehaviour.cs" />
+     <Compile Include="Assets\Scripts\WavePowerUpManager.cs" />
+     <Compile Include="Assets\Scripts\WeaponManager.cs" />
+     <Compile Include="Assets\Scripts\WeaponPickupManager.cs" />
+     <Compile Include="Assets\SpawnController\Example\Main.cs" />
+     <Compile Include="Assets\SpawnController\Example\Skeletons\Scripts\Skeleton.cs" />
+     <Compile Include="Assets\SpawnController\Plugins\Breed\Scripts\Breed.cs" />
+     <Compile Include="Assets\SpawnController\Scripts\SpawnController.cs" />
+     <Compile Include="Assets\SpawnController\Scripts\SpawnedEnemy.cs" />
+     <None Include="Assets\PigeonCoopToolkit\__SharedDemoAssets\_Shaders\Unlit Transparent Color.shader" />
+     <None Include="Assets\SpawnController\ReadMe.txt" />
+     <None Include="Assets\CameraShake\README.txt" />
+     <None Include="Assets\CameraShake\CHANGELOG.txt" />
+     <None Include="Assets\SpawnController\Plugins\Breed\ReadMe.txt" />
+     <None Include="Assets\PigeonCoopToolkit\External\Editor\Poly2Tri\Poly2Tri Lic.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files (x86)/Unity Beta/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+ </Reference>
+>>>>>>> FETCH_HEAD
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">

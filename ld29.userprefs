@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LevelManager.cs">
     <Files>
@@ -16,6 +17,16 @@
       <File FileName="Assets/Scripts/WeaponManager.cs" Line="134" Column="100" />
       <File FileName="Assets/Scripts/WeaponPickupManager.cs" Line="48" Column="29" />
       <File FileName="Assets/Scripts/WavePowerUpManager.cs" Line="1" Column="1" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scenes\TESTE.unity">
+    <Files>
+      <File FileName="Assets\Scripts\GameManager.cs" Line="13" Column="46" />
+      <File FileName="Assets\Scripts\Enemy.cs" Line="392" Column="3" />
+      <File FileName="Assets\Scripts\EnemySpawner.cs" Line="100" Column="63" />
+      <File FileName="Assets\Scripts\HeroManager.cs" Line="89" Column="9" />
+      <File FileName="Assets\Scenes\TESTE.unity" Line="667" Column="8" />
+>>>>>>> FETCH_HEAD
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

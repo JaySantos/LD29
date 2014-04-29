@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using PigeonCoopToolkit.Navmesh2D;
 
-public enum EnemyBehaviourType { Wander, Seek, Idle }
+public enum EnemyBehaviourType { Wander, Seek, Idle, Attack, Death }
 
 public class Enemy : EnhancedBehaviour {
 	
@@ -22,6 +22,12 @@ public class Enemy : EnhancedBehaviour {
 	/// The type of the current behaviour.
 	/// </summary>
 	EnemyBehaviourType curBehaviourType = EnemyBehaviourType.Idle;
+
+	public EnemyBehaviourType CurBehaviourType {
+		get {
+			return curBehaviourType;
+		}
+	}
 	
 	/// <summary>
 	/// Aqui a gente armazena
@@ -85,6 +91,7 @@ public class Enemy : EnhancedBehaviour {
 	protected override void EnhancedOnEnable ()
 	{
 		base.EnhancedOnEnable ();
+		curBehaviourType = EnemyBehaviourType.Idle;
 		hitPoints = baseHitPoints;
 		IsFrozen = false;
 		collider2D.enabled = true;
@@ -100,16 +107,23 @@ public class Enemy : EnhancedBehaviour {
 	protected override void EnhancedUpdate ()
 	{
 		base.EnhancedUpdate ();
+<<<<<<< HEAD
 		if (calculatePath)
 		{
 			switch(curBehaviourType) 
 			{
+=======
+		
+		switch(curBehaviourType) {
+
+>>>>>>> FETCH_HEAD
 			case EnemyBehaviourType.Wander:
 				WalkRandomly();
 				break;
 			case EnemyBehaviourType.Idle:
 				StayIdle();
 				break;
+<<<<<<< HEAD
 			default:
 				SeekPlayer();
 				break;
@@ -127,6 +141,14 @@ public class Enemy : EnhancedBehaviour {
 			{
 				calculatePath = true;
 			}
+=======
+			case EnemyBehaviourType.Attack:
+				Attack();
+				break;
+			default:
+				SeekPlayer();
+				break;
+>>>>>>> FETCH_HEAD
 		}
 	}
 	
@@ -137,12 +159,13 @@ public class Enemy : EnhancedBehaviour {
 	Vector3 nextPosition;
 
 	bool mirrored = false;
-	
+
 	protected override void EnhancedFixedUpdate ()
 	{
 		base.EnhancedFixedUpdate ();
 		
 		if(!IsFrozen && path != null) {
+
 			if(Body.position.x < nextPosition.x && !mirrored) {
 				mirrored = true;
 				transform.right = Vector3.left;
@@ -154,22 +177,24 @@ public class Enemy : EnhancedBehaviour {
 			Body.MovePosition(nextPosition);
 		}
 	}
+
+	protected override void EnhancedLateUpdate ()
+	{
+		base.EnhancedLateUpdate ();
+		MySpriteRenderer.sortingOrder = Mathf.FloorToInt(-Body.position.y);
+	}
 	
 	List<Vector2> path;
 	
 	#region Seek
 	
 	void EvaluatePathToSeek() {
-		
-		NavMesh2DBehaviour behaviour = NavMesh2D.GetNavMeshObject();
-		NavMesh2DNode node = behaviour.ClosestNodeTo(player.position);
-		
-		if(node != null) {
-			Vector2 nextPos = node.position;
-			path = NavMesh2D.GetSmoothedPath(Body.position, nextPos);
-		}
+		path = NavMesh2D.GetSmoothedPath(Body.position, player.position);
 	}
-	
+
+	[SerializeField]
+	Vector2 seekTimeInterval = new Vector2(5f, 7f);
+
 	void SeekPlayer() {
 		
 		if(path == null || path.Count == 0)
@@ -180,8 +205,9 @@ public class Enemy : EnhancedBehaviour {
 		if(path != null) {
 			
 			if(Vector2.Distance(Body.position, player.position) < 0.2f) {
-				curBehaviourType = EnemyBehaviourType.Idle;
+				curBehaviourType = EnemyBehaviourType.Attack;
 				path = null;
+				maxTimeInState.Reset();
 			}
 			else if (path.Count != 0) {
 				
@@ -193,8 +219,8 @@ public class Enemy : EnhancedBehaviour {
 				}
 			}
 		}
-		
-		if(maxTimeInState.IsOver(Random.Range(5f, 7f), true)) {
+
+		if(maxTimeInState.IsOver(Random.Range(seekTimeInterval.x, seekTimeInterval.y), true)) {
 			curBehaviourType = EnemyBehaviourType.Idle;
 			path = null;
 		}
@@ -212,7 +238,10 @@ public class Enemy : EnhancedBehaviour {
 		NavMesh2DNode rndNode = behaviour.GetNode(Random.Range(0, behaviour.NavMesh2DNodes.Length));
 		path = NavMesh2D.GetSmoothedPath(Body.position, rndNode.position);
 	}
-	
+
+	[SerializeField]
+	Vector2 wanderTimeInterval = new Vector2(2f, 3f);
+
 	void WalkRandomly() {
 		
 		if(path == null || path.Count == 0)
@@ -232,30 +261,51 @@ public class Enemy : EnhancedBehaviour {
 				}
 			}
 		}
-		
-		if(maxTimeInState.IsOver(Random.Range(5f, 7f), true)) {
+
+		if(maxTimeInState.IsOver(Random.Range(wanderTimeInterval.x, wanderTimeInterval.y), true)) {
+
 			curBehaviourType = EnemyBehaviourType.Seek;
 			path = null;
 		}
 		
 		maxTimeInState.UpdateTime(Time.deltaTime);
 	}
-	
-	#endregion
-	
-	#region Idle
-	
+
+#endregion
+
+#region Idle
+
+	[SerializeField]
+	Vector2 idleTimeInterval = new Vector2(0f, 1f);
+
 	void StayIdle() {
 		
-		if(maxTimeInState.IsOver(Random.Range(1f, 3f), true)) {
+		if(maxTimeInState.IsOver(Random.Range(idleTimeInterval.x, idleTimeInterval.y), true)) {
 			curBehaviourType = EnemyBehaviourType.Wander;
 			path = null;
 		}
 		
 		maxTimeInState.UpdateTime(Time.deltaTime);
 	}
-	
-	#endregion
+
+#endregion
+
+#region Attack
+
+	void Attack() {
+
+		if(maxTimeInState.IsOver(1f, true)) {
+
+			if(Vector2.Distance(Body.position, player.position) >= 0.2f) {
+				curBehaviourType = EnemyBehaviourType.Idle;
+				path = null;
+			}
+		}
+		
+		maxTimeInState.UpdateTime(Time.deltaTime);
+	}
+
+#endregion
 	
 	[SerializeField]
 	int baseHitPoints = 1;
@@ -297,10 +347,12 @@ public class Enemy : EnhancedBehaviour {
 			}
 		}
 	}
+
 	/// <summary>
 	/// My sprite renderer.
 	/// </summary>
 	SpriteRenderer mySpriteRenderer;
+
 	public SpriteRenderer MySpriteRenderer {
 		get {
 			if(!mySpriteRenderer)
@@ -329,11 +381,17 @@ public class Enemy : EnhancedBehaviour {
 			isHurt = false;
 		}
 	}
-
+	
+	public Transform ExplosionPool {
+		get;
+		set;
+	}
+	
 	IEnumerator Death() {
 		
 		collider2D.enabled = false;
 		IsFrozen = true;
+<<<<<<< HEAD
 		foreach (Transform t in transform)
 		{
 			if (t.gameObject.tag == "FrozenFX")
@@ -341,6 +399,11 @@ public class Enemy : EnhancedBehaviour {
 				Destroy(t.gameObject);
 			}
 		}
+=======
+
+		curBehaviourType = EnemyBehaviourType.Death;
+
+>>>>>>> FETCH_HEAD
 		if (!scoreManager)
 		{
 			scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
@@ -348,12 +411,17 @@ public class Enemy : EnhancedBehaviour {
 		scoreManager.Score += (int)(100 * scoreManager.Combo);
 		scoreManager.Combo += 0.1f;
 		scoreManager.UpdateScore();
-		yield return StartCoroutine(MySpriteRenderer.FadeOut(0.25f));
+
+		yield return new WaitForSeconds(0.65f);
+//			StartCoroutine(MySpriteRenderer.FadeOut(0.85f));
+
 		EnemySpawner.NumEnemies--;
+
 		if (!levelManager)
 		{
 			levelManager = GameObject.Find("Game").GetComponent<LevelManager>();
 		}
+
 		levelManager.enemiesOnLevel--;
 		calculatePath = false;
 		Instantiate(explosionPrefab, transform.position, Quaternion.Euler(0f, 0f, Random.Range(0.0f, 360.0f)));
