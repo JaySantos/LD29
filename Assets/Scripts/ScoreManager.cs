@@ -7,12 +7,12 @@ public class ScoreManager : MonoBehaviour
 	public GameObject scoreText;
 	public GameObject comboText;
 	public GameObject hpText;
-	public GameObject gameOverText;
 	public GameObject ammoText;
-	public GameObject comboSlider;
+	public GameObject gameOverImage;
+	//public GameObject comboSlider;
 
 	private bool countDownCombo;
-	private float comboTimerInitValue = 2.0f;
+	private float comboTimerInitValue = 3.0f;
 	private float comboTimer;
 	private WeaponManager wm;
 	private HeroManager hm;
@@ -96,11 +96,11 @@ public class ScoreManager : MonoBehaviour
 		if (countDownCombo)
 		{
 			comboTimer -= Time.deltaTime;
-			comboSlider.GetComponent<Slider>().value = comboTimer;
+			//comboSlider.GetComponent<Slider>().value = comboTimer;
 			if (comboTimer <= 0f)
 			{
 				combo = 1.0f;
-				comboText.GetComponent<Text>().text = "Combo: " + combo + "x";
+				comboText.GetComponent<Text>().text = combo.ToString();
 				countDownCombo = false;
 
 			}
@@ -115,17 +115,26 @@ public class ScoreManager : MonoBehaviour
 		combo = 1.0f;
 		hp = 5;
 		ammo = 0;
-		gameOverText.GetComponent<Text>().text = "";
+		UpdateScore();
+	}
+
+	public void RestartScore()
+	{
+		scoreText.GetComponent<Text>().text = "0";
+		comboText.GetComponent<Text>().text = "1";
+		hpText.GetComponent<Text>().text = "5";
+		ammoText.GetComponent<Text>().text = "-";
+		gameOverImage.SetActive(false);
 		UpdateScore();
 	}
 
 	public void UpdateScore()
 	{
-		scoreText.GetComponent<Text>().text =  score;
-		comboText.GetComponent<Text>().text = combo + "x";
+		scoreText.GetComponent<Text>().text =  score.ToString();
+		comboText.GetComponent<Text>().text = combo.ToString();
 		if (hm)
 		{
-			hpText.GetComponent<Text>().text = hm.hitPoints;
+			hpText.GetComponent<Text>().text = hm.hitPoints.ToString();
 		}
 		if (wm)
 		{
@@ -135,17 +144,18 @@ public class ScoreManager : MonoBehaviour
 			}
 			else
 			{
-				ammoText.GetComponent<Text>().text = wm.ammo;
+				ammoText.GetComponent<Text>().text = wm.ammo.ToString();
 			}
 		}
 	}
 
 	public void ShowGameOver()
 	{
-		scoreText.GetComponent<Text>().text = "";
-		comboText.GetComponent<Text>().text = "";
-		hpText.GetComponent<Text>().text = "";
-		ammoText.GetComponent<Text>().text = "";
-		gameOverText.GetComponent<Text>().text = "GAME OVER!!!";
+		//scoreText.GetComponent<Text>().text = "";
+		//comboText.GetComponent<Text>().text = "";
+		//hpText.GetComponent<Text>().text = "";
+		//ammoText.GetComponent<Text>().text = "";
+		gameOverImage.SetActive(true);
+		GameObject.Find("GameOverScore").GetComponent<Text>().text = "Score:\n" + score.ToString();
 	}
 }

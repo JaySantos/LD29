@@ -9,6 +9,7 @@ public class HeroManager : EnhancedBehaviour
 	public float stealthTime = 5.0f;
 	public GameObject legs;
 	public ScoreManager scoreManager;
+	public GameManager gameManager;
 	public GameObject invisiblePrefab;
 
 	public Sprite up;
@@ -60,6 +61,7 @@ public class HeroManager : EnhancedBehaviour
 
 		legsAnim = legs.GetComponent<Animator>();
 		scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+		gameManager = GameObject.Find("Game").GetComponent<GameManager>();
 	}
 
 	protected override void EnhancedOnEnable()
@@ -214,6 +216,7 @@ public class HeroManager : EnhancedBehaviour
 			else
 			{
 				scoreManager.ShowGameOver();
+				gameManager.EndGame();
 				enableInput = false;
 			}
 		}

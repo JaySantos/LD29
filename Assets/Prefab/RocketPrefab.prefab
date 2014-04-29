@@ -71,6 +71,7 @@ MonoBehaviour:
   bulletSpeed: 5
   bulletDirection: {x: 0, y: 0}
   weaponType: 3
+  explosionPrefab: {fileID: 100000, guid: 4bb71dffa85bb4470a180042e9e715f1, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

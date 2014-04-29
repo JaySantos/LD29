@@ -50,7 +50,7 @@ public class PowerUpManager : MonoBehaviour
 			int draw = Random.Range (0, 100);
 			if (draw < chanceToDraw)
 			{
-				powerUp = Random.Range(1, 2);
+				powerUp = Random.Range(0, 4);
 
 				switch (powerUp)
 				{

@@ -13,6 +13,7 @@ TagManager:
   - InvisibleFX
   - Spawner
   - SpawnController
+  - StartPoint
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -58,4 +59,8 @@ TagManager:
   - name: Game
     userID: 2
     uniqueID: 2063342131
+    locked: 0
+  - name: Foreground
+    userID: 3
+    uniqueID: 1718723487
     locked: 0

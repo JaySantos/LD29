@@ -7,6 +7,7 @@ public class BulletManager : MonoBehaviour
 	public Vector2 bulletDirection;
 	public WeaponType weaponType;
 	public enum WeaponType {DEFAULT, MACHINE_GUN, SHOTGUN, ROCKET_LAUNCHER};
+	public GameObject explosionPrefab;
 
 	private Transform myTransform;
 	private float areaDamage = 1.0f;
@@ -53,6 +54,7 @@ public class BulletManager : MonoBehaviour
 		{
 			if (weaponType == WeaponType.ROCKET_LAUNCHER)
 			{
+				Instantiate(explosionPrefab, myTransform.position, Quaternion.Euler(0f, 0f, Random.Range(0.0f, 360.0f)));
 				Collider2D[] colls = Physics2D.OverlapCircleAll(myTransform.position, areaDamage);
 				foreach (Collider2D c in colls)
 				{

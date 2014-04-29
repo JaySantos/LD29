@@ -11,6 +11,12 @@ public class Enemy : EnhancedBehaviour {
 	public GameObject frozenPrefab;
 	private ScoreManager scoreManager = null;
 	private LevelManager levelManager = null;
+	public GameObject explosionPrefab;
+
+	private bool calculatePath = false;
+	public Vector3 startPoint;
+	public Vector3 endPoint;
+	public float startTime = 0f;
 	
 	/// <summary>
 	/// The type of the current behaviour.
@@ -87,25 +93,41 @@ public class Enemy : EnhancedBehaviour {
 		path = null;
 		mirrored = false;
 		transform.right = Vector3.right;
-	}
+		calculatePath = false;
+		startTime = 0f;
+ 	}
 	
 	protected override void EnhancedUpdate ()
 	{
 		base.EnhancedUpdate ();
-		
-		switch(curBehaviourType) {
-		case EnemyBehaviourType.Wander:
-			WalkRandomly();
-			break;
-		case EnemyBehaviourType.Idle:
-			StayIdle();
-			break;
-		default:
-			SeekPlayer();
-			break;
+		if (calculatePath)
+		{
+			switch(curBehaviourType) 
+			{
+			case EnemyBehaviourType.Wander:
+				WalkRandomly();
+				break;
+			case EnemyBehaviourType.Idle:
+				StayIdle();
+				break;
+			default:
+				SeekPlayer();
+				break;
+			}
+			gameObject.name = curBehaviourType.ToString();
 		}
-		
-		gameObject.name = curBehaviourType.ToString();
+		else
+		{
+			if (startTime == 0f)
+			{
+				startTime = Time.time;
+			}
+			transform.position = Vector2.Lerp(startPoint, endPoint, (Time.time - startTime) / 1f);
+			if (transform.position == endPoint)
+			{
+				calculatePath = true;
+			}
+		}
 	}
 	
 	/// <summary>
@@ -312,6 +334,13 @@ public class Enemy : EnhancedBehaviour {
 		
 		collider2D.enabled = false;
 		IsFrozen = true;
+		foreach (Transform t in transform)
+		{
+			if (t.gameObject.tag == "FrozenFX")
+			{
+				Destroy(t.gameObject);
+			}
+		}
 		if (!scoreManager)
 		{
 			scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
@@ -326,6 +355,8 @@ public class Enemy : EnhancedBehaviour {
 			levelManager = GameObject.Find("Game").GetComponent<LevelManager>();
 		}
 		levelManager.enemiesOnLevel--;
+		calculatePath = false;
+		Instantiate(explosionPrefab, transform.position, Quaternion.Euler(0f, 0f, Random.Range(0.0f, 360.0f)));
 		this.Recycle();
 		
 		yield return null;

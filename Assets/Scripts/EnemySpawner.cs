@@ -28,7 +28,7 @@ public class EnemySpawner : EnhancedBehaviour {
 	/// <summary>
 	/// The spawn interval.
 	/// </summary>
-	float spawnInterval = 2f;
+	float spawnInterval = 1f;
 
 	bool isFrozen;
 	GameObject gameScene;
@@ -58,14 +58,21 @@ public class EnemySpawner : EnhancedBehaviour {
 		// Crio uma piscina de inimigos para reaproveitar
 		enemyPrefab.CreatePool();
 		
-		List<Transform> transforms = new List<Transform>(GetComponentsInChildren<Transform>(false));
+		List<Transform> transforms = new List<Transform>();
+		foreach (Transform t in GetComponentsInChildren<Transform>(false))
+		{
+			if (t.gameObject.tag != "StartPoint")
+			{
+				transforms.Add (t);
+			}
+		}
 		transforms.Remove(transform);
 		spawnPoints = transforms.ToArray();
 		gameScene = GameObject.Find("Game");
 	}
 
 	[SerializeField]
-	int maxEnemies = 1;
+	int maxEnemies = 50;
 
 	public int MaxEnemies
 	{
@@ -83,7 +90,7 @@ public class EnemySpawner : EnhancedBehaviour {
 
 	public void StartSpawning()
 	{
-		InvokeRepeating("Spawn", Time.time, spawnInterval);
+		InvokeRepeating("Spawn", 3f, spawnInterval);
 	}
 
 	public void StopSpawning()
@@ -92,11 +99,21 @@ public class EnemySpawner : EnhancedBehaviour {
 	}
 
 	void Spawn() {
-
-		if(NumEnemies < maxEnemies && !IsFrozen) {
-
-			Vector3 rndPosition = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
+		if(NumEnemies < maxEnemies && !IsFrozen) 
+		{
+			Transform chosenPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+			Transform endPoint = null;
+			foreach (Transform t in chosenPoint)
+			{
+				if (t.gameObject.tag == "StartPoint")
+				{
+					endPoint = t;
+				}
+			}
+			Vector3 rndPosition = chosenPoint.position;
 			Enemy enemy = enemyPrefab.Spawn(rndPosition);
+			enemy.startPoint = rndPosition;
+			enemy.endPoint = endPoint.position;
 			enemy.gameObject.transform.parent = gameScene.transform;
 			enemy.GetComponent<SpriteRenderer>().sortingLayerID = 2;
 			enemy.Player = player;

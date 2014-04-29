@@ -18,17 +18,17 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: c763d30161f6d4389bfecd941f66a1de, type: 3}
+      value: {fileID: 21300000, guid: 75770fe9d692c43e1a6015e7857d22cf, type: 3}
     - time: .0833333358
-      value: {fileID: 21300000, guid: a82a0106263004021bffe518e4254682, type: 3}
+      value: {fileID: 21300000, guid: 65872b547a4b84afea3120010e3d033d, type: 3}
     - time: .166666672
-      value: {fileID: 21300000, guid: aee5a8619f03e405c934c166dd88f868, type: 3}
+      value: {fileID: 21300000, guid: a9c125716827741f1bb2f6d31a654a72, type: 3}
     - time: .25
-      value: {fileID: 21300000, guid: 0b47848de8b1346df9acb770f7f8bafb, type: 3}
+      value: {fileID: 21300000, guid: 0232d3b5d21364e6b9a9e6fe1a7a0649, type: 3}
     - time: .333333343
-      value: {fileID: 21300000, guid: 3dd38126c3be546afb1147b405ba4829, type: 3}
+      value: {fileID: 21300000, guid: 5b6a5fbee17f34391b6ab829be8891e6, type: 3}
     - time: .416666657
-      value: {fileID: 21300000, guid: 67db22d58dd754dd2a0edb5be9ac198b, type: 3}
+      value: {fileID: 21300000, guid: b9e321f7b1043473abccfc72f694108d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
