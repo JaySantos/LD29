@@ -11,7 +11,6 @@ public class Enemy : EnhancedBehaviour {
 	public GameObject frozenPrefab;
 	private ScoreManager scoreManager = null;
 	private LevelManager levelManager = null;
-	public GameObject explosionPrefab;
 
 	private bool calculatePath = false;
 	public Vector3 startPoint;
@@ -107,23 +106,19 @@ public class Enemy : EnhancedBehaviour {
 	protected override void EnhancedUpdate ()
 	{
 		base.EnhancedUpdate ();
-<<<<<<< HEAD
 		if (calculatePath)
 		{
 			switch(curBehaviourType) 
 			{
-=======
-		
-		switch(curBehaviourType) {
-
->>>>>>> FETCH_HEAD
 			case EnemyBehaviourType.Wander:
 				WalkRandomly();
 				break;
 			case EnemyBehaviourType.Idle:
 				StayIdle();
 				break;
-<<<<<<< HEAD
+			case EnemyBehaviourType.Attack:
+				Attack();
+				break;
 			default:
 				SeekPlayer();
 				break;
@@ -141,14 +136,6 @@ public class Enemy : EnhancedBehaviour {
 			{
 				calculatePath = true;
 			}
-=======
-			case EnemyBehaviourType.Attack:
-				Attack();
-				break;
-			default:
-				SeekPlayer();
-				break;
->>>>>>> FETCH_HEAD
 		}
 	}
 	
@@ -325,10 +312,10 @@ public class Enemy : EnhancedBehaviour {
 	{
 		base.EnhancedOnTriggerEnter2D (col);
 		
-		if(col.CompareTag("SingleBullet")) {
-			if(!isHurt) {
-				StartCoroutine(Hurt (1));
-			}
+		if(col.CompareTag("SingleBullet")) 
+		{
+			StopCoroutine("Hurt");
+			StartCoroutine(Hurt (1));
 		}
 		else if(col.CompareTag("AreaBullet")) {
 			StartCoroutine(Hurt (baseHitPoints));
@@ -391,7 +378,6 @@ public class Enemy : EnhancedBehaviour {
 		
 		collider2D.enabled = false;
 		IsFrozen = true;
-<<<<<<< HEAD
 		foreach (Transform t in transform)
 		{
 			if (t.gameObject.tag == "FrozenFX")
@@ -399,11 +385,7 @@ public class Enemy : EnhancedBehaviour {
 				Destroy(t.gameObject);
 			}
 		}
-=======
-
 		curBehaviourType = EnemyBehaviourType.Death;
-
->>>>>>> FETCH_HEAD
 		if (!scoreManager)
 		{
 			scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
@@ -424,7 +406,6 @@ public class Enemy : EnhancedBehaviour {
 
 		levelManager.enemiesOnLevel--;
 		calculatePath = false;
-		Instantiate(explosionPrefab, transform.position, Quaternion.Euler(0f, 0f, Random.Range(0.0f, 360.0f)));
 		this.Recycle();
 		
 		yield return null;

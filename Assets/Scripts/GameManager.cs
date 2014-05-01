@@ -9,6 +9,7 @@ public class GameManager : EnhancedBehaviour
 	public LevelManager levelManager;
 	public ScoreManager scoreManager;
 	public HeroManager heroManager;
+	public WeaponManager weaponManager;
 
 	protected override void EnhancedOnEnable ()
 	{
@@ -17,6 +18,7 @@ public class GameManager : EnhancedBehaviour
 		weaponPickupManager = GameObject.Find("WeaponPickUpManagerPrefab").GetComponent<WeaponPickupManager>();
 		levelManager = GetComponent<LevelManager>();
 		scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+		weaponManager = GameObject.Find("Player").GetComponent<WeaponManager>();
 	}
 	public void StartGame()
 	{
@@ -24,7 +26,9 @@ public class GameManager : EnhancedBehaviour
 		enemySpawner.StartSpawning();
 		powerUpManager.Activate();
 		weaponPickupManager.Activate();
+		weaponManager.weaponType = WeaponManager.WeaponType.DEFAULT;
 		scoreManager.gameOverImage.SetActive(false);
+		scoreManager.RestartScore();
 		GameObject.Find("Player").transform.position = new Vector2(0f, 0f);
 		GameObject.Find("Player").GetComponent<HeroManager>().EnableInput = true;
 	}
@@ -38,5 +42,6 @@ public class GameManager : EnhancedBehaviour
 		}
 		enemySpawner.StopSpawning();
 		EnemySpawner.NumEnemies = 0;
+
 	}
 }

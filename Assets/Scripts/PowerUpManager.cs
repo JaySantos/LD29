@@ -38,6 +38,12 @@ public class PowerUpManager : MonoBehaviour
 
 	public void Activate()
 	{
+		//Clear any Circle Power Ups existing
+		GameObject[] obj = GameObject.FindGameObjectsWithTag("CirclePowerUp");
+		foreach (GameObject go in obj)
+		{
+			Destroy(go);
+		}
 		gameObject.GetComponent<BoxCollider2D>().enabled = false;
 		gameObject.GetComponent<SpriteRenderer>().enabled = false;
 		InvokeRepeating ("TryToShowCard", 0.0f, timeBetweenDrews);
@@ -112,8 +118,6 @@ public class PowerUpManager : MonoBehaviour
 				GameObject[] objs = GameObject.FindGameObjectsWithTag("Enemy");
 				foreach (GameObject go in objs)
 				{
-					Debug.Log("SQUARE:: " + go);
-					Debug.Log("SQUARE:: " + go.GetComponent<Enemy>());
 					go.GetComponent<Enemy>().IsFrozen = true;
 				}
 				GameObject.Find("Enemy Manager").GetComponent<EnemySpawner>().IsFrozen = true;

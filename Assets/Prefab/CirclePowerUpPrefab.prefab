@@ -71,7 +71,7 @@ GameObject:
   - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: CirclePowerUpPrefab
-  m_TagString: Untagged
+  m_TagString: CirclePowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -29,7 +29,7 @@ public class LevelManager : MonoBehaviour
 		enemiesOnLevel = baseNumberOfEnemies + (NumberOfEnemiesIncrement * levelNumber);
 		levelSpawnNumber = baseSpawnNumber + (SpawnNumberIncrement * levelNumber);
 
-		GameObject.Find("Enemy Manager").GetComponent<EnemySpawner>().MaxEnemies = levelSpawnNumber;
+		//GameObject.Find("Enemy Manager").GetComponent<EnemySpawner>().MaxEnemies = levelSpawnNumber;
 
 		int levelSprite = Random.Range(0,3);
 		GameObject scenario = GameObject.Find("Scenario");
